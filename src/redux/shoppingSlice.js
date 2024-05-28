@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   productsData: [],
@@ -14,13 +14,13 @@ const initialState = {
 };
 
 export const shoppingSlice = createSlice({
-  name: 'compras',
+  name: "compras",
   initialState,
   reducers: {
     increaseLoginAttempts: (state, action) => {
-      console.log(state.loginAttempts, 'before', action.payload.count);
+      console.log(state.loginAttempts, "before", action.payload.count);
       state.loginAttempts += action.payload.count;
-      console.log(state.loginAttempts, 'after', action.payload.count);
+      console.log(state.loginAttempts, "after", action.payload.count);
     },
     addToPOSCart: (state, action) => {
       const existingProduct = state.productsPOS.find(

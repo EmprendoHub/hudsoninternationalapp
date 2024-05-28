@@ -27,21 +27,32 @@ export function trackingMiddleware(middleware) {
         const browserName = browser.name;
         const source = url.href;
         const country = request.geo?.country || "";
-        const response = fetch(`${process.env.NEXTAUTH_URL}/api/analytics`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            event: "visit",
-            source,
-            country,
-            ip,
-            viewport,
-            browserName,
-            device: deviceData,
-          }),
-        });
+        console.log(source, country, ip, viewport, browserName, deviceData);
+        const response = await fetch(
+          `${process.env.NEXTAUTH_URL}/api/analytics`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              event: "visit",
+              source,
+              country,
+              ip,
+              viewport,
+              browserName,
+              device: deviceData,
+            }),
+          }
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          //console.log(data.message);
+        } else {
+          console.error("Analytics API error");
+        }
       }
     } catch (error) {
       // Handle or log the error

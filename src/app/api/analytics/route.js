@@ -62,7 +62,7 @@ export const POST = async (request) => {
     }
 
     // Find the visitor by IP and update
-    const visitor = await Visitor.findOne({ ip: ip }).exec();
+    const visitor = await Visitor.findOne({ ip: ip });
     if (!visitor) {
       // If no visitor exists, create a new one
       const newVisitor = new Visitor({
