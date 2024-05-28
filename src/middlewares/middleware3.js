@@ -1,4 +1,3 @@
-//import { addAnalytics } from "@/app/[lang]/_actions";
 import { NextResponse, userAgent } from "next/server";
 
 // Helper function to log time spent
@@ -38,6 +37,11 @@ export function trackingMiddleware(middleware) {
           "URL:",
           `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`
         );
+
+        // Adding detailed logging before and after the fetch call
+        console.log("Starting fetch POST to analytics API...");
+        const fetchStartTime = performance.now();
+
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`,
           {
@@ -56,6 +60,14 @@ export function trackingMiddleware(middleware) {
             }),
           }
         );
+
+        const fetchEndTime = performance.now();
+        console.log(
+          `Fetch POST completed in: ${fetchEndTime - fetchStartTime} ms`
+        );
+        console.log(`Response status: ${response.status}`);
+        console.log(`Response ok: ${response.ok}`);
+
         logTimeSpent("Route Call", startTime);
       }
     } catch (error) {
