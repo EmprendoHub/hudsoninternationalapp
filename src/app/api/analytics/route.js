@@ -1,26 +1,16 @@
 import Analytic from "@/backend/models/Analytic";
 import Visitor from "@/backend/models/Visitor";
-import { NextResponse, userAgent } from "next/server";
+import { NextResponse } from "next/server";
+
+// Helper function to log time spent
+const logTimeSpent = (label, startTime) => {
+  const endTime = performance.now();
+  console.log(`${label}: ${endTime - startTime} ms`);
+};
 
 export const POST = async (request) => {
-  //console.log(request);
-  const ip = (request.headers.get("x-forwarded-for") ?? "127.0.0.1")
-    .split(",")[0]
-    .replace(/^::ffff:/, "");
-  const { device, browser } = userAgent(request);
-  const headers = request.headers;
-  const viewport = device.type === "mobile" ? "mobile" : "desktop";
-  const deviceData = {
-    vendor: device.vendor || "unknown",
-    model: device.model || "unknown",
-    type: device.type === "mobile" ? "mobile" : "desktop",
-  };
-  const url = request.nextUrl;
-  const browserName = browser.name;
-  const source = url.href;
-  const country = request.geo?.country || "";
-  console.log(source, country, ip, viewport, browserName, deviceData, "route");
-
+  const { event, source, country, ip, viewport, browserName, device } =
+    await request.json();
   try {
     // Get the current UTC date and time
     const currentDate = new Date();
@@ -44,6 +34,7 @@ export const POST = async (request) => {
     today.setUTCHours(0, 0, 0, 0);
 
     // Update or create Analytic document
+    let startTime = performance.now();
     const dayAnalytics = await Analytic.findOne({
       createdAt: today,
       "source.page": source,
@@ -52,7 +43,7 @@ export const POST = async (request) => {
     if (!dayAnalytics) {
       // No document for today and this source, create a new one
       const newAnalytics = new Analytic({
-        createdAt: today, // Ensure the createdAt time is set when the document is created
+        createdAt: new Date(), // Ensure the createdAt time is set when the document is created
         source: [
           {
             page: source,
@@ -76,8 +67,9 @@ export const POST = async (request) => {
       }
       await dayAnalytics.save();
     }
-
+    logTimeSpent("Find Analytic document", startTime);
     // Find the visitor by IP and update
+    let startVisitorTime = performance.now();
     const visitor = await Visitor.findOne({ ip: ip });
     if (!visitor) {
       // If no visitor exists, create a new one
@@ -86,7 +78,7 @@ export const POST = async (request) => {
         country,
         actions: [
           {
-            name: "visit",
+            name: event,
             source: source,
             date: today,
             viewport: viewport,
@@ -102,7 +94,7 @@ export const POST = async (request) => {
       // Check if there is an existing action today with the same name and source
       const existingActions = visitor?.actions.find(
         (action) =>
-          action.name === "visit" &&
+          action.name === event &&
           action.source === source &&
           action.viewport === viewport &&
           action.browser === browserName &&
@@ -115,7 +107,7 @@ export const POST = async (request) => {
       } else {
         // Add a new action if none exists that matches
         await visitor?.actions?.push({
-          name: "visit",
+          name: event,
           source: source,
           date: today,
           viewport: viewport,
@@ -126,7 +118,7 @@ export const POST = async (request) => {
       visitor.updatedAt = new Date(); // Update the last updated timestamp
       await visitor.save();
     }
-
+    logTimeSpent("Find Visitor document", startVisitorTime);
     const response = NextResponse.json({
       message: "Tracked successfully",
       success: true,
@@ -136,7 +128,7 @@ export const POST = async (request) => {
     console.log(error);
     return NextResponse.json(
       {
-        error: "Translation error",
+        error: "Analytics error",
       },
       { status: 500 }
     );

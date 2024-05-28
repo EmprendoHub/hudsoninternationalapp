@@ -1,6 +1,12 @@
 //import { addAnalytics } from "@/app/[lang]/_actions";
 import { NextResponse, userAgent } from "next/server";
 
+// Helper function to log time spent
+const logTimeSpent = (label, startTime) => {
+  const endTime = performance.now();
+  console.log(`${label}: ${endTime - startTime} ms`);
+};
+
 export function trackingMiddleware(middleware) {
   return async (request, event) => {
     // Create a response object to pass down the chain
@@ -27,40 +33,26 @@ export function trackingMiddleware(middleware) {
         const browserName = browser.name;
         const source = url.href;
         const country = request.geo?.country || "";
-        console.log(
-          source,
-          country,
-          ip,
-          viewport,
-          browserName,
-          deviceData,
-          "middelware"
+        let startTime = performance.now();
+        const response = await fetch(
+          `${process.env.NEXTAUTH_URL}/api/analytics`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              event: "visit",
+              source,
+              country,
+              ip,
+              viewport,
+              browserName,
+              device: deviceData,
+            }),
+          }
         );
-        // const response = await fetch(
-        //   `${process.env.NEXTAUTH_URL}/api/analytics`,
-        //   {
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //       event: "visit",
-        //       source,
-        //       country,
-        //       ip,
-        //       viewport,
-        //       browserName,
-        //       device: deviceData,
-        //     }),
-        //   }
-        // );
-
-        // if (response.ok) {
-        //   const data = await response.json();
-        //   //console.log(data.message);
-        // } else {
-        //   console.error("Analytics API error");
-        // }
+        logTimeSpent("Route Call", startTime);
       }
     } catch (error) {
       // Handle or log the error

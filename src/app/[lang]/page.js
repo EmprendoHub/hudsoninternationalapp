@@ -15,22 +15,6 @@ import ImageHero from "@/components/sliders/ImageHero";
 export default async function Home({ params }) {
   const lang = params.lang;
   const { homeDic } = await getDictionary(lang);
-  const sendAnalytics = await fetch(
-    `${process.env.NEXTAUTH_URL}/api/analytics`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-
-  if (sendAnalytics.ok) {
-    const data = await sendAnalytics.json();
-    console.log(data.message);
-  } else {
-    console.error("Analytics API error");
-  }
   return (
     <div className=" overflow-x-hidden">
       <Suspense fallback={<LoadingHero />}>
