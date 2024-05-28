@@ -1,10 +1,26 @@
 import Analytic from "@/backend/models/Analytic";
 import Visitor from "@/backend/models/Visitor";
-import { NextResponse } from "next/server";
+import { NextResponse, userAgent } from "next/server";
 
 export const POST = async (request) => {
-  const { event, source, country, ip, viewport, browserName, device } =
-    await request.json();
+  //console.log(request);
+  const ip = (request.headers.get("x-forwarded-for") ?? "127.0.0.1")
+    .split(",")[0]
+    .replace(/^::ffff:/, "");
+  const { device, browser } = userAgent(request);
+  const headers = request.headers;
+  const viewport = device.type === "mobile" ? "mobile" : "desktop";
+  const deviceData = {
+    vendor: device.vendor || "unknown",
+    model: device.model || "unknown",
+    type: device.type === "mobile" ? "mobile" : "desktop",
+  };
+  const url = request.nextUrl;
+  const browserName = browser.name;
+  const source = url.href;
+  const country = request.geo?.country || "";
+  console.log(source, country, ip, viewport, browserName, deviceData, "route");
+
   try {
     // Get the current UTC date and time
     const currentDate = new Date();
@@ -36,7 +52,7 @@ export const POST = async (request) => {
     if (!dayAnalytics) {
       // No document for today and this source, create a new one
       const newAnalytics = new Analytic({
-        createdAt: new Date(), // Ensure the createdAt time is set when the document is created
+        createdAt: today, // Ensure the createdAt time is set when the document is created
         source: [
           {
             page: source,
@@ -70,7 +86,7 @@ export const POST = async (request) => {
         country,
         actions: [
           {
-            name: event,
+            name: "visit",
             source: source,
             date: today,
             viewport: viewport,
@@ -86,7 +102,7 @@ export const POST = async (request) => {
       // Check if there is an existing action today with the same name and source
       const existingActions = visitor?.actions.find(
         (action) =>
-          action.name === event &&
+          action.name === "visit" &&
           action.source === source &&
           action.viewport === viewport &&
           action.browser === browserName &&
@@ -99,7 +115,7 @@ export const POST = async (request) => {
       } else {
         // Add a new action if none exists that matches
         await visitor?.actions?.push({
-          name: event,
+          name: "visit",
           source: source,
           date: today,
           viewport: viewport,
