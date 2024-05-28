@@ -57,5 +57,8 @@ const VisitorSchema = new mongoose.Schema({
   },
 });
 
+// Ensure index on createdAt
+VisitorSchema.index({ ip: 1 });
+
 export default mongoose?.models?.Visitor ||
   mongoose.model("Visitor", VisitorSchema);

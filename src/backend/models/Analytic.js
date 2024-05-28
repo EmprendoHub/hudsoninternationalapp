@@ -17,5 +17,11 @@ const AnalyticSchema = new mongoose.Schema({
   ],
 });
 
+// Ensure index on createdAt
+AnalyticSchema.index({ createdAt: 1 });
+
+// Ensure index on source.page
+AnalyticSchema.index({ "source.page": 1 });
+
 export default mongoose?.models?.Analytic ||
   mongoose.model("Analytic", AnalyticSchema);
