@@ -1772,8 +1772,8 @@ export async function requestContact(data) {
       }
 
       const recipient_email = email;
-      const sender_email = "emprendomex@gmail.com";
-      const fromName = "Emprendomex Marketing";
+      const sender_email = "hudsoninternationalmarket01@gmail.com";
+      const fromName = "Hudson International Market";
 
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",

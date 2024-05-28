@@ -3,8 +3,6 @@
     "menu": [
       { "title": "About", "url": "/acerca" },
       { "title": "Blog", "url": "/blog" },
-      { "title": "Portfolio", "url": "/portfolio" },
-      { "title": "Services", "url": "/servicios" },
       { "title": "Contact", "url": "/contacto" }
     ],
     "searchbar": "Buscar"
@@ -65,8 +63,8 @@
     },
     "footerBar": {
       "developBy": "Developed by Emprendomex Marketing",
-      "path": "https://www.emprendomex.com",
-      "company": "Emprendomex Marketing",
+      "path": "https://www.hudsoninternationalmarket.com",
+      "company": "Hudson International Market",
       "addressOne": "119 N La Plaza St,",
       "addressTwo": "",
       "city": "Anaheim",
@@ -84,6 +82,14 @@
     }
   },
   "homeDic": {
+    "imageHero": {
+      "pretitle": "Digital",
+      "title": "Grow Your",
+      "titleTwo": "Business",
+      "text": "Expand the reach and presence of your products or services and reach new markets with a personalized web application tailored to your business and reach new markets with a personalized web application tailored to your business..",
+      "btnText": "Discover More",
+      "btnPath": "/servicios"
+    },
     "sliders": [
       {
         "preTitle": "Digital",
@@ -122,7 +128,7 @@
       "boxOne": {
         "preTitle": "WE ARE EXPERTS IN EVERYTHING DIGITAL",
         "title": "Transform your digital experience with",
-        "titleTwo": "emprendomex",
+        "titleTwo": "Hudson International Market",
         "subtitle": "Our team of experts is ready to help optimize your conversions",
         "text": "We offer a strategic approach in creating sales funnels that are seamlessly integrated with your website development. This not only improves the user experience, but optimizes conversion rates, converting visitors into customers more effectively and increasing your revenue.",
         "btnText": "Contact Us",
@@ -381,7 +387,7 @@
   },
   "privacyDic": {
     "title": "Privacy Policy",
-    "summary": "Emprendomex Marketing collects, uses, maintains and discloses information collected from users (each, a “User”) of the emprendomex.com website (“Site”). This privacy policy applies to the Site and all products and services offered by undertakingomex.com. Emprendomex Marketing is responsible for the use and protection of your personal data, and in this regard we inform you of the following:",
+    "summary": "Hudson International Market collects, uses, maintains and discloses information collected from users (each, a “User”) of the hudsoninternationalmarket.com website (“Site”). This privacy policy applies to the Site and all products and services offered by undertakingomex.com. Hudson International Market is responsible for the use and protection of your personal data, and in this regard we inform you of the following:",
     "textArray": [
       {
         "section": {
@@ -575,7 +581,7 @@
             },
             { "name": "Supply content for our blog", "path": "" }
           ],
-          "textEight": "If you do not want your personal data to be processed for these secondary purposes, from this moment you can inform us of the above through the following mechanism: Sending an email to GDRP@emprendomex.com. Refusal to use your personal data for these purposes may not be a reason for us to deny you the services and products you request or contract with us."
+          "textEight": "If you do not want your personal data to be processed for these secondary purposes, from this moment you can inform us of the above through the following mechanism: Sending an email to GDRP@hudsoninternationalmarket.com. Refusal to use your personal data for these purposes may not be a reason for us to deny you the services and products you request or contract with us."
         }
       },
       {
@@ -606,8 +612,8 @@
           "textThree": "3) Contact form: There is a contact form whose purpose is to respond to queries, suggestions or professional contact. In this case, the email address will be used to respond to them and send the information that the user requires through the website. This data will be stored on High Velocity's servers.",
           "textFour": "4) Cookies: When the user registers or browses this website, “cookies” are stored. The user can consult the cookie policy at any time to obtain more information about the use of cookies and how to deactivate them.",
           "textFive": "5) Sale of computer products: Through the website, information-products can be purchased; in this case, the buyer's data is required (name, surname, address and email) through the entrepreneurship platform.",
-          "textSix": "6) Users may unsubscribe at any time from the services provided by https://emprendomex.com/cancel/newsletter from the Newsletter itself through an Automated cancellation form.",
-          "textSeven": "7) Tracking systems used on this site: Google (Analytics), at https://emprendomex.com/ the preferences of its users, their demographic characteristics, their traffic patterns, and other information are also studied together to better understand Who constitutes your audience and what they need. Tracking our users' preferences also helps us show you the most relevant advertising.",
+          "textSix": "6) Users may unsubscribe at any time from the services provided by https://hudsoninternationalmarket.com/cancel/newsletter from the Newsletter itself through an Automated cancellation form.",
+          "textSeven": "7) Tracking systems used on this site: Google (Analytics), at https://hudsoninternationalmarket.com/ the preferences of its users, their demographic characteristics, their traffic patterns, and other information are also studied together to better understand Who constitutes your audience and what they need. Tracking our users' preferences also helps us show you the most relevant advertising.",
           "bullets": [
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -615,14 +621,14 @@
             { "name": "", "path": "" },
             { "name": "", "path": "" }
           ],
-          "textEight": "Likewise, we inform you that to attract subscribers and customers we use Facebook Ads with the corresponding Facebook Pixel installed, so when generating an ad, the audience can be segmented by location, demographic data, interests, etc. so the data obtained by this platform, would be subject to this privacy policy from the moment the user leaves their data to join the Emprendomex Marketing community newsletter."
+          "textEight": "Likewise, we inform you that to attract subscribers and customers we use Facebook Ads with the corresponding Facebook Pixel installed, so when generating an ad, the audience can be segmented by location, demographic data, interests, etc. so the data obtained by this platform, would be subject to this privacy policy from the moment the user leaves their data to join the Hudson International Market community newsletter."
         }
       },
       {
         "section": {
           "title": "How can you access, rectify or cancel your personal data, or oppose its use?",
           "text": "You have the right to know what personal data we have about you, what we use it for and the conditions of use we give it (Access). Likewise, it is your right to request the correction of your personal information if it is outdated, inaccurate or incomplete rectification(rectification); that we delete it from our records or databases when we consider that it is not being used appropriately (cancellation); as well as oppose the use of your personal data for specific purposes (opposition). These rights are known as GDPR rights.",
-          "textTwo": "To exercise any of the GDPR rights, you must submit the respective request through the following means: by sending an email to GDPR@emprendomex.com.",
+          "textTwo": "To exercise any of the GDPR rights, you must submit the respective request through the following means: by sending an email to GDPR@hudsoninternationalmarket.com.",
           "textThree": "In relation to the procedure and requirements for the exercise of your GDPR rights, we inform you of the following:",
           "textFour": "",
           "textFive": "",
@@ -630,7 +636,7 @@
           "textSeven": "",
           "bullets": [
             {
-              "name": "a) Through what means can the owner and, where applicable, his representative, as well as the personality of the latter, prove their identity? By sending an email to GDPR@emprendomex.com",
+              "name": "a) Through what means can the owner and, where applicable, his representative, as well as the personality of the latter, prove their identity? By sending an email to GDPR@hudsoninternationalmarket.com",
               "path": ""
             },
             {
@@ -650,13 +656,13 @@
               "path": ""
             }
           ],
-          "textEight": "The contact information of the person or personal data department, which is in charge of processing GDPR rights requests, is as follows: Name of the person or personal data department: Salvador Sandoval Sanchez, Address: Colima 61, colony Las Brisas, Sahuayo city of Morelos, c.p. 59010, in the entity of Michoacán, country of Mexico, Email: GDRP@emprendomex.com, "
+          "textEight": "The contact information of the person or personal data department, which is in charge of processing GDPR rights requests, is as follows: Name of the person or personal data department: Salvador Sandoval Sanchez, Address: Colima 61, colony Las Brisas, Sahuayo city of Morelos, c.p. 59010, in the entity of Michoacán, country of Mexico, Email: GDRP@hudsoninternationalmarket.com, "
         }
       },
       {
         "section": {
           "title": "You can revoke your consent to the use of your personal data.",
-          "text": "You can revoke the consent that, if applicable, you have given us for the processing of your personal data. However, it is important that you keep in mind that not in all cases we will be able to respond to your request or terminate the use immediately, since it is possible that due to some legal obligation we require to continue processing your personal data. Likewise, you must consider that for certain purposes, the revocation of your consent may imply that we cannot continue providing you with the service you requested from us, or the conclusion of your relationship with us. To revoke your consent you must submit your request through the following means: Sending an email to GDPR@emprendomex.com",
+          "text": "You can revoke the consent that, if applicable, you have given us for the processing of your personal data. However, it is important that you keep in mind that not in all cases we will be able to respond to your request or terminate the use immediately, since it is possible that due to some legal obligation we require to continue processing your personal data. Likewise, you must consider that for certain purposes, the revocation of your consent may imply that we cannot continue providing you with the service you requested from us, or the conclusion of your relationship with us. To revoke your consent you must submit your request through the following means: Sending an email to GDPR@hudsoninternationalmarket.com",
           "textTwo": "Regarding the procedure and requirements for revoking your consent, we inform you of the following:",
           "textThree": "",
           "textFour": "",
@@ -665,7 +671,7 @@
           "textSeven": "",
           "bullets": [
             {
-              "name": "a) Through what means can the owner and, where applicable, his representative, as well as the personality of the latter, prove their identity? Sending an email to GDPR@emprendomex.com",
+              "name": "a) Through what means can the owner and, where applicable, his representative, as well as the personality of the latter, prove their identity? Sending an email to GDPR@hudsoninternationalmarket.com",
               "path": ""
             },
             {
@@ -681,7 +687,7 @@
               "path": ""
             },
             {
-              "name": "e) For more information about the procedure, we make available the following means: https://emprendomex.com/contacto",
+              "name": "e) For more information about the procedure, we make available the following means: https://hudsoninternationalmarket.com/contacto",
               "path": ""
             }
           ],
@@ -691,7 +697,7 @@
       {
         "section": {
           "title": "How can you limit the use or disclosure of your personal information?",
-          "text": "In order for you to limit the use and disclosure of your personal information, we offer you the following means: Send an email to GDPR@emprendomex.com.",
+          "text": "In order for you to limit the use and disclosure of your personal information, we offer you the following means: Send an email to GDPR@hudsoninternationalmarket.com.",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -713,9 +719,9 @@
           "title": "The use of tracking technologies on our internet portal",
           "text": "We inform you that on our website we use cookies, web beacons or other technologies, through which it is possible to monitor your behavior as an internet user, as well as provide you with a better service and experience when browsing our website.",
           "textTwo": "We will use the personal data that we collect through these technologies for the following purposes: Offer relevant services and products to the user. The personal data that we obtain from these tracking technologies are the following: Identifiers, username and passwords of a session, Language preferred by the user, region in which the user is located. User's browser type, User's operating system type, Date and time of the start and end of a user's session, Web pages visited by a user, Searches performed by a user, Advertising reviewed by a user, Lists and browsing habits consumption on shopping pages.",
-          "textThree": "In relation to the management of your data associated with the social profiles of Emprendomex Marketing, the exercise of the right of access will depend on the functionality of the social network and the possibilities of accessing the information in the user profiles. In relation to the rights of access and rectification, we recommend that they can only be satisfied in relation to information that is under the control of Emprendomex Marketing.",
-          "textFour": "In addition, you may stop interacting, following or receiving information from the social profiles of Emprendomex Marketing, eliminate content that no longer interests you or restrict who you share your connections with, through the mechanisms stipulated in the different social networks.",
-          "textFive": "The user will be able to access the privacy policies of each Social Network, as well as configure their profile to guarantee their privacy. Emprendomex Marketing encourages users to familiarize themselves with the conditions of use of the different social networks before starting to use them.",
+          "textThree": "In relation to the management of your data associated with the social profiles of Hudson International Market, the exercise of the right of access will depend on the functionality of the social network and the possibilities of accessing the information in the user profiles. In relation to the rights of access and rectification, we recommend that they can only be satisfied in relation to information that is under the control of Hudson International Market.",
+          "textFour": "In addition, you may stop interacting, following or receiving information from the social profiles of Hudson International Market, eliminate content that no longer interests you or restrict who you share your connections with, through the mechanisms stipulated in the different social networks.",
+          "textFive": "The user will be able to access the privacy policies of each Social Network, as well as configure their profile to guarantee their privacy. Hudson International Market encourages users to familiarize themselves with the conditions of use of the different social networks before starting to use them.",
           "textSix": "",
           "textSeven": "",
           "bullets": [
@@ -737,7 +743,7 @@
       {
         "section": {
           "title": "How we use the information collected",
-          "text": "emprendomex.com may collect and use Users' personal information for the following purposes:",
+          "text": "hudsoninternationalmarket.com may collect and use Users' personal information for the following purposes:",
           "textTwo": "To improve customer service.",
           "textThree": "The information you provide to us helps us respond to your customer service requests and support needs more efficiently. To personalize the user experience.",
           "textFour": "We may use the information in the aggregate to understand how our Users as a group use the services and resources provided on our Site.",
@@ -837,7 +843,7 @@
       {
         "section": {
           "title": "Changes to this privacy policy",
-          "text": "emprendomex.com has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and to be aware of any modifications.",
+          "text": "hudsoninternationalmarket.com has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and to be aware of any modifications.",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -903,7 +909,7 @@
       {
         "section": {
           "title": "Terms of Service",
-          "text": "These terms of service (Terms, «Agreement») are an agreement between the operator of emprendomex.com («Website Operator», «we», «us» o «our») and you («User», «you» o «your»). This Agreement sets forth the general terms and conditions of your use of the https://emprendomex.com website and any of its products or services (collectively, «Website» o «Services»).",
+          "text": "These terms of service (Terms, «Agreement») are an agreement between the operator of hudsoninternationalmarket.com («Website Operator», «we», «us» o «our») and you («User», «you» o «your»). This Agreement sets forth the general terms and conditions of your use of the https://hudsoninternationalmarket.com website and any of its products or services (collectively, «Website» o «Services»).",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -923,7 +929,7 @@
       {
         "section": {
           "title": "Payment terms",
-          "text": "A valid credit card is required to open an account with emprendomex.com. Service is billed monthly in advance and is non-refundable. There will be no credits or refunds for partial months of service or unused months with an open account.",
+          "text": "A valid credit card is required to open an account with hudsoninternationalmarket.com. Service is billed monthly in advance and is non-refundable. There will be no credits or refunds for partial months of service or unused months with an open account.",
           "textTwo": "If you subscribe to any of the paid portions of the Services, you understand that once you have become a Subscriber, your subscription will automatically renew and your credit card will be charged based on the subscription schedule (e.g., annual, monthly , etc.). ) you have chosen.",
           "textThree": "Payment is due on the defined recurring billing date. Service will be interrupted on accounts with a 10-day expiration date.",
           "textFour": "",
@@ -1131,7 +1137,7 @@
           "text": "Likewise with most blog reviews, we work vice versa by first finding a product or service we really like and then making an evaluation. Therefore only after determining whether we use it or not do we find out if they have an affiliate program.",
           "textTwo": "Finally, we are objective about our evaluations that list the benefits and disadvantages based on our own experiences. So most of the apps, software, programs, and website builders we've reviewed are ones we've used in the past.",
           "textThree": "Likewise, we always share the benefits and disadvantages, so above all we try to be impartial.",
-          "textFour": "In the meantime, if you have any questions regarding the above, please do not hesitate to contact us emprendomex@gmail.com or send us a message on our page",
+          "textFour": "In the meantime, if you have any questions regarding the above, please do not hesitate to contact us hudsoninternationalmarket01@gmail.com or send us a message on our page",
           "textFive": "",
           "textSix": "",
           "textSeven": "",

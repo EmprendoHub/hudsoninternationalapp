@@ -1,13 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { addToCart, deleteFavorite } from "@/redux/shoppingSlice";
+import { deleteFavorite } from "@/redux/shoppingSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineClose } from "react-icons/ai";
-import { Bounce, toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import { IoMdCart } from "react-icons/io";
 import { BiSolidSelectMultiple } from "react-icons/bi";
+import Swal from "sweetalert2";
 
 const FavoritesComp = () => {
   //import CartContext and assign to addItemToCart
@@ -19,14 +18,19 @@ const FavoritesComp = () => {
 
   function handleAddToCart(item) {
     setButtonPressed(true);
-    dispatch(deleteFavorite(item?._id)) &&
-      toast.success(`Selecciona opciones para agregar al carrito`, {
-        position: toast.POSITION.TOP_CENTER,
-        className: "foo-bar",
-        theme: "light",
-        transition: Bounce,
-      }) &&
-      router.push(`/producto/${item.slug}`);
+    dispatch(deleteFavorite(item?._id));
+
+    Swal.fire({
+      icon: "success",
+      iconColor: "#0D121B",
+      background: "#fff5fb",
+      color: "#0D121B",
+      toast: true,
+      text: `Selecciona opciones para agregar al carrito`,
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    router.push(`/producto/${item.slug}`);
   }
 
   return (

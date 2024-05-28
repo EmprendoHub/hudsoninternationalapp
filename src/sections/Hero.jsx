@@ -1,8 +1,8 @@
-'use client';
-import Button from '@/components/buttons/Button';
-import Link from 'next/link';
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import Button from "@/components/buttons/Button";
+import Link from "next/link";
+import React from "react";
+import { motion } from "framer-motion";
 function Hero() {
   return (
     <div className="hero">
@@ -12,7 +12,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.3,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 0.6,
         }}
       >
@@ -24,7 +24,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.3,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 0.75,
         }}
       >
@@ -36,7 +36,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.3,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 1.05,
         }}
       >
@@ -48,7 +48,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.3,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 1.35,
         }}
       >
@@ -65,13 +65,13 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.3,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 1.65,
         }}
       >
         <Button
           text="Check out my course"
-          link="https://youtube.com/emprendomex"
+          link="https://youtube.com/hudsoninternationalmarket"
         />
       </motion.div>
     </div>

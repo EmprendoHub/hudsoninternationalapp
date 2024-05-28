@@ -10,6 +10,7 @@ import ContactSection from "@/components/home/ContactSection";
 import { Suspense } from "react";
 import LoadingHero from "@/components/sliders/LoadingHero";
 import { getDictionary } from "@/lib/dictionary";
+import ImageHero from "@/components/sliders/ImageHero";
 
 export default async function Home({ params }) {
   const lang = params.lang;
@@ -17,6 +18,7 @@ export default async function Home({ params }) {
   return (
     <div className=" overflow-x-hidden">
       <Suspense fallback={<LoadingHero />}>
+        <ImageHero homeDic={homeDic} />
         <HeroSlider homeDic={homeDic} />
         <TopicsFocus lang={lang} />
         <InfiniteLogoSlider homeDic={homeDic} />

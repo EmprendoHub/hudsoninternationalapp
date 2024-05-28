@@ -1,5 +1,5 @@
 "use client";
-import { addAddress } from "@/app/_actions";
+import { addAddress } from "@/app/[lang]/_actions";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 

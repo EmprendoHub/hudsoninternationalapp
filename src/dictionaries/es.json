@@ -3,8 +3,6 @@
     "menu": [
       { "title": "Acerca", "url": "/acerca" },
       { "title": "Blog", "url": "/blog" },
-      { "title": "Portfolio", "url": "/portfolio" },
-      { "title": "Servicios", "url": "/servicios" },
       { "title": "Contacto", "url": "/contacto" }
     ],
     "searchbar": "Buscar"
@@ -65,8 +63,8 @@
     },
     "footerBar": {
       "developBy": "Desarrollada por Emprendomex Marketing",
-      "path": "https://www.emprendomex.com",
-      "company": "Emprendomex Marketing",
+      "path": "https://www.hudsoninternationalmarket.com",
+      "company": "Hudson International Market",
       "addressOne": "119 N La Plaza St,",
       "addressTwo": "",
       "city": "Anaheim",
@@ -84,6 +82,14 @@
     }
   },
   "homeDic": {
+    "imageHero": {
+      "pretitle": "Digital",
+      "title": "Grow Your",
+      "titleTwo": "Business",
+      "text": "Expand the reach and presence of your products or services and reach new markets with a personalized web application tailored to your business and reach new markets with a personalized web application tailored to your business..",
+      "btnText": "Discover More",
+      "btnPath": "/servicios"
+    },
     "sliders": [
       {
         "preTitle": "Digital",
@@ -122,7 +128,7 @@
       "boxOne": {
         "preTitle": "SOMOS EXPERTOS EN TODO LO DIGITAL",
         "title": "Transforma tu experiencia digital con",
-        "titleTwo": "emprendomex",
+        "titleTwo": "hudson international market",
         "subtitle": "Nuestro equipo de expertos esta listo para asistir a optimizar tus conversiones.",
         "text": "Ofrecemos un enfoque estratégico en la creación de embudos de venta que están perfectamente integrados con el desarrollo de tu sitio web. Esto no solo mejora la experiencia del usuario, sino que optimiza las tasas de conversión, convirtiendo a los visitantes en clientes de manera más eficaz y aumentando tus ingresos.",
         "btnText": "Contáctenos",
@@ -380,7 +386,7 @@
   },
   "privacyDic": {
     "title": "Política de Privacidad",
-    "summary": "Emprendomex Marketing recopila, utiliza, mantiene y divulga información recopilada de los usuarios (cada uno, un “Usuario”) del sitio web emprendomex.com (“Sitio”). Esta política de privacidad se aplica al Sitio y a todos los productos y servicios ofrecidos por emprendedoromex.com. Emprendomex Marketing es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:",
+    "summary": "Hudson International Market recopila, utiliza, mantiene y divulga información recopilada de los usuarios (cada uno, un “Usuario”) del sitio web hudsoninternationalmarket.com (“Sitio”). Esta política de privacidad se aplica al Sitio y a todos los productos y servicios ofrecidos por emprendedoromex.com. Hudson International Market es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:",
     "textArray": [
       {
         "section": {
@@ -574,7 +580,7 @@
             },
             { "name": "Suministro de contenidos en el blog", "path": "" }
           ],
-          "textEight": "En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, desde este momento usted nos puede comunicar lo anterior a través del siguiente mecanismo: Envío de correo a GDPR@emprendomex.com. La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros."
+          "textEight": "En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, desde este momento usted nos puede comunicar lo anterior a través del siguiente mecanismo: Envío de correo a GDPR@hudsoninternationalmarket.com. La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros."
         }
       },
       {
@@ -600,13 +606,13 @@
       {
         "section": {
           "title": "Sistemas utilizamos para la captura de estos datos",
-          "text": "1) Formularios de suscripción a contenidos: dentro de la web emprendomex.com existen varios formularios para activar la suscripción gestionada por emprendomex.com con la finalidad de enviar campañas de marketing por correo electrónico, gestión de suscripciones y envío de boletines o noticias.",
+          "text": "1) Formularios de suscripción a contenidos: dentro de la web hudsoninternationalmarket.com existen varios formularios para activar la suscripción gestionada por hudsoninternationalmarket.com con la finalidad de enviar campañas de marketing por correo electrónico, gestión de suscripciones y envío de boletines o noticias.",
           "textTwo": "2) Formulario de comentarios: La web incluye un formulario cuya finalidad es comentar los artículos y dar su opinión respetando la libertad de expresión. El usuario podrá publicar comentarios en las publicaciones. Los datos personales introducidos en el formulario para insertar estos comentarios serán utilizados exclusivamente para modelarlos y publicarlos, recabando igualmente estos datos que se almacenarán en los servidores de High Velocity.",
           "textThree": "3) Formulario de contacto: Existe un formulario de contacto cuya finalidad es la respuesta de consultas, sugerencias o contacto profesional. En este caso se utilizará la dirección de correo electrónico para responder a las mismas y enviar la información que el usuario requiera a través de la web, estos datos se almacenarán en los servidores de High Velocity.",
           "textFour": "4) Cookies: Cuando el usuario se registra o navega en esta web, se almacenan “cookies”, El usuario puede consultar en cualquier momento la política de cookies para ampliar información sobre el uso de cookies y cómo desactivarlas.",
-          "textFive": "5) Venta de productos informáticos: A través de la página web, se pueden adquirir info-productos, en este caso, se requieren datos del comprador (Nombre, apellido, dirección y e-mail) mediante la plataforma de emprendomex.",
-          "textSix": "6) Los usuarios podrán darse de baja en cualquier momento de los servicios prestados por https://emprendomex.com/cancel/newsletter desde la misma Newsletter a través de un formulario de cancelación de Automatizado.",
-          "textSeven": "7) Sistemas de rastreo utilizadas en este sitio: Google (Analytics), en https://emprendomex.com/ también se estudian las preferencias de sus usuarios, sus características demográficas, sus patrones de tráfico, y otra información en conjunto para comprender mejor quiénes constituyen su audiencia y qué es lo que esta necesita. El rastreo de las preferencias de nuestros usuarios también nos ayuda a mostrarle los avisos publicitarios más relevantes.",
+          "textFive": "5) Venta de productos informáticos: A través de la página web, se pueden adquirir info-productos, en este caso, se requieren datos del comprador (Nombre, apellido, dirección y e-mail) mediante la plataforma de hudson international market.",
+          "textSix": "6) Los usuarios podrán darse de baja en cualquier momento de los servicios prestados por https://hudsoninternationalmarket.com/cancel/newsletter desde la misma Newsletter a través de un formulario de cancelación de Automatizado.",
+          "textSeven": "7) Sistemas de rastreo utilizadas en este sitio: Google (Analytics), en https://hudsoninternationalmarket.com/ también se estudian las preferencias de sus usuarios, sus características demográficas, sus patrones de tráfico, y otra información en conjunto para comprender mejor quiénes constituyen su audiencia y qué es lo que esta necesita. El rastreo de las preferencias de nuestros usuarios también nos ayuda a mostrarle los avisos publicitarios más relevantes.",
           "bullets": [
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -614,14 +620,14 @@
             { "name": "", "path": "" },
             { "name": "", "path": "" }
           ],
-          "textEight": "Asimismo, informamos que para la captación de suscriptores y clientes utilizamos Facebook Ads teniendo instalado el correspondiente Pixel de Facebook, por lo que al generar un anuncio, se puede segmentar el público por el lugar, datos demográficos, intereses, etc por lo que los datos obtenidos por esta plataforma, estarían sujetos a esta política de privacidad desde el momento en que el usuario deja sus datos para unirse al boletín de la comunidad de Emprendomex Marketing."
+          "textEight": "Asimismo, informamos que para la captación de suscriptores y clientes utilizamos Facebook Ads teniendo instalado el correspondiente Pixel de Facebook, por lo que al generar un anuncio, se puede segmentar el público por el lugar, datos demográficos, intereses, etc por lo que los datos obtenidos por esta plataforma, estarían sujetos a esta política de privacidad desde el momento en que el usuario deja sus datos para unirse al boletín de la comunidad de Hudson International Market."
         }
       },
       {
         "section": {
           "title": "¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?",
           "text": "Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta rectificación(rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no esté siendo utilizada adecuadamente (cancelación); asÌ como oponerse al uso de sus datos personales para fines específicos (oposición). Estos derechos se conocen como derechos ARCO.",
-          "textTwo": "Para el ejercicio de cualquiera de los derechos ARCO, usted deber· presentar la solicitud respectiva a través del siguiente medio: enviando un correo electrónico a GDPR@emprendomex.com.",
+          "textTwo": "Para el ejercicio de cualquiera de los derechos ARCO, usted deber· presentar la solicitud respectiva a través del siguiente medio: enviando un correo electrónico a GDPR@hudsoninternationalmarket.com.",
           "textThree": "Con relación al procedimiento y requisitos para el ejercicio de sus derechos ARCO, le informamos lo siguiente:",
           "textFour": "",
           "textFive": "",
@@ -629,7 +635,7 @@
           "textSeven": "",
           "bullets": [
             {
-              "name": "a) A través de qué medios pueden acreditar su identidad el titular y, en su caso, su representante, asÌ como la personalidad este ˙ultimo? Enviando un correo electrónico a GDPR@emprendomex.com",
+              "name": "a) A través de qué medios pueden acreditar su identidad el titular y, en su caso, su representante, asÌ como la personalidad este ˙ultimo? Enviando un correo electrónico a GDPR@hudsoninternationalmarket.com",
               "path": ""
             },
             {
@@ -649,13 +655,13 @@
               "path": ""
             }
           ],
-          "textEight": "Los datos de contacto de la persona o departamento de datos personales, que está cargo de dar trámite a las solicitudes de derechos ARCO (GDPR), son los siguientes: Nombre de la persona o departamento de datos personales: Salvador Sandoval Sanchez, Domicilio: Colima 61, colonia Las Brisas, ciudad Sahuayo de Morelos, c.p. 59010, en la entidad de Michoacán, paÌs México, Correo electrónico: GDPR@emprendomex.com, "
+          "textEight": "Los datos de contacto de la persona o departamento de datos personales, que está cargo de dar trámite a las solicitudes de derechos ARCO (GDPR), son los siguientes: Nombre de la persona o departamento de datos personales: Salvador Sandoval Sanchez, Domicilio: Colima 61, colonia Las Brisas, ciudad Sahuayo de Morelos, c.p. 59010, en la entidad de Michoacán, paÌs México, Correo electrónico: GDPR@hudsoninternationalmarket.com, "
         }
       },
       {
         "section": {
           "title": "Usted puede revocar su consentimiento para el uso de sus datos personales.",
-          "text": "Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales. Asimismo, usted debe considerar que para ciertos fines, la revocación de su consentimiento puede implicar que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros. Para revocar su consentimiento debe presentar su solicitud a través del siguiente medio: Envío de correo electrónico a GDPR@emprendomex.com",
+          "text": "Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales. Asimismo, usted debe considerar que para ciertos fines, la revocación de su consentimiento puede implicar que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros. Para revocar su consentimiento debe presentar su solicitud a través del siguiente medio: Envío de correo electrónico a GDPR@hudsoninternationalmarket.com",
           "textTwo": "Con relación al procedimiento y requisitos para la revocación de su consentimiento, le informamos lo siguiente:",
           "textThree": "",
           "textFour": "",
@@ -664,7 +670,7 @@
           "textSeven": "",
           "bullets": [
             {
-              "name": "a) A través de qué medios pueden acreditar su identidad el titular y, en su caso, su representante, asÌ como la personalidad este último? Enviando un correo a GDPR@emprendomex.com",
+              "name": "a) A través de qué medios pueden acreditar su identidad el titular y, en su caso, su representante, asÌ como la personalidad este último? Enviando un correo a GDPR@hudsoninternationalmarket.com",
               "path": ""
             },
             {
@@ -680,7 +686,7 @@
               "path": ""
             },
             {
-              "name": "e) Para mayor información sobre el procedimiento, ponemos a disposición los siguientes medios: https://emprendomex.com",
+              "name": "e) Para mayor información sobre el procedimiento, ponemos a disposición los siguientes medios: https://hudsoninternationalmarket.com",
               "path": ""
             }
           ],
@@ -690,7 +696,7 @@
       {
         "section": {
           "title": "¿Cómo puede limitar el uso o divulgación de su información personal?",
-          "text": "Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos los siguientes medios: Enviar un correo a GDPR@emprendomex.com.",
+          "text": "Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos los siguientes medios: Enviar un correo a GDPR@hudsoninternationalmarket.com.",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -712,9 +718,9 @@
           "title": "El uso de tecnologías de rastreo en nuestro portal de internet",
           "text": "Le informamos que en nuestra página de internet utilizamos cookies, web beacons u otras tecnologías, a través de las cuales es posible monitorear su comportamiento como usuario de internet, asÌ como brindarle un mejor servicio y experiencia al navegar en nuestra página.",
           "textTwo": "Los datos personales que recabamos a través de estas tecnologías, los utilizaremos para los siguientes fines: Ofrecer servicios y productos relevantes para el usuario. Los datos personales que obtenemos de estas tecnologías de rastreo son los siguientes: Identificadores, nombre de usuario y contraseñas de una sesión, Idioma preferido por el usuario, región en la que se encuentra el usuario. Tipo de navegador del usuario, Tipo de sistema operativo del usuario, Fecha y hora del inicio y final de una sesión de un usuario, Páginas web visitadas por un usuario, Búsquedas realizadas por un usuario, Publicidad revisada por un usuario, Listas y hábitos de consumo en páginas de compras.",
-          "textThree": "En relación con la gestión de tus datos asociados a los perfiles sociales de Emprendomex Marketing, el ejercicio del derecho de acceso, dependerá de la funcionalidad de la red social y las posibilidades de acceso a la información de los perfiles de los usuarios. Con relación a los derechos de acceso y rectificación, le recomendamos que sólo podrá satisfacerse en relación a aquella información que se encuentre bajo el control de Emprendomex Marketing.",
-          "textFour": "Además podrá dejar de interactuar, seguir o recibir información de los perfiles sociales de Emprendomex Marketing, eliminar los contenidos que dejen de interesarle o restringir con quién comparte sus conexiones, mediante los mecanismos estipulados en las diferentes redes sociales.",
-          "textFive": "El usuario podrá acceder a las políticas de privacidad de cada Red Social, así como configurar su perfil para garantizar su privacidad. Emprendomex Marketing anima a los usuarios a familiarizarse con las condiciones de uso de las distintas redes sociales antes de comenzar a usarlas.",
+          "textThree": "En relación con la gestión de tus datos asociados a los perfiles sociales de Hudson International Market, el ejercicio del derecho de acceso, dependerá de la funcionalidad de la red social y las posibilidades de acceso a la información de los perfiles de los usuarios. Con relación a los derechos de acceso y rectificación, le recomendamos que sólo podrá satisfacerse en relación a aquella información que se encuentre bajo el control de Hudson International Market.",
+          "textFour": "Además podrá dejar de interactuar, seguir o recibir información de los perfiles sociales de Hudson International Market, eliminar los contenidos que dejen de interesarle o restringir con quién comparte sus conexiones, mediante los mecanismos estipulados en las diferentes redes sociales.",
+          "textFive": "El usuario podrá acceder a las políticas de privacidad de cada Red Social, así como configurar su perfil para garantizar su privacidad. Hudson International Market anima a los usuarios a familiarizarse con las condiciones de uso de las distintas redes sociales antes de comenzar a usarlas.",
           "textSix": "",
           "textSeven": "",
           "bullets": [
@@ -736,7 +742,7 @@
       {
         "section": {
           "title": "Cómo utilizamos la información recopilada",
-          "text": "emprendomex.com puede recopilar y utilizar la información personal de los Usuarios para los siguientes fines:",
+          "text": "hudsoninternationalmarket.com puede recopilar y utilizar la información personal de los Usuarios para los siguientes fines:",
           "textTwo": "Para mejorar el servicio al cliente.",
           "textThree": "La información que nos proporciona nos ayuda a responder a sus solicitudes de servicio al cliente y las necesidades de soporte de manera más eficiente. Para personalizar la experiencia del usuario.",
           "textFour": "Podemos usar la información en conjunto para comprender cómo nuestros Usuarios como grupo utilizan los servicios y recursos provistos en nuestro Sitio.",
@@ -836,7 +842,7 @@
       {
         "section": {
           "title": "Cambios a esta política de privacidad",
-          "text": "emprendomex.com tiene la facultad de actualizar esta política de privacidad en cualquier momento. Cuando lo hagamos, revisaremos la fecha actualizada al final de esta página. Alentamos a los Usuarios a que visiten con frecuencia esta página para ver si hay cambios para mantenerse informados sobre cómo estamos ayudando a proteger la información personal que recopilamos. Usted reconoce y acepta que es su responsabilidad revisar esta política de privacidad periódicamente y conocer las modificaciones.",
+          "text": "hudsoninternationalmarket.com tiene la facultad de actualizar esta política de privacidad en cualquier momento. Cuando lo hagamos, revisaremos la fecha actualizada al final de esta página. Alentamos a los Usuarios a que visiten con frecuencia esta página para ver si hay cambios para mantenerse informados sobre cómo estamos ayudando a proteger la información personal que recopilamos. Usted reconoce y acepta que es su responsabilidad revisar esta política de privacidad periódicamente y conocer las modificaciones.",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -902,7 +908,7 @@
       {
         "section": {
           "title": "Términos de servicio",
-          "text": "Estos términos de servicio («Términos», «Acuerdo») son un acuerdo entre el operador de emprendomex.com («Operador del sitio web», «nosotros», «nosotros» o «nuestro») y usted («Usuario», «usted » o tu»). Este Acuerdo establece los términos y condiciones generales de su uso del sitio web https://emprendomex.com y cualquiera de sus productos o servicios (colectivamente, «Sitio web» o «Servicios»).",
+          "text": "Estos términos de servicio («Términos», «Acuerdo») son un acuerdo entre el operador de hudsoninternationalmarket.com («Operador del sitio web», «nosotros», «nosotros» o «nuestro») y usted («Usuario», «usted » o tu»). Este Acuerdo establece los términos y condiciones generales de su uso del sitio web https://hudsoninternationalmarket.com y cualquiera de sus productos o servicios (colectivamente, «Sitio web» o «Servicios»).",
           "textTwo": "",
           "textThree": "",
           "textFour": "",
@@ -922,7 +928,7 @@
       {
         "section": {
           "title": "Términos de pago",
-          "text": "Se requiere una tarjeta de crédito válida para abrir una cuenta con emprendomex.com. El servicio se factura mensualmente por adelantado y no es reembolsable. No habrá créditos ni reembolsos por meses parciales de servicio o meses sin usar con una cuenta abierta.",
+          "text": "Se requiere una tarjeta de crédito válida para abrir una cuenta con hudsoninternationalmarket.com. El servicio se factura mensualmente por adelantado y no es reembolsable. No habrá créditos ni reembolsos por meses parciales de servicio o meses sin usar con una cuenta abierta.",
           "textTwo": "Si se suscribe a cualquiera de las partes pagadas de los Servicios, comprende que una vez que se haya convertido en un Suscriptor, su suscripción se renovará automáticamente y su tarjeta de crédito se cobrará en función del programa de suscripción (por ejemplo, anual, mensual, etc.). ) has elegido.",
           "textThree": "El pago vence en la fecha de facturación recurrente definida. El servicio se interrumpirá en las cuentas con vencimiento de 10 días.",
           "textFour": "",
@@ -1110,7 +1116,7 @@
           "text": "New subscriptions have a 5-day money back guarantee.",
           "textTwo": "Además nuestro objetivo de este sitio web es ayudarte a estar más informado y a ahorrar tiempo al brindar información útil sobre nuestras experiencias de nuestro propio negocio en línea con creadores de sitios web, aplicaciones y herramientas para servicios de marketing.",
           "textThree": "Por lo tanto no hay necesidad de que tú repitas nuestros errores y pases días o semanas probando todos los métodos, herramientas, y técnicas de marketing que existen. En cambio puedes leer nuestras revisiones, artículos, y videos o tomar algunos de nuestros cursos en línea y tomar un atajo al éxito.",
-          "textFour": "Mientras tanto las comisiones que recibimos nos ayudarán a crear más información útil, revisiones, consejos y tutoriales para continuar ayudándote a ti y tu negocio. Como resultado te ganarás nuestra gratitud y apreciación infinita !+2,000 puntos de karma!. Si quieres saber mas acerca de mas acerca de emprendomex.com ",
+          "textFour": "Mientras tanto las comisiones que recibimos nos ayudarán a crear más información útil, revisiones, consejos y tutoriales para continuar ayudándote a ti y tu negocio. Como resultado te ganarás nuestra gratitud y apreciación infinita !+2,000 puntos de karma!. Si quieres saber mas acerca de mas acerca de hudsoninternationalmarket.com ",
           "textFive": "",
           "textSix": "",
           "textSeven": "",
@@ -1130,7 +1136,7 @@
           "text": "Asimismo con la mayoría de las reseñas de blogs, trabajamos viceversa primero encontramos un producto o servicio que realmente nos gusta y luego hacemos una evaluación. Por lo tanto solo después de determinar si lo usamos o no averiguamos si tienen un programa de afiliados.",
           "textTwo": "Finalmente somos objetivos en cuanto a nuestras evaluaciones que enumeran los beneficios y desventajas en función a nuestras propias experiencias. Así que la mayoría de las aplicaciones, software, programas y creadores de sitios web que hemos evaluado son los que hemos utilizado en el pasado.",
           "textThree": "Asimismo siempre compartimos los beneficios y desventajas, por lo que sobre todo tratamos de ser imparciales.",
-          "textFour": "Mientras tanto si tienes alguna pregunta con respecto a lo anterior, no dudes en ponerte en contacto con nosotros emprendomex@gmail.com o mandanos un mensajes en nuestra página de",
+          "textFour": "Mientras tanto si tienes alguna pregunta con respecto a lo anterior, no dudes en ponerte en contacto con nosotros hudsoninternationalmarket01@gmail.com o mandanos un mensajes en nuestra página de",
           "textFive": "",
           "textSix": "",
           "textSeven": "",

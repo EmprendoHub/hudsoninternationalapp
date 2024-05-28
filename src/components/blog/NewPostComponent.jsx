@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useDropzone } from "react-dropzone";
 import { FaWindowClose, FaArrowUp } from "react-icons/fa";
 import { cstDateTimeClient } from "@/backend/helpers";
-//import { addPost } from '@/app/_actions';
+//import { addPost } from '@/app/[lang]/_actions';
 import { useRouter } from "next/navigation";
 
 const NewPostComponent = () => {

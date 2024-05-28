@@ -1,10 +1,9 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import AuthContext from "@/context/AuthContext";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { updateClientPassword } from "@/app/_actions";
+import { updateClientPassword } from "@/app/[lang]/_actions";
 import { cstDateTimeClient } from "@/backend/helpers";
+import Swal from "sweetalert2";
 
 const UpdatePassword = () => {
   const { user } = useContext(AuthContext);
@@ -14,35 +13,34 @@ const UpdatePassword = () => {
   const [updatedAt, setUpdatedAt] = useState(cstDateTimeClient());
   const [validationError, setValidationError] = useState(null);
 
-  const handlePhoneChange = (e) => {
-    const inputPhone = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
-    let formattedPhone = "";
-
-    if (inputPhone.length <= 10) {
-      formattedPhone = inputPhone.replace(
-        /(\d{3})(\d{0,3})(\d{0,4})/,
-        "$1 $2 $3"
-      );
-    } else {
-      // If the phone number exceeds 10 digits, truncate it
-      formattedPhone = inputPhone
-        .slice(0, 10)
-        .replace(/(\d{3})(\d{0,3})(\d{0,4})/, "$1 $2 $3");
-    }
-
-    setPhone(formattedPhone);
-  };
-
   const submitHandler = async (e) => {
     setLoading(true);
     e.preventDefault();
 
     if (currentPassword === "") {
-      toast.error("Por favor tu contraseña actual.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor tu contraseña actual.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     if (newPassword === "") {
-      toast.error("Por favor una contraseña nueva.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor una contraseña nueva.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
@@ -59,7 +57,16 @@ const UpdatePassword = () => {
     } else {
       setValidationError(null);
       setLoading(null);
-      toast.success("La contraseña se actualizo exitosamente");
+      Swal.fire({
+        icon: "success",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `La contraseña se actualizo exitosamente`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
   };
 

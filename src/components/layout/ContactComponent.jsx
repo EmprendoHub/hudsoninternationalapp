@@ -123,7 +123,9 @@ const ContactComponent = ({ contactDic }) => {
               <p className="text-[12px] uppercase font-secondary text-gray-500">
                 {contactDic.contactInfo.questions}
               </p>
-              <p className="text-base font-primary ">emprendomex@gmail.com</p>
+              <p className="text-base font-primary ">
+                hudsoninternationalmarket@gmail.com
+              </p>
             </div>
           </div>
           {/* Email */}

@@ -1,5 +1,5 @@
 "use client";
-import { updateAddress, viewOneAddress } from "@/app/_actions";
+import { updateAddress, viewOneAddress } from "@/app/[lang]/_actions";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { countries } from "countries-list";

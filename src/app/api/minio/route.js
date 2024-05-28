@@ -39,7 +39,7 @@ export async function POST(request, res) {
 
         await writeFile(path, buffer);
         const fileName = "/posts/" + String(file.name);
-        await uploadToBucket("emprendomex", fileName, path);
+        await uploadToBucket("hudsoninternational", fileName, path);
         const imageUrl = { url: `${process.env.MINIO_URL}${fileName}` };
         savedImagesResults.push(imageUrl);
       }
@@ -77,7 +77,7 @@ export async function PUT(request, res) {
     const url = await new Promise((resolve, reject) => {
       const filename = folder + name;
       mc.presignedPutObject(
-        "emprendomex", // bucket name
+        "hudsoninternational", // bucket name
         filename,
         900, // 15 min expiry
         function (err, url) {

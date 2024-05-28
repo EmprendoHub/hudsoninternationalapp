@@ -2,14 +2,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import AuthContext from "@/context/AuthContext";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { updateClient } from "@/app/_actions";
+import { updateClient } from "@/app/[lang]/_actions";
 import {
   cstDateTimeClient,
   isValidEmail,
   isValidPhone,
 } from "@/backend/helpers";
+import Swal from "sweetalert2";
 
 const UpdateProfileWithFormData = () => {
   const { user } = useContext(AuthContext);
@@ -60,29 +59,70 @@ const UpdateProfileWithFormData = () => {
     e.preventDefault();
 
     if (name === "") {
-      toast.error("Por favor complete el nombre de usuario para registrarse.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor complete el nombre de usuario para registrarse.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (email === "") {
-      toast.error("Por favor agregue su correo electrónico para registrarse.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor agregue su correo electrónico para registrarse.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (!isValidEmail(email)) {
-      toast.error("Utilice un correo electrónico válido.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Utilice un correo electrónico válido.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     if (phone === "") {
-      toast.error(
-        "Por favor agregar un teléfono válido para continuar. El formato correcto es: 331 235 4455"
-      );
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor agregar un teléfono válido para continuar. El formato correcto es: 331 235 4455`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     if (!isValidPhone(phone)) {
-      toast.error(
-        "Por favor agregar un teléfono válido para continuar. El formato correcto es: 331 235 4455"
-      );
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor agregar un teléfono válido para continuar. El formato correcto es: 331 235 4455`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
@@ -101,7 +141,16 @@ const UpdateProfileWithFormData = () => {
     } else {
       setValidationError(null);
       setLoading(null);
-      toast.success("El perfil se actualizo exitosamente");
+      Swal.fire({
+        icon: "success",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `El perfil se actualizo exitosamente`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
   };
 

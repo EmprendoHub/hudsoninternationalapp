@@ -1,16 +1,15 @@
-'use client';
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AiOutlineClose } from 'react-icons/ai';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+"use client";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineClose } from "react-icons/ai";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import {
   decreaseQuantity,
   deleteProduct,
   increaseQuantity,
-} from '@/redux/shoppingSlice';
-import { toast } from 'react-toastify';
-import FormattedPrice from '@/backend/helpers/FormattedPrice';
-import Image from 'next/image';
+} from "@/redux/shoppingSlice";
+import FormattedPrice from "@/backend/helpers/FormattedPrice";
+import Image from "next/image";
 
 const CartItem = () => {
   const { productsData } = useSelector((state) => state?.compras);

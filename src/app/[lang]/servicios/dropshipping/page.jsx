@@ -3,21 +3,21 @@ import React from "react";
 import { getDictionary } from "@/lib/dictionary";
 
 export const metadata = {
-  title: "Emprendomex Marketing Ecommerce Dropshipping API",
+  title: "Hudson International Market",
   description:
-    "Expertos en desarrollo de aplicaciones y sitios web con funciones avanzadas, Marketing digital y embudos de venta",
+    "We are a trading company with more than 20 years in the market, specialized in the exchange of spices, condiments and other food ingredients.",
   openGraph: {
-    title: "Ecommerce Dropshipping API",
+    title: "Wholesale Import and Export",
     description:
-      "Desarrollo en React y Next Js de comercio electrónico con API para revendedores",
+      "We are a trading company with more than 20 years in the market, specialized in the exchange of spices, condiments and other food ingredients.",
     image: "url/opengraph-image.png",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@emprendomex",
-    title: "Ecommerce Dropshipping API",
+    site: "@hudson-international-market",
+    title: "Wholesale Import and Export",
     description:
-      "Desarrollo en React y Next Js de comercio electrónico con API para revendedores",
+      "We are a trading company with more than 20 years in the market, specialized in the exchange of spices, condiments and other food ingredients.",
     image: "url/opengraph-image.png",
   },
 };

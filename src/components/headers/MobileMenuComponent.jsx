@@ -141,7 +141,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
                 <motion.a
                   whileHover={{ scale: 1.3 }}
                   whileTap={{ scale: 0.9 }}
-                  href="https://www.instagram.com/emprendomex/"
+                  href="https://www.instagram.com/hudsoninternationalmarket/"
                   target="_blank"
                 >
                   <span className="socialLink">
@@ -151,7 +151,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
                 <motion.a
                   whileHover={{ scale: 1.3 }}
                   whileTap={{ scale: 0.9 }}
-                  href="https://www.facebook.com/emprendomex/"
+                  href="https://www.facebook.com/hudsoninternationalmarket/"
                   target="_blank"
                 >
                   <span className="socialLink">

@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
-import { toast } from "react-toastify";
 import { IoLogoGoogle } from "react-icons/io";
 import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 import { useSelector } from "react-redux";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import Swal from "sweetalert2";
 
 const LoginComponent = ({ cookie }) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -30,12 +30,30 @@ const LoginComponent = ({ cookie }) => {
     e.preventDefault();
 
     if (password === "" || email === "") {
-      toast.error("Fill all fields!");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Fill all fields!`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (password.length < 8) {
-      toast.error("Password must be at least 8 characters long");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Password must be at least 8 characters long`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     if (!executeRecaptcha) {
@@ -62,18 +80,45 @@ const LoginComponent = ({ cookie }) => {
         }
 
         if (res.status === 400) {
-          toast.warning("This email is already in use");
+          Swal.fire({
+            icon: "warning",
+            iconColor: "#0D121B",
+            background: "#fff5fb",
+            color: "#0D121B",
+            toast: true,
+            text: `This email is already in use`,
+            showConfirmButton: false,
+            timer: 2000,
+          });
           setError("This email is already in use");
         }
         if (res.ok) {
-          toast.success("Iniciar ");
+          Swal.fire({
+            icon: "success",
+            iconColor: "#0D121B",
+            background: "#fff5fb",
+            color: "#0D121B",
+            toast: true,
+            text: `Iniciar`,
+            showConfirmButton: false,
+            timer: 2000,
+          });
           setTimeout(() => {
             router.push("/tienda");
           }, 200);
           return;
         }
       } catch (error) {
-        toast.error("Error occured while loggin");
+        Swal.fire({
+          icon: "warning",
+          iconColor: "#0D121B",
+          background: "#fff5fb",
+          color: "#0D121B",
+          toast: true,
+          text: `Error occurred during login`,
+          showConfirmButton: false,
+          timer: 2000,
+        });
         console.log(error);
       }
     });

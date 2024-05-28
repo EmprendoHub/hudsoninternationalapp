@@ -1,10 +1,10 @@
-'use client';
-import { increaseLoginAttempts } from '@/redux/shoppingSlice';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { CiWarning } from 'react-icons/ci';
-import { useDispatch, useSelector } from 'react-redux';
-import { toast, Bounce } from 'react-toastify';
+"use client";
+import { increaseLoginAttempts } from "@/redux/shoppingSlice";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { CiWarning } from "react-icons/ci";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 const ErrorComponent = ({
   ifEmailNotVerified,
@@ -17,6 +17,21 @@ const ErrorComponent = ({
   const router = useRouter();
   const dispatch = useDispatch();
 
+  function onNewLogin() {
+    Swal.fire({
+      icon: "success",
+      iconColor: "#0D121B",
+      background: "#fff5fb",
+      color: "#0D121B",
+      toast: true,
+      text: `${loginAttempts + 1}... de 5 intentes remanentes`,
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    dispatch(increaseLoginAttempts({ count: 1 }));
+    router.push("/iniciar");
+  }
+
   return (
     <main className="flex min-h-screen maxsm:min-h-[70vh] flex-col items-center justify-center ">
       <div className="h-screen flex flex-col items-center justify-center">
@@ -25,7 +40,7 @@ const ErrorComponent = ({
           <div>
             <div>Por favor verifica tu email</div>
             <div className="mt-3">
-              <Link href={'/exito'} className="bg-black text-white p-3">
+              <Link href={"/exito"} className="bg-black text-white p-3">
                 Reenviar Correo de Verificación.
               </Link>
             </div>
@@ -40,19 +55,7 @@ const ErrorComponent = ({
             </p>
             <div className="mt-3">
               <button
-                onClick={() =>
-                  toast.success(
-                    `${loginAttempts + 1}... de 5 intentes remanentes`,
-                    {
-                      position: toast.POSITION.TOP_CENTER,
-                      className: 'foo-bar',
-                      theme: 'dark',
-                      transition: Bounce,
-                    }
-                  ) &&
-                  dispatch(increaseLoginAttempts({ count: 1 })) &&
-                  router.push('/iniciar')
-                }
+                onClick={() => onNewLogin()}
                 className="bg-black text-white p-3"
               >
                 Inicio de Session
@@ -81,7 +84,7 @@ const ErrorComponent = ({
             <p>Por seguridad bloqueamos tu cuenta</p>
             <p>Para desbloquear tu cuenta por favor verifica tu email.</p>
             <div className="mt-3">
-              <Link href={'/reiniciar'} className="bg-black text-white p-3">
+              <Link href={"/reiniciar"} className="bg-black text-white p-3">
                 Reactivar Cuenta
               </Link>
             </div>

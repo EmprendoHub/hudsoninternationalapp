@@ -5,7 +5,7 @@ import { getAllPost } from "../_actions";
 import { getDictionary } from "@/lib/dictionary";
 
 export const metadata = {
-  title: "Blog Emprendomex Marketing",
+  title: "Blog Hudson International Market",
   description: "Expertos en Desarrollo web y marketing integral.",
 };
 

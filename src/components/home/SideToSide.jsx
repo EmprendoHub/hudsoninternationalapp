@@ -12,7 +12,9 @@ const SideToSide = () => {
             <div className="w-2/5 maxmd:w-full p-6">
               <h2 className="text-3xl text-gray-800 dark:text-gray-300 font-primary leading-none mb-3">
                 <span>Transforma tu experiencia digital con </span>
-                <span className="text-secondary">emprendomex</span>
+                <span className="text-secondary">
+                  Hudson International Market
+                </span>
               </h2>
               <p className="font-secondary italic text-sm font-semibold mb-1">
                 Nuestro equipo de expertos esta listo para asistir.

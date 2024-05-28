@@ -5,6 +5,25 @@ export const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
+export const handlePhoneChange = (e) => {
+  const inputPhone = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+  let formattedPhone = "";
+
+  if (inputPhone.length <= 10) {
+    formattedPhone = inputPhone.replace(
+      /(\d{3})(\d{0,3})(\d{0,4})/,
+      "$1 $2 $3"
+    );
+  } else {
+    // If the phone number exceeds 10 digits, truncate it
+    formattedPhone = inputPhone
+      .slice(0, 10)
+      .replace(/(\d{3})(\d{0,3})(\d{0,4})/, "$1 $2 $3");
+  }
+
+  setPhone(formattedPhone);
+};
+
 export function removeUndefinedAndPageKeys(obj) {
   // Iterate through each key in the object
   for (const key in obj) {

@@ -2,7 +2,7 @@ import OneOrder from "@/components/user/profile/OneOrder";
 import React from "react";
 import { getServerSession } from "next-auth";
 import { options } from "@/app/api/auth/[...nextauth]/options";
-import { getOneOrder } from "@/app/_actions";
+import { getOneOrder } from "@/app/[lang]/_actions";
 
 const UserOneOrderPage = async ({ params }) => {
   const session = await getServerSession(options);

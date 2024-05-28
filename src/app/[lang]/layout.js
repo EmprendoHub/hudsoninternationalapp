@@ -13,20 +13,20 @@ import AdminThemeToggle from "@/components/layout/AdminThemeToggle";
 
 export const metadata = {
   manifest: "/manifest.json",
-  metadataBase: new URL("https://www.emprendomex.xyz"),
-  title: "Emprendomex Marketing",
+  metadataBase: new URL("https://www.hudsoninternationalmarket.com"),
+  title: "Hudson International Market",
   description:
     "Expertos en desarrollo de aplicaciones y sitios web con funciones avanzadas, Marketing digital y embudos de venta",
   openGraph: {
-    title: "Emprendomex Marketing",
+    title: "Hudson International Market",
     description:
       "Desarrollo de aplicaciones y sitios web con funciones avanzadas. Marketing digital y embudos de venta",
     image: "url/opengraph-image.png",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@emprendomex",
-    title: "Emprendomex Marketing",
+    site: "@hudsoninternationalmarket",
+    title: "Hudson International Market",
     description:
       "Expertos en desarrollo de aplicaciones y sitios web con funciones avanzadas, Marketing digital y embudos de venta",
     image: "url/opengraph-image.png",

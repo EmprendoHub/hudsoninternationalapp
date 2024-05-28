@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
-import { toast } from "react-toastify";
 import { IoLogoGoogle } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { isValidEmail, isValidPhone } from "@/backend/helpers";
+import Swal from "sweetalert2";
 
 const RegisterComponent = ({ cookie }) => {
   const [notification, setNotification] = useState("");
@@ -31,27 +31,72 @@ const RegisterComponent = ({ cookie }) => {
     e.preventDefault();
 
     if (username === "") {
-      toast.error("Por favor complete el nombre de usuario para registrarse.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor complete el nombre de usuario para registrarse.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (email === "") {
-      toast.error("Por favor agregue su correo electrónico para registrarse.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Por favor agregue su correo electrónico para registrarse.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (!isValidEmail(email)) {
-      toast.error("Utilice un correo electrónico válido.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Utilice un correo electrónico válido.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (!isValidPhone(phone)) {
-      toast.error("Utilice un teléfono válido.");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `Utilice un teléfono válido.`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
     if (!password || password.length < 8) {
-      toast.error("La contraseña debe tener al menos 8 caracteres");
+      Swal.fire({
+        icon: "warning",
+        iconColor: "#0D121B",
+        background: "#fff5fb",
+        color: "#0D121B",
+        toast: true,
+        text: `La contraseña debe tener al menos 8 caracteres`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
 
@@ -88,13 +133,19 @@ const RegisterComponent = ({ cookie }) => {
         }
 
         if (res.status === 400) {
-          toast.warning(
-            "Este correo electrónico y/o el teléfono ya esta en uso"
-          );
           setError("Este correo electrónico y/o el teléfono ya esta en uso");
         }
         if (res.ok) {
-          toast.success("Se registró exitosamente al usuario");
+          Swal.fire({
+            icon: "warning",
+            iconColor: "#0D121B",
+            background: "#fff5fb",
+            color: "#0D121B",
+            toast: true,
+            text: `Se registró exitosamente al usuario`,
+            showConfirmButton: false,
+            timer: 2000,
+          });
           signIn();
           return;
         }

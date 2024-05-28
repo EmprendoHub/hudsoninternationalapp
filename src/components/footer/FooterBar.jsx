@@ -42,7 +42,7 @@ const FooterBar = ({ localeFooter, lang }) => {
         />
       </div>
       {/* <Link
-        aria-label="emprendomex"
+        aria-label="hudsoninternationalmarket"
         target="_blank"
         href={localeFooter.footerBar.path}
         className="text-popPrimary hover:text-popSecondary hover:scale-105 ease-in-out duration-300"
