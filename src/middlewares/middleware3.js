@@ -34,8 +34,12 @@ export function trackingMiddleware(middleware) {
         const source = url.href;
         const country = request.geo?.country || "";
         let startTime = performance.now();
+        console.log(
+          "URL:",
+          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`
+        );
         const response = await fetch(
-          `${process.env.NEXTAUTH_URL}/api/analytics`,
+          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`,
           {
             method: "POST",
             headers: {
