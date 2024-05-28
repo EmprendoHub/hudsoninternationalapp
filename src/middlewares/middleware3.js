@@ -1,10 +1,5 @@
+//import { addAnalytics } from "@/app/[lang]/_actions";
 import { NextResponse, userAgent } from "next/server";
-
-// Helper function to log time spent
-const logTimeSpent = (label, startTime) => {
-  const endTime = performance.now();
-  console.log(`${label}: ${endTime - startTime} ms`);
-};
 
 export function trackingMiddleware(middleware) {
   return async (request, event) => {
@@ -32,43 +27,21 @@ export function trackingMiddleware(middleware) {
         const browserName = browser.name;
         const source = url.href;
         const country = request.geo?.country || "";
-        let startTime = performance.now();
-        console.log(
-          "URL:",
-          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`
-        );
-
-        // Adding detailed logging before and after the fetch call
-        console.log("Starting fetch POST to analytics API...");
-        const fetchStartTime = performance.now();
-
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/analytics`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              event: "visit",
-              source,
-              country,
-              ip,
-              viewport,
-              browserName,
-              device: deviceData,
-            }),
-          }
-        );
-
-        const fetchEndTime = performance.now();
-        console.log(
-          `Fetch POST completed in: ${fetchEndTime - fetchStartTime} ms`
-        );
-        console.log(`Response status: ${response.status}`);
-        console.log(`Response ok: ${response.ok}`);
-
-        logTimeSpent("Route Call", startTime);
+        const response = fetch(`${process.env.NEXTAUTH_URL}/api/analytics`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            event: "visit",
+            source,
+            country,
+            ip,
+            viewport,
+            browserName,
+            device: deviceData,
+          }),
+        });
       }
     } catch (error) {
       // Handle or log the error
