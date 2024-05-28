@@ -34,7 +34,6 @@ export function trackingMiddleware(middleware) {
         const source = url.href;
         const country = request.geo?.country || "";
         let startTime = performance.now();
-        console.log(`${process.env.NEXTAUTH_URL}/api/analytics`);
         const response = await fetch(
           `${process.env.NEXTAUTH_URL}/api/analytics`,
           {

@@ -3,6 +3,12 @@ import Visitor from "@/backend/models/Visitor";
 import dbConnect from "@/lib/db";
 import { NextResponse } from "next/server";
 
+// Helper function to log time spent
+const logTimeSpent = (label, startTime) => {
+  const endTime = performance.now();
+  console.log(`${label}: ${endTime - startTime} ms`);
+};
+
 export const POST = async (request) => {
   const { event, source, country, ip, viewport, browserName, device } =
     await request.json();
@@ -25,6 +31,7 @@ export const POST = async (request) => {
     today.setUTCHours(0, 0, 0, 0);
 
     // Efficiently find or create Analytic document
+    let startTime = performance.now();
     let dayAnalytics = await Analytic.findOneAndUpdate(
       { createdAt: today, "source.page": source },
       {
@@ -45,7 +52,7 @@ export const POST = async (request) => {
         }
       });
     }
-    await dayAnalytics.save();
+    dayAnalytics.save();
 
     // Efficiently find or create Visitor document
     let visitor = await Visitor.findOneAndUpdate(
@@ -95,8 +102,8 @@ export const POST = async (request) => {
     }
 
     visitor.updatedAt = new Date();
-    await visitor.save();
-
+    visitor.save();
+    logTimeSpent("Set Analytics:", startTime);
     const response = NextResponse.json({
       message: "Tracked successfully",
       success: true,
