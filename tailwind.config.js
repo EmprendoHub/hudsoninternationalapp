@@ -9,11 +9,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#1984e1",
+        primary: "#0D121B",
         secondary: "#4EA4B2",
         accent: "#F0AA44",
         accentTwo: "#F15733",
-        dark: "#0D121B",
+        dark: "#1984e1",
         light: "#fad0c6",
       },
       fontFamily: {
@@ -22,11 +22,11 @@ module.exports = {
       },
 
       colors: {
-        primary: "#1984e1",
+        primary: "#0D121B",
         secondary: "#4EA4B2",
         accent: "#F0AA44",
         accentTwo: "#F15733",
-        dark: "#0D121B",
+        dark: "#1984e1",
         light: "#fad0c6",
       },
       backgroundImage: {
@@ -40,6 +40,9 @@ module.exports = {
           "linear-gradient(to bottom right, #e1e6ed 0%, #f0f1f2 100%)",
       },
       screens: {
+        max2xl: {
+          max: "1600px",
+        },
         maxxlg: {
           max: "1400px",
         },

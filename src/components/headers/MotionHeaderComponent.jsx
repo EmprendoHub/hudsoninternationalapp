@@ -57,7 +57,7 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
           variants={{ hidden: { y: 0 }, visible: { y: "-110%" } }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className={`print:hidden flex flex-row items-center justify-between  header-class  from bg-white dark:bg-dark dark:text-white text-black text-xl sticky top-0 z-[50]  w-full mx-auto py-3  border-b shadow-lg pl-4 h-[80px]`}
+          className={`print:hidden flex flex-row items-center justify-between  header-class  text-white  text-xl absolute top-0 z-[50]  w-full mx-auto py-3  border-b shadow-lg pl-4 h-[80px]`}
         >
           <DarkLightLogo lang={lang} />
           <motion.div
@@ -86,7 +86,7 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
           variants={{ hidden: { y: 0 }, visible: { y: "-110%" } }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className={`print:hidden flex flex-row items-center justify-between  header-class  from bg-white dark:bg-dark dark:text-white text-black text-xl sticky top-0 z-[50]  w-full mx-auto py-3  border-b shadow-lg pl-4 h-[80px]`}
+          className={`print:hidden flex flex-row items-center justify-between  header-class text-white  text-xl absolute top-0 z-[50]  w-full mx-auto py-3 pl-4 h-[80px]`}
         >
           <DarkLightLogo lang={lang} />
           <motion.div
@@ -94,7 +94,7 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
             initial="initial"
             animate="open"
             exit="initial"
-            className="flex w-8/12 flex-row items-center justify-between font-lato tracking-widest gap-x-3 maxlg:hidden "
+            className="flex w-8/12 flex-row items-center justify-between font-lato tracking-widest gap-x-3 hidden "
           >
             {localeHeader.menu?.map((link, index) => {
               return (
@@ -113,7 +113,7 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
           </motion.div>
 
           <MobileMenuComponent
-            className={"minlg:hidden"}
+            className={""}
             lang={lang}
             localeHeader={localeHeader}
           />

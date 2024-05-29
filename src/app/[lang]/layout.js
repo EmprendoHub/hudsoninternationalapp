@@ -46,7 +46,7 @@ export default async function RootLayout({ children, params }) {
       <GoogleTagManager gtmId="GTM-NZ8VMWZ" />
       <GoogleAnalytics gaId="G-GW5V9YLG5X" />
       <body
-        className={`body-class relative overflow-x-hidden h-full dark:bg-dark dark:text-white`}
+        className={`body-class relative overflow-x-hidden h-full dark:bg-dark bg-white dark:text-white`}
       >
         <CustomSessionProvider>
           <HeaderComponent lang={lang} />

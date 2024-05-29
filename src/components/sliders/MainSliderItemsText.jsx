@@ -7,14 +7,6 @@ const MainSliderItemsText = ({ item, index }) => {
     <div className="relative w-full h-full pr-10 maxmd:pr-0 overflow-x-hidden">
       {/* Text Column */}
       <div className="w-full h-full relative grid grid-cols-1 items-start ">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="uppercase text-xs text-gray-600 tracking-widest"
-        >
-          {item.preTitle}
-        </motion.p>
         <h2 className="font-primary text-7xl maxlg:text-5xl maxmd:text-4xl flex flex-wrap items-center gap-x-3">
           <motion.span
             initial={{ y: -50, x: -50, opacity: 0 }}
@@ -27,7 +19,7 @@ const MainSliderItemsText = ({ item, index }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-primary"
+            className="text-dark dark:text-primary"
           >
             {item.titleTwo}
           </motion.span>

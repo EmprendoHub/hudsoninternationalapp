@@ -144,6 +144,15 @@
         "imgUrl": "/images/pexels-photo-3183197.jpeg"
       }
     },
+    "singlesides": {
+      "boxOne": {
+        "title": "Transforma tu experiencia digital con",
+        "titleTwo": "hudson international market",
+        "text": "Ofrecemos un enfoque estratégico en la creación de embudos de venta que están perfectamente integrados con el desarrollo de tu sitio web.",
+        "btnText": "Contáctenos",
+        "imgUrl": "/images/h1-img2.jpg"
+      }
+    },
     "teamTalk": {
       "title": "Platica con nuestro equipo",
       "btnText": "Contáctenos",

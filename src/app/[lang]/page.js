@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import LoadingHero from "@/components/sliders/LoadingHero";
 import { getDictionary } from "@/lib/dictionary";
 import ImageHero from "@/components/sliders/ImageHero";
+import SingleSideToSide from "@/components/home/SingleSideToSide";
 
 export default async function Home({ params }) {
   const lang = params.lang;
@@ -19,13 +20,13 @@ export default async function Home({ params }) {
     <div className=" overflow-x-hidden">
       <Suspense fallback={<LoadingHero />}>
         <ImageHero homeDic={homeDic} />
+        <SingleSideToSide homeDic={homeDic} />
         <HeroSlider homeDic={homeDic} />
         <TopicsFocus lang={lang} />
-        <InfiniteLogoSlider homeDic={homeDic} />
         <SideToSide homeDic={homeDic} />
         <TalkToTeam homeDic={homeDic} />
         <SideToSideText homeDic={homeDic} />
-        <MiniPortfolio homeDic={homeDic} />
+        {/* <MiniPortfolio homeDic={homeDic} /> */}
         {/* <WhyUs /> */}
         <TestimonialSlider homeDic={homeDic} />
         <ContactSection params={params} />

@@ -4,9 +4,10 @@ import Image from "next/image";
 
 const ImageHero = ({ homeDic }) => {
   return (
-    <div className="portfolio-body">
+    <div className="bg-dark dark:bg-primary">
       <div className="w-full h-[800px] overflow-hidden top-0 relative flex justify-center items-center flex-col ">
-        <div className="absolute bg-dark bg-opacity-40 w-full h-full z-0" />
+        {/* overlay */}
+        <div className="absolute bg-black bg-opacity-10 dark:bg-opacity-20 w-full h-full z-0" />
         <Image
           src={coverImage}
           width={1920}
@@ -16,12 +17,16 @@ const ImageHero = ({ homeDic }) => {
           alt="portfolio image"
           className="object-cover h-full w-full"
         />
-        <div className="absolute top-20 right-20 z-10 text-white text-5xl maxsm:text-3xl  font-primary w-[50%] maxsm:w-[80%] ">
+        <div className="absolute top-20 right-20 maxlg:right-5 z-10 text-white text-5xl maxsm:text-3xl  font-primary w-[50%] maxsm:w-[80%] ">
           <h2 className="text-7xl  font-primary leading-none mb-3">
-            <span>{homeDic.imageHero.title} </span>
-            <span className="text-primary">{homeDic.imageHero.titleTwo}</span>
+            <span className="text-primary dark:text-white">
+              {homeDic.imageHero.title}{" "}
+            </span>
+            <span className="text-white dark:text-dark">
+              {homeDic.imageHero.titleTwo}
+            </span>
           </h2>
-          <p className="font-secondary text-lg font-medium mb-1">
+          <p className="font-secondary text-lg font-medium mb-1 text-gray-800 dark:text-white">
             {homeDic.imageHero.pretitle}
           </p>
           <p className="font-secondary text-sm mb-1">

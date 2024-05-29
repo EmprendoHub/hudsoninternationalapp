@@ -124,6 +124,15 @@
       "titleTwo": "Cutting-Edge Technology",
       "subtitle": "We leverage the experience of our expert programmers and designers to develop advanced solutions and tools to help propel your business to the next level."
     },
+    "singlesides": {
+      "boxOne": {
+        "title": "Transform your digital experience with",
+        "titleTwo": "Hudson International Market",
+        "text": "We offer a strategic approach in creating sales funnels that are seamlessly integrated with your website development.",
+        "btnText": "Contact Us",
+        "imgUrl": "/images/h1-img2.jpg"
+      }
+    },
     "doublesides": {
       "boxOne": {
         "preTitle": "WE ARE EXPERTS IN EVERYTHING DIGITAL",

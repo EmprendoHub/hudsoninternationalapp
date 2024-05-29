@@ -2,7 +2,6 @@
 .imageSlider {
   overflow: hidden;
   position: relative;
-  width: 100%; // Ensure the slider fills its container
 }
 
 .slide {
@@ -39,14 +38,8 @@
 .arrowLeft,
 .arrowRight {
   position: absolute;
-  bottom: -20px;
   cursor: pointer;
   z-index: 10; // Ensure arrows are above slides
-  right: 40px;
-}
-
-.arrowLeft {
-  right: 90px; // Adjust the position if necessary
 }
 
 // Social Media Circle

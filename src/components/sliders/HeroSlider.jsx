@@ -4,8 +4,6 @@ import styles from "./HeroSliderPush.module.scss";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import MainSliderItems from "./MainSliderItems";
 import MainSliderItemsText from "./MainSliderItemsText";
-import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa6";
-import Link from "next/link";
 import Head from "next/head";
 
 const HeroSlider = ({ homeDic }) => {
@@ -36,11 +34,13 @@ const HeroSlider = ({ homeDic }) => {
         <link rel="preload" as="image" href={homeDic.sliders[index].imgPath} />
       </Head>
       <div
-        className="relative h-[420px] maxmd:h-full grid grid-cols-2 maxmd:grid-cols-1 w-full px-10 maxmd:px-5 maxsm:pl-2 pt-20 maxsm:pt-10"
+        className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 pb-20 maxsm:pt-10 bg-white dark:bg-primary"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className={`maxmd:h-[250px] ${styles.textSlider}`}>
+        <div
+          className={`relative  h-[420px]  maxmd:h-[250px] w-1/3 maxmd:w-full ${styles.textSlider}`}
+        >
           {homeDic.sliders.map((item, idx) => (
             <div
               key={item.title}
@@ -52,9 +52,9 @@ const HeroSlider = ({ homeDic }) => {
             </div>
           ))}
         </div>
-        <div className="relative flex maxmd:h-[200px]">
+        <div className="relative flex h-[620px] max2xl:h-[500px] maxxlg:h-[400px]  maxsm:h-[300px] w-2/3 maxmd:w-full">
           {/* Right Images */}
-          <div className={`${styles.imageSlider} `}>
+          <div className={`${styles.imageSlider} w-full`}>
             {homeDic.sliders.map((item, idx) => (
               <div
                 key={idx}
@@ -66,98 +66,11 @@ const HeroSlider = ({ homeDic }) => {
               </div>
             ))}
           </div>
-          {/* Social media */}
-          <div className="relative flex flex-col items-start justify-start -right-3 maxmd:right-0 maxmd:-top-2 w-[40px]">
-            {/* Facebook */}
-            <Link
-              aria-label="Facebook"
-              href={"/"}
-              className="relative flex items-center justify-center group"
-            >
-              <svg className={`${styles.circle}`}>
-                <g>
-                  <ellipse
-                    className={`${styles.background}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                  <ellipse
-                    className={`${styles.foreground}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                </g>
-              </svg>
-              <FaFacebookF className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
-            </Link>
-            {/* YouTube */}
-            <Link
-              aria-label="YouTube"
-              href={"/"}
-              className="relative flex items-center justify-center group"
-            >
-              <svg className={`${styles.circle}`}>
-                <g>
-                  <ellipse
-                    className={`${styles.background}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                  <ellipse
-                    className={`${styles.foreground}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                </g>
-              </svg>
-              <FaYoutube className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
-            </Link>
-            {/* TikTok */}
-            <Link
-              aria-label="TikTok"
-              href={"/"}
-              className="relative flex items-center justify-center group"
-            >
-              <svg className={`${styles.circle}`}>
-                <g>
-                  <ellipse
-                    className={`${styles.background}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                  <ellipse
-                    className={`${styles.foreground}`}
-                    ry="20"
-                    rx="20"
-                    cy="30"
-                    cx="30"
-                    strokeWidth="2"
-                  />
-                </g>
-              </svg>
-              <FaTiktok className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
-            </Link>
-          </div>
         </div>
 
         <button
           aria-label="leftArrow"
-          className={styles.arrowLeft}
+          className={`${styles.arrowLeft} right-[220px] bottom-[80px] maxxlg:right-[130px]`}
           onClick={() =>
             setIndex(
               (index - 1 + homeDic.sliders.length) % homeDic.sliders.length
@@ -170,7 +83,7 @@ const HeroSlider = ({ homeDic }) => {
         </button>
         <button
           aria-label="rightArrow"
-          className={styles.arrowRight}
+          className={`${styles.arrowRight} right-[170px] bottom-[80px] maxxlg:right-[80px]`}
           onClick={() => setIndex((index + 1) % homeDic.sliders.length)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
