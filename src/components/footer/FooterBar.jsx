@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const FooterBar = ({ localeFooter, lang }) => {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center text-gray-500 pb-4 px-20 maxmd:px-5 text-[12px] text-center bg-dark dark:bg-gray-950 ">
+    <div className="relative w-full flex flex-col items-center justify-center text-white pb-4 px-20 maxmd:px-5 text-[12px] text-center bg-primary ">
       {/* <DarkLightLogo lang={lang} /> */}
       <p className="mt-3">
         {localeFooter.footerBar.copyright.pretitle} &copy;{" "}

@@ -9,9 +9,9 @@ const AdminProductSearch = () => {
     e.preventDefault();
 
     if (keyword) {
-      router.push(`/admin/servicios/?keyword=${keyword}`);
+      router.push(`/admin/productos/?keyword=${keyword}`);
     } else {
-      router.push("/admin/servicios");
+      router.push("/admin/productos");
     }
   };
   return (

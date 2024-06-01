@@ -10,10 +10,15 @@ const ProductDetailsPage = async ({ params }) => {
   const currentCookies = `${cookieName}=${nextAuthSessionToken?.value}`;
 
   const data = await getOneProduct(params.slug, false);
+  const lang = params.lang;
   const product = JSON.parse(data.product);
 
   return (
-    <EditVariationProduct product={product} currentCookies={currentCookies} />
+    <EditVariationProduct
+      product={product}
+      currentCookies={currentCookies}
+      lang={lang}
+    />
   );
 };
 

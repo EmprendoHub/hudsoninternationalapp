@@ -375,7 +375,7 @@ export const AuthProvider = ({ children }) => {
         },
       });
       if (data) {
-        router.refresh("/admin/servicios");
+        router.refresh("/admin/productos");
       }
     } catch (error) {
       setError(error?.response?.data?.message);

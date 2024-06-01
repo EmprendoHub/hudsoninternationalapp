@@ -6,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 const ThreeDFlipBoxComp = ({ data, className, classNameBack }) => {
   const IconComponent = FaIcons[data.icon];
   return (
-    <div className="flip-card m-4 maxsm:mx-0 maxsm:my-2 ">
+    <div className="flip-card m-4 maxlg:mx-2 maxmd:mx-1 maxsm:my-2 ">
       <div className="flip-card-front  w-[240px] maxlg:w-[200px] maxsm:w-[340px] min-h-[340px] ">
         <div className="inner p-5 maxmd:p-3 flex flex-col justify-center items-center  text-white">
           {IconComponent && <IconComponent className="text-4xl " />}

@@ -130,7 +130,7 @@ export function SideBarItem({ icon, text, active, alert, url, dropdownItems }) {
       className={`relative flex flex-col items-center justify-center h-8 my-2 mx-1 font-medium rounded-md cursor-pointer gap-x-1 transition-colors group ${
         active === "true"
           ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-secondary"
-          : "hover:text-secondary text-gray-500"
+          : "hover:text-secondary dark:text-gray-200 text-gray-600"
       } ${expandSidebar ? " pl-2" : "w-8"}`}
       onClick={handleDropdownToggle}
     >

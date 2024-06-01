@@ -105,12 +105,12 @@ export const SIDENAV_ITEMS = [
   },
   {
     title: "servicios",
-    path: "/admin/servicios",
+    path: "/admin/productos",
     icon: <FaFolder width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      { title: "Todos", path: "/admin/servicios" },
-      { title: "Nuevo", path: "/admin/servicios/nuevo/variaciones" },
+      { title: "Todos", path: "/admin/productos" },
+      { title: "Nuevo", path: "/admin/productos/nuevo/variaciones" },
     ],
   },
   {

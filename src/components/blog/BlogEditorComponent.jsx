@@ -162,7 +162,7 @@ const BlogEditorComponent = ({ lang, translate }) => {
       method: "PUT",
       headers: {
         Name: file.name,
-        Folder: "posts/",
+        Folder: "/posts/",
       },
     })
       .then((response) => {

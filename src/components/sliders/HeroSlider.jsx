@@ -34,7 +34,7 @@ const HeroSlider = ({ homeDic }) => {
         <link rel="preload" as="image" href={homeDic.sliders[index].imgPath} />
       </Head>
       <div
-        className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 pb-20 maxsm:pt-10 bg-white dark:bg-primary"
+        className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 py-20 maxsm:pt-10 bg-white dark:bg-primary overflow-hidden"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -52,9 +52,9 @@ const HeroSlider = ({ homeDic }) => {
             </div>
           ))}
         </div>
-        <div className="relative flex h-[620px] max2xl:h-[500px] maxxlg:h-[400px]  maxsm:h-[300px] w-2/3 maxmd:w-full">
+        <div className="relative flex h-[720px] max2xl:h-[500px] maxxlg:h-[400px]  maxsm:h-[300px] w-2/3 maxmd:w-full">
           {/* Right Images */}
-          <div className={`${styles.imageSlider} w-full`}>
+          <div className={`${styles.imageSlider} w-full h-full`}>
             {homeDic.sliders.map((item, idx) => (
               <div
                 key={idx}

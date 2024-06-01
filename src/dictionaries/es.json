@@ -98,7 +98,7 @@
         "text": "Amplía el alcance y la presencia de tus productos o servicios y llegue a nuevos mercados con una aplicación web personalizada y adaptada a su negocio.",
         "btnText": "Descubrir más",
         "btnPath": "/servicios",
-        "imgPath": "/images/branding_para_marca.webp"
+        "imgPath": "/images/dried-red-chili_seco.webp"
       },
       {
         "preTitle": "Digital",
@@ -107,7 +107,7 @@
         "text": "Aprovecha herramientas de última generación como IA, CRM y SMS Marketing, aprovechando el poder del análisis de datos y el marketing digital.",
         "btnText": "Descubrir más",
         "btnPath": "/servicios",
-        "imgPath": "/images/como_desarrollar_una_marca.webp"
+        "imgPath": "/images/delicious-nuts-concept.webp"
       },
       {
         "preTitle": "Digital",
@@ -116,7 +116,7 @@
         "text": "Te ayudamos a crear sistemas que le faciliten la formulación de relaciones duraderas y lucrativas.",
         "btnText": "Descubrir más",
         "btnPath": "/servicios",
-        "imgPath": "/images/ocupo_un_sitio_web.webp"
+        "imgPath": "/images/metal-bucket-salted-popcorn.webp"
       }
     ],
     "infiniteSlider": {
@@ -347,6 +347,20 @@
         "text": "Desde técnicas en la página hasta ajustes en el backend, nuestras prácticas SEO aseguran que tu sitio gane alta visibilidad y atraiga más tráfico orgánico, convirtiendo búsquedas en valiosos compromisos de clientes.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
+      },
+      {
+        "icon": "/icons/p12-icon-img-2.png",
+        "title": "Escalabilidad inteligente",
+        "text": "A medida que tu negocio crece, también deberían hacerlo tus soluciones digitales. Nuestras aplicaciones web están construidas para escalar sin esfuerzo con tus necesidades, asegurando que siempre estés listo para expandirte sin restricciones tecnológicas.",
+        "btnText": "Cotizar",
+        "btnUrl": "/es/cotizar"
+      },
+      {
+        "icon": "/icons/h5-icon-img-1.png",
+        "title": "Optimización SEO",
+        "text": "Desde técnicas en la página hasta ajustes en el backend, nuestras prácticas SEO aseguran que tu sitio gane alta visibilidad y atraiga más tráfico orgánico, convirtiendo búsquedas en valiosos compromisos de clientes.",
+        "btnText": "Cotizar",
+        "btnUrl": "/es/cotizar"
       }
     ]
   },
@@ -365,8 +379,8 @@
       "orders": "Pedidos",
       "posts": "Publicaciones",
       "newPost": "Nueva Publicación",
-      "services": "Servicios",
-      "newService": "Nuevo Servicio",
+      "products": "Productos",
+      "newService": "Nuevo Producto",
       "clients": "Clientes",
       "affiliates": "Afiliados"
     },

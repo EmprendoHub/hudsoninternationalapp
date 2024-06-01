@@ -19,9 +19,9 @@ const SearchProducts = ({ search }) => {
     }
 
     if (!query) {
-      router.push(`/admin/servicios`);
+      router.push(`/admin/productos`);
     } else {
-      router.push(`/admin/servicios?keyword=${query}`);
+      router.push(`/admin/productos?keyword=${query}`);
     }
   }, [query]);
 
@@ -35,7 +35,7 @@ const SearchProducts = ({ search }) => {
       </div>
       <input
         value={text}
-        placeholder="Buscar servicios..."
+        placeholder="Buscar productos..."
         onChange={(e) => setText(e.target.value)}
         className="block w-full rounded-md border-0 py-1.5 pl-10 maxsm:pl-1 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
       />

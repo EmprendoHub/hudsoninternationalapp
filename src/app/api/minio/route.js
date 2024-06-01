@@ -27,7 +27,7 @@ export async function POST(request, res) {
   if (token && token.user.role === "manager") {
     try {
       const images = await request.formData();
-
+      const folder = await request.headers.get("folder");
       // set image urls
       const savedPostMinioBucketImages = [];
       const savedImagesResults = [];
@@ -38,7 +38,7 @@ export async function POST(request, res) {
         const path = join("/", "tmp", file.name);
 
         await writeFile(path, buffer);
-        const fileName = "/posts/" + String(file.name);
+        const fileName = folder + String(file.name);
         await uploadToBucket("hudsoninternational", fileName, path);
         const imageUrl = { url: `${process.env.MINIO_URL}${fileName}` };
         savedImagesResults.push(imageUrl);

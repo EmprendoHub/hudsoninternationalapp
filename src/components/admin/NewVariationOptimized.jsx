@@ -393,7 +393,7 @@ const NewVariationOptimized = ({ currentCookies }) => {
       //reset the form
       setIsSending(true);
       await updateRevalidateProduct();
-      router.push("/admin/servicios");
+      router.push("/admin/productos");
     }
   }
   const handleCategoryChange = async (e) => {

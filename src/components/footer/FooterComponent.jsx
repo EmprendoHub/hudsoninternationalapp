@@ -6,7 +6,7 @@ import FooterBar from "./FooterBar";
 const FooterComponent = async ({ lang, session }) => {
   const { footer } = await getDictionary(lang);
   return (
-    <div className="relative w-full mx-auto px-20  bg-dark dark:bg-gray-950 text-white maxmd:px-5 pt-24 mt-20">
+    <div className="relative w-full mx-auto px-20 bg-primary text-white maxmd:px-5 pt-24 mt-20">
       {/* Call to action */}
       {session?.user.role !== "manager" && (
         <>

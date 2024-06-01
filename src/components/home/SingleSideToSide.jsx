@@ -1,11 +1,14 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import { GiCheckMark } from "react-icons/gi";
 import FlipBoxesComp from "./FlipBoxesComp";
+import Link from "next/link";
 
 const SingleSideToSide = ({ homeDic }) => {
   return (
-    <div className="w-full pt-10 maxmd:pt-0 dark:bg-dark bg-white px-40 maxxlg:px-20 maxmd:px-5 ">
+    <div className="w-full pt-10 maxmd:pt-0 dark:bg-primary bg-white px-40 maxxlg:px-20 maxlg:px-5 maxmd:px-3 ">
       {/* underhero */}
 
       <section className=" py-8">
@@ -13,25 +16,43 @@ const SingleSideToSide = ({ homeDic }) => {
           <div className="flex maxmd:flex-wrap items-center justify-center">
             {/* Text */}
             <div className="w-1/3 maxmd:w-full p-6 maxmd:px-0">
-              <h2 className="text-3xl  font-primary leading-none mb-3">
+              <motion.h2
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+                className="text-3xl font-primary leading-none mb-3"
+              >
                 <span className="dark:text-white text-dark">
                   {homeDic.singlesides.boxOne.title}{" "}
                 </span>
-                <span className="text-primary">
+                <span className="text-primary dark:text-dark">
                   {homeDic.singlesides.boxOne.titleTwo}
                 </span>
-              </h2>
+              </motion.h2>
               <div className="text-gray-800 dark:text-gray-300 font-secondary text-sm mb-3  maxmd:text-sm flex flex-col gap-3">
-                <p className=" text-primary flex items-center gap-2">
+                <motion.p
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.9 }}
+                  className=" text-primary dark:text-white flex items-center gap-2"
+                >
                   {homeDic.singlesides.boxOne.text}
-                </p>
+                </motion.p>
               </div>
-              <button
-                aria-label="Contactar"
-                className="bg-primary px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
-              >
-                {homeDic.singlesides.boxOne.btnText}
-              </button>
+
+              <Link href={homeDic.sideText.btnUrl} aria-label="Contactar">
+                <motion.button
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 1.0,
+                  }}
+                  aria-label="Contactar"
+                  className="bg-primary dark:bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
+                >
+                  {homeDic.singlesides.boxOne.btnText}
+                </motion.button>
+              </Link>
             </div>
             {/* Image */}
             <div className="relative w-2/3 maxmd:w-full">

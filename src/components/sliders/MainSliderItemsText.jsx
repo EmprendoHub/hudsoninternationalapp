@@ -19,7 +19,7 @@ const MainSliderItemsText = ({ item, index }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-dark dark:text-primary"
+            className="text-dark"
           >
             {item.titleTwo}
           </motion.span>

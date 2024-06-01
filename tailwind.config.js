@@ -13,7 +13,7 @@ module.exports = {
         secondary: "#4EA4B2",
         accent: "#F0AA44",
         accentTwo: "#F15733",
-        dark: "#1984e1",
+        dark: "#2e7cbf",
         light: "#fad0c6",
       },
       fontFamily: {
@@ -26,12 +26,12 @@ module.exports = {
         secondary: "#4EA4B2",
         accent: "#F0AA44",
         accentTwo: "#F15733",
-        dark: "#1984e1",
+        dark: "#2e7cbf",
         light: "#fad0c6",
       },
       backgroundImage: {
         "main-gradient":
-          "linear-gradient(to bottom right, #1984b1 0%,  #4EA4B2 100%)",
+          "linear-gradient(to bottom right, #1984b1 0%,  #2e7cbf 100%)",
         "secondary-gradient":
           "linear-gradient(to bottom right, #be185d 0%,  #d97706 100%)",
         "dark-gradient":

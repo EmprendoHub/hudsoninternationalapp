@@ -10,6 +10,7 @@ import LocaleToggleStyled from "@/components/buttons/LocaleToggleStyled";
 import { options } from "../api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
 import AdminThemeToggle from "@/components/layout/AdminThemeToggle";
+import BackToTopButton from "@/components/buttons/BackToTopButton";
 
 export const metadata = {
   manifest: "/manifest.json",
@@ -53,7 +54,7 @@ export default async function RootLayout({ children, params }) {
 
           {children}
           <FooterComponent session={session} lang={lang} />
-          {/* <BackToTopButton /> */}
+          <BackToTopButton />
           {!isLoggedIn && <WhatsAppButton lang={lang} />}
           {isLoggedIn && session?.user.role === "manager" && (
             <div className="fixed z-50 right-0 top-1/2">

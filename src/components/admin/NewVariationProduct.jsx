@@ -307,7 +307,7 @@ const NewVariationProduct = () => {
       setValidationError(null);
       //reset the form
       formRef.current.reset();
-      router.push("/admin/servicios");
+      router.push("/admin/productos");
     }
   }
   const handleCategoryChange = async (e) => {

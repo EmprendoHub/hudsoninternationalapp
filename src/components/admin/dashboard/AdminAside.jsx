@@ -40,15 +40,15 @@ const AdminAside = ({ lang, admin }) => {
       />
       <SideBarItem
         icon={<AiFillProfile size={20} />}
-        text={admin?.sidebar?.services}
-        active={pathname === `/${lang}/admin/servicios`}
-        url={`/${lang}/admin/servicios`}
+        text={admin?.sidebar?.products}
+        active={pathname === `/${lang}/admin/productos`}
+        url={`/${lang}/admin/productos`}
       />
       <SideBarItem
         icon={<TbLayoutGridAdd size={20} />}
         text={admin?.sidebar?.newService}
-        active={pathname === `/${lang}/admin/servicios/nuevo`}
-        url={`/${lang}/admin/servicios`}
+        active={pathname === `/${lang}/admin/productos/nuevo`}
+        url={`/${lang}/admin/productos/nuevo`}
       />
       <SideBarItem
         icon={<PiUserListLight size={20} />}

@@ -12,24 +12,28 @@ import LoadingHero from "@/components/sliders/LoadingHero";
 import { getDictionary } from "@/lib/dictionary";
 import ImageHero from "@/components/sliders/ImageHero";
 import SingleSideToSide from "@/components/home/SingleSideToSide";
+import ServiceComp from "@/components/services/ServiceComp";
+import IconGridComp from "@/components/home/IconGridComp";
+import CategoriesComp from "@/components/home/CategoriesComp";
 
 export default async function Home({ params }) {
   const lang = params.lang;
-  const { homeDic } = await getDictionary(lang);
+  const { homeDic, servicesDic } = await getDictionary(lang);
   return (
     <div className=" overflow-x-hidden">
       <Suspense fallback={<LoadingHero />}>
         <ImageHero homeDic={homeDic} />
         <SingleSideToSide homeDic={homeDic} />
         <HeroSlider homeDic={homeDic} />
-        <TopicsFocus lang={lang} />
+        <IconGridComp servicesDic={servicesDic} />
         <SideToSide homeDic={homeDic} />
-        <TalkToTeam homeDic={homeDic} />
+        <CategoriesComp homeDic={homeDic} />
+        {/* <TalkToTeam homeDic={homeDic} /> */}
         <SideToSideText homeDic={homeDic} />
         {/* <MiniPortfolio homeDic={homeDic} /> */}
         {/* <WhyUs /> */}
-        <TestimonialSlider homeDic={homeDic} />
-        <ContactSection params={params} />
+        {/* <TestimonialSlider homeDic={homeDic} /> */}
+        {/* <ContactSection params={params} /> */}
         {/* <HeroComp /> */}
         {/* <FlipBoxesComp /> */}
         {/* <PricingTable /> */}

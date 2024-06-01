@@ -4,11 +4,12 @@ import AdminProducts from "@/components/admin/AdminProducts";
 import { getAllProduct } from "@/app/[lang]/_actions";
 import { removeUndefinedAndPageKeys } from "@/backend/helpers";
 
-const AdminProductsPage = async ({ searchParams }) => {
+const AdminProductsPage = async ({ searchParams, params }) => {
   const urlParams = {
     keyword: searchParams.keyword,
     page: searchParams.page,
   };
+  const lang = params.lang;
   const filteredUrlParams = Object.fromEntries(
     Object.entries(urlParams).filter(([key, value]) => value !== undefined)
   );
@@ -43,6 +44,7 @@ const AdminProductsPage = async ({ searchParams }) => {
   return (
     <>
       <AdminProducts
+        lang={lang}
         products={products}
         search={search}
         filteredProductsCount={itemCount}

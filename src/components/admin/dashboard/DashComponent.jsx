@@ -321,7 +321,7 @@ const DashComponent = ({ data, lang }) => {
               <h1 className="font-primary text-xs">Servicios Recientes</h1>
               <Link
                 className=" font-secondary text-[12px]"
-                href={`/${lang}/admin/servicios`}
+                href={`/${lang}/admin/productos`}
               >
                 Ver Todos
               </Link>
@@ -355,11 +355,11 @@ const DashComponent = ({ data, lang }) => {
                       </td>
                       <td>
                         <p className="line-clamp-2 capitalize">
-                          {product.title.substring(0, 12)}...
+                          {product.title[`${lang}`].substring(0, 12)}...
                         </p>
                       </td>
                       <td>
-                        <Link href={`/admin/servicios/editar/${product.slug}`}>
+                        <Link href={`/admin/productos/editar/${product.slug}`}>
                           <IoArrowRedoSharp className=" text-indigo-500 " />
                         </Link>
                       </td>

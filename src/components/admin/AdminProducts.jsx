@@ -1,23 +1,17 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaPencilAlt,
-  FaStar,
-  FaInstagramSquare,
-  FaExclamationCircle,
-} from "react-icons/fa";
+import { FaPencilAlt, FaStar, FaExclamationCircle } from "react-icons/fa";
 import FormattedPrice from "@/backend/helpers/FormattedPrice";
 import Swal from "sweetalert2";
-import SearchProducts from "@/app/[lang]/admin/servicios/search";
+import SearchProducts from "@/app/[lang]/admin/productos/search";
 import {
   changeProductAvailability,
   deleteOneProduct,
 } from "@/app/[lang]/_actions";
-import { FaShop } from "react-icons/fa6";
 import { TbWorldWww } from "react-icons/tb";
 
-const AdminProducts = ({ products, filteredProductsCount, search }) => {
+const AdminProducts = ({ products, filteredProductsCount, search, lang }) => {
   const deleteHandler = (product_id) => {
     Swal.fire({
       title: "¿Estas seguro(a) que quieres eliminar a este producto?",
@@ -87,98 +81,13 @@ const AdminProducts = ({ products, filteredProductsCount, search }) => {
     });
   };
 
-  const deactivateBranchHandler = (product_id, active) => {
-    const location = "Branch";
-    let title;
-    let text;
-    let confirmBtn;
-    let successTitle;
-    let successText;
-    let icon;
-    let confirmBtnColor;
-    if (active === true) {
-      icon = "warning";
-      title = "Estas seguro(a)?";
-      text =
-        "¡Estas a punto de desactivar a este producto de la sucursal física y quedara sin acceso!";
-      confirmBtn = "¡Sí, desactivar producto!";
-      confirmBtnColor = "#CE7E00";
-      successTitle = "Desactivar!";
-      successText = "El producto ha sido desactivado.";
-    } else {
-      icon = "success";
-      title = "Estas seguro(a)?";
-      text = "¡Estas a punto de Activar a este producto a la sucursal física!";
-      confirmBtn = "¡Sí, Activar producto!";
-      confirmBtnColor = "#228B22";
-      successTitle = "Reactivado!";
-      successText = "El producto ha sido Activado.";
-    }
-    Swal.fire({
-      title: title,
-      text: text,
-      icon: icon,
-      showCancelButton: true,
-      confirmButtonColor: confirmBtnColor,
-      cancelButtonColor: "#000",
-      confirmButtonText: confirmBtn,
-      cancelButtonText: "No, cancelar!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        changeProductAvailability(product_id, location);
-      }
-    });
-  };
-
-  const deactivateInstagramHandler = (product_id, active) => {
-    const location = "Instagram";
-    let title;
-    let text;
-    let confirmBtn;
-    let successTitle;
-    let successText;
-    let icon;
-    let confirmBtnColor;
-    if (active === true) {
-      icon = "warning";
-      title = "Estas seguro(a)?";
-      text = "¡Estas a punto de desactivar a este producto en Instagram!";
-      confirmBtn = "¡Sí, desactivar producto!";
-      confirmBtnColor = "#CE7E00";
-      successTitle = "Desactivar!";
-      successText = "El producto ha sido desactivado en Instagram.";
-    } else {
-      icon = "success";
-      title = "Estas seguro(a)?";
-      text = "¡Estas a punto de Activar a este producto en Instagram!";
-      confirmBtn = "¡Sí, Activar producto en Instagram!";
-      confirmBtnColor = "#228B22";
-      successTitle = "Reactivado!";
-      successText = "El producto ha sido Activado en Instagram.";
-    }
-    Swal.fire({
-      title: title,
-      text: text,
-      imageUrl: "/images/instagram_logo_small.webp",
-      showCancelButton: true,
-      confirmButtonColor: confirmBtnColor,
-      cancelButtonColor: "#000",
-      confirmButtonText: confirmBtn,
-      cancelButtonText: "No, cancelar!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        changeProductAvailability(product_id, location);
-      }
-    });
-  };
-
   return (
     <>
       <hr className="my-4 maxsm:my-1" />
       <div className="relative min-h-full shadow-md sm:rounded-lg">
         <div className=" flex flex-row  maxsm:items-start items-center justify-between">
           <h1 className="text-3xl maxsm:text-base mb-2 maxsm:mb-1 ml-4 maxsm:ml-0 font-bold font-primary w-1/2">
-            {`${filteredProductsCount} Servicios `}
+            {`${filteredProductsCount} Productos `}
           </h1>
           <SearchProducts search={search} />
         </div>
@@ -190,6 +99,12 @@ const AdminProducts = ({ products, filteredProductsCount, search }) => {
                 className="w-full px-6 maxsm:px-0 py-3 maxsm:hidden"
               >
                 Titulo
+              </th>
+              <th
+                scope="col"
+                className="w-full px-6 maxsm:px-0 py-3 maxsm:hidden"
+              >
+                Categoria
               </th>
               <th scope="col" className="w-full px-6 maxsm:px-0 py-3 ">
                 Img
@@ -220,12 +135,18 @@ const AdminProducts = ({ products, filteredProductsCount, search }) => {
                 <td
                   className={`w-full px-6 maxsm:px-0 py-0 font-bold maxsm:hidden`}
                 >
-                  {product?.title}
+                  {product?.title.es}
                 </td>
-
+                <td
+                  className={`w-full px-6 maxsm:px-0 py-0 font-bold maxsm:hidden`}
+                >
+                  {product?.category.es}
+                </td>
                 <td className="w-full px-6 maxsm:px-0 py-0 relative ">
                   <span className="relative flex items-center justify-center text-black w-20 h-20 maxsm:w-8 maxsm:h-8 shadow mt-2">
-                    <Link href={`/admin/servicios/ver/${product?.slug}`}>
+                    <Link
+                      href={`/${lang}/admin/productos/ver/${product?.slug}`}
+                    >
                       <Image
                         src={product?.images[0]?.url}
                         alt="Title"
@@ -245,14 +166,14 @@ const AdminProducts = ({ products, filteredProductsCount, search }) => {
                 </td>
                 <td className="w-full px-6 maxsm:px-0 py-0 ">
                   <b>
-                    <FormattedPrice amount={product?.variations[0]?.price} />
+                    <FormattedPrice amount={product?.price} />
                   </b>
                 </td>
 
                 <td className="w-full px-1 py-0 ">{product?.stock}</td>
                 <td className="w-full px-1 py-0 flex flex-row items-center gap-x-1">
                   <Link
-                    href={`/admin/servicios/ver/${product?.slug}`}
+                    href={`/${lang}/admin/productos/ver/${product?.slug}`}
                     className="p-2 inline-block text-white hover:text-darkblack bg-black shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 cursor-pointer "
                   >
                     <FaPencilAlt className="maxsm:text-[10px]" />
@@ -271,41 +192,6 @@ const AdminProducts = ({ products, filteredProductsCount, search }) => {
                       className={` ${
                         product?.availability?.online === true
                           ? "text-green-800 maxsm:text-[10px]"
-                          : "text-slate-400 maxsm:text-[10px]"
-                      }`}
-                    />
-                  </button>
-
-                  <button
-                    onClick={() =>
-                      deactivateBranchHandler(
-                        product?._id,
-                        product?.availability?.branch
-                      )
-                    }
-                    className="p-2 inline-block text-white hover:text-darkblack bg-slate-300 shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 cursor-pointer "
-                  >
-                    <FaShop
-                      className={` ${
-                        product?.availability?.branch === true
-                          ? "text-green-800 maxsm:text-[10px]"
-                          : "text-slate-400 maxsm:text-[10px]"
-                      }`}
-                    />
-                  </button>
-                  <button
-                    onClick={() =>
-                      deactivateInstagramHandler(
-                        product?._id,
-                        product?.availability?.instagram
-                      )
-                    }
-                    className="p-2 inline-block text-white hover:text-darkblack bg-slate-300 shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 cursor-pointer "
-                  >
-                    <FaInstagramSquare
-                      className={` ${
-                        product?.availability.instagram === true
-                          ? "bg-gradient-to-tr from-amber-700 to-pink-600 maxsm:text-[10px]"
                           : "text-slate-400 maxsm:text-[10px]"
                       }`}
                     />

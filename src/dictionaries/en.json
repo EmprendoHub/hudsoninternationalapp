@@ -98,7 +98,7 @@
         "text": "Expand the reach and presence of your products or services and reach new markets with a personalized web application tailored to your business.",
         "btnText": "Discover More",
         "btnPath": "/servicios",
-        "imgPath": "/images/branding_para_marca.webp"
+        "imgPath": "/images/dried-red-chili_seco.webp"
       },
       {
         "preTitle": "Digital",
@@ -107,7 +107,7 @@
         "text": "Take advantage of cutting-edge tools such as AI, CRM and SMS Marketing, harnessing the power of data analysis and digital marketing.",
         "btnText": "Discover More",
         "btnPath": "/servicios",
-        "imgPath": "/images/como_desarrollar_una_marca.webp"
+        "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
         "preTitle": "Digital",
@@ -116,7 +116,7 @@
         "text": "We help you create systems that make it easier for you to formulate lasting and lucrative relationships.",
         "btnText": "Discover More",
         "btnPath": "/servicios",
-        "imgPath": "/images/ocupo_un_sitio_web.webp"
+        "imgPath": "/images/metal-bucket-salted-popcorn.webp"
       }
     ],
     "infiniteSlider": {
@@ -323,8 +323,8 @@
     "services": [
       {
         "icon": "/icons/p12-icon-img-1.png",
-        "title": "Custom Web Design",
-        "text": "Your brand is unique and your website should be too. Our custom designs ensure your site stands out from the competition, aligns perfectly with your brand identity, and captivates your audience from the first click.",
+        "title": "Custom Web Design Your brand is unique and your website should be too.",
+        "text": " Our custom designs ensure your site stands out from the competition, aligns perfectly with your brand identity.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
@@ -332,6 +332,20 @@
         "icon": "/icons/h5-icon-img-2.png",
         "title": "High Speed and Performance",
         "text": "Speed is not a luxury; It is a necessity to retain visitors. We optimize each app for high performance, ensuring fast loading times that improve user experience and increase your SEO rankings.",
+        "btnText": "Quote",
+        "btnUrl": "/en/cotizar"
+      },
+      {
+        "icon": "/icons/p12-icon-img-2.png",
+        "title": "Intelligent scalability",
+        "text": "As your business grows, so should your digital solutions. Our web applications are built to scale effortlessly with your needs, ensuring you're always ready to expand without technological restrictions..",
+        "btnText": "Quote",
+        "btnUrl": "/en/cotizar"
+      },
+      {
+        "icon": "/icons/h5-icon-img-1.png",
+        "title": "SEO Optimization",
+        "text": "From on-page techniques to backend tweaks, our SEO practices ensure your site gains high visibility and attracts more organic traffic, turning searches into valuable customer engagements.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
@@ -366,8 +380,8 @@
       "orders": "Orders",
       "posts": "Posts",
       "newPost": "New Post",
-      "services": "Services",
-      "newService": "New Service",
+      "products": "Products",
+      "newService": "New Product",
       "clients": "Clients",
       "affiliates": "Affiliates"
     },

@@ -24,11 +24,7 @@ import Affiliate from "@/backend/models/Affiliate";
 import bcrypt from "bcrypt";
 import nodemailer from "nodemailer";
 import axios from "axios";
-import {
-  cstDateTime,
-  generateUrlSafeTitle,
-  getTotalFromItems,
-} from "@/backend/helpers";
+import { cstDateTime, getTotalFromItems } from "@/backend/helpers";
 import Order from "@/backend/models/Order";
 import APIPostsFilters from "@/lib/APIPostsFilters";
 import APIFilters from "@/lib/APIFilters";
@@ -44,7 +40,17 @@ import Author from "@/backend/models/Author";
 import Analytic from "@/backend/models/Analytic";
 import Visitor from "@/backend/models/Visitor";
 import Onboarding from "@/backend/models/Onboarding";
+import { SiSuckless } from "react-icons/si";
 
+function generateUrlSafeTitle(title) {
+  // Convert the title to lowercase and replace spaces with dashes
+  let urlSafeTitle = title.toLowerCase().replace(/\s+/g, "-");
+
+  // Remove special characters and non-alphanumeric characters
+  urlSafeTitle = urlSafeTitle.replace(/[^\w-]+/g, "");
+
+  return urlSafeTitle;
+}
 // Function to get the document count for all from the previous month
 const getDocumentCountPreviousMonth = async (model) => {
   const now = new Date();
@@ -2019,7 +2025,7 @@ export async function changeProductStatus(productId) {
     }
     // Save the product to persist the changes
     await product.save();
-    revalidatePath("/admin/servicios");
+    revalidatePath("/admin/productos");
   } catch (error) {
     console.log(error);
     throw Error(error);
@@ -2032,7 +2038,7 @@ export async function deleteOneProduct(productId) {
     // Find the product that contains the variation with the specified variation ID
     await Product.findOneAndDelete({ _id: productId });
 
-    revalidatePath("/admin/servicios");
+    revalidatePath("/admin/productos");
   } catch (error) {
     console.log(error);
     throw Error(error);
@@ -2078,7 +2084,7 @@ export async function changeProductAvailability(productId, location) {
     }
     // Save the product to persist the changes
     await product.save();
-    revalidatePath("/admin/servicios");
+    revalidatePath("/admin/productos");
     revalidatePath("/admin/pos/tienda");
     revalidatePath("/puntodeventa/tienda");
   } catch (error) {
@@ -2285,7 +2291,7 @@ export async function getAllProduct(searchQuery) {
     let sortedProducts = JSON.stringify(productsData);
     allCategories = JSON.stringify(allCategories);
     allBrands = JSON.stringify(allBrands);
-    revalidatePath("/admin/servicios/");
+    revalidatePath("/admin/productos/");
     return {
       products: sortedProducts,
       productsCount: productsCount,
@@ -2837,6 +2843,83 @@ export async function deleteAddress(id) {
   }
 }
 
+export async function addNewProduct(data) {
+  const session = await getServerSession(options);
+  const user = { _id: session?.user?._id };
+  let {
+    title,
+    packing,
+    description,
+    category,
+    weight,
+    featured,
+    onlineAvailability,
+    mainImage,
+    origins,
+    tags,
+    presentations,
+    price,
+    cost,
+    stock,
+    createdAt,
+  } = Object.fromEntries(data);
+
+  createdAt = new Date(createdAt);
+
+  //check for errors
+  title = JSON.parse(title);
+  packing = JSON.parse(packing);
+  category = JSON.parse(category);
+  weight = JSON.parse(weight);
+  description = JSON.parse(description);
+  featured = JSON.parse(featured);
+  onlineAvailability = JSON.parse(onlineAvailability);
+  mainImage = JSON.parse(mainImage);
+  origins = JSON.parse(origins);
+  tags = JSON.parse(tags);
+  presentations = JSON.parse(presentations);
+  console.log(tags, presentations, "tags and presentations");
+  await dbConnect();
+  const slug = generateUrlSafeTitle(title.es);
+
+  const slugExists = await Product.findOne({ slug: slug });
+  if (slugExists) {
+    return {
+      error: {
+        title: "Este Titulo del producto ya esta en uso",
+      },
+    };
+  }
+  const newProduct = await Product.create({
+    title,
+    slug,
+    packing,
+    description,
+    category,
+    weight,
+    featured,
+    onlineAvailability,
+    origins,
+    tags,
+    presentations,
+    price,
+    cost,
+    stock,
+    images: [{ url: mainImage }],
+    createdAt,
+    published: true,
+    user,
+  });
+  console.log(newProduct);
+  //if (error) throw Error(error);
+  revalidatePath("/admin/productos");
+  return {
+    success: {
+      ok: "Producto se creo con exito",
+    },
+  };
+}
+
 export async function addNewPost(data) {
   const session = await getServerSession(options);
   const user = { _id: session?.user?._id };
@@ -3206,7 +3289,7 @@ export async function addVariationProduct(data) {
   });
   console.log(error);
   if (error) throw Error(error);
-  revalidatePath("/admin/servicios");
+  revalidatePath("/admin/productos");
   revalidatePath("/tienda");
 }
 
@@ -3328,12 +3411,12 @@ export async function updateVariationProduct(data) {
     }
   );
   if (error) throw Error(error);
-  revalidatePath("/admin/servicios");
+  revalidatePath("/admin/productos");
   revalidatePath("/tienda");
 }
 
 export async function updateRevalidateProduct() {
-  revalidatePath("/admin/servicios");
+  revalidatePath("/admin/productos");
   revalidatePath("/tienda");
 }
 
@@ -3396,7 +3479,7 @@ export async function addProduct(data) {
   }
   // Create a new Product in the database
   await dbConnect();
-  const slug = generateUrlSafeTitle(title);
+  const slug = generateUrlSafeTitle(title.es);
   const slugExists = await Post.findOne({ slug: slug });
   if (slugExists) {
     return {
@@ -3427,7 +3510,7 @@ export async function addProduct(data) {
     user,
   });
   if (error) throw Error(error);
-  revalidatePath("/admin/servicios");
+  revalidatePath("/admin/productos");
   revalidatePath("/tienda");
 }
 
