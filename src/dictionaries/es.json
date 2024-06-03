@@ -2,7 +2,7 @@
   "header": {
     "menu": [
       { "title": "Acerca", "url": "/acerca" },
-      { "title": "Blog", "url": "/blog" },
+      { "title": "Products", "url": "/productos" },
       { "title": "Contacto", "url": "/contacto" }
     ],
     "searchbar": "Buscar"
@@ -25,219 +25,277 @@
       "phone": "+52 353-246-4146"
     },
     "addressTwo": {
-      "ubicacion": "California",
-      "addressOne": "119 N La Plaza St",
-      "addressTwo": "",
-      "city": "Anaheim",
+      "ubicacion": "Washington",
+      "addressOne": "321 High School Rd NE",
+      "addressTwo": "Suite D3",
+      "city": "Bainbridge Island",
       "hood": "",
-      "state": "California",
-      "zip": "92806",
+      "state": "Washington",
+      "zip": "98110",
       "country": "USA",
-      "phone": "+1 949-723-9390"
+      "phone": "+1 206 979 9807"
     },
     "widgettwo": {
-      "title": "Servicios",
+      "title": "Productos",
       "links": [
-        { "title": "Desarrollo E-commerce", "url": "/servicios" },
-        { "title": "Sistema POS", "url": "/servicios" },
-        { "title": "Aplicaciones personalizadas", "url": "/servicios" },
-        { "title": "Herramientas de Marketing", "url": "/servicios" }
+        { "title": "Chiles", "url": "/productos?keyword=chiles" },
+        { "title": "Condimentos", "url": "/productos?keyword=Condimentos" },
+        { "title": "Especias", "url": "/productos?keyword=Spices" },
+        { "title": "Flores", "url": "/productos?keyword=Flores" },
+        {
+          "title": "Frutos Secos y Nueces",
+          "url": "/productos?keyword=Frutos Secos y Nueces"
+        },
+        { "title": "Hierbas", "url": "/productos?keyword=Hierbas" },
+        {
+          "title": "Grains and Seeds",
+          "url": "/productos?keyword=Grains and Seeds"
+        }
       ]
     },
     "widgetthree": {
       "title": "Sitio",
       "links": [
-        { "title": "Nosotros", "url": "/acerca" },
-        { "title": "Blog", "url": "/blog" },
+        { "title": "Inicio", "url": "/" },
+        { "title": "Productos", "url": "/productos" },
         { "title": "Contacto", "url": "/contacto" },
-        { "title": "Portfolio", "url": "/portfolio" }
+        { "title": "Nosotros", "url": "/acerca" }
       ]
     },
     "widgetfour": {
       "title": "Legales",
       "links": [
         { "title": "Términos de Uso", "url": "/legal/terminos" },
-        { "title": "Política de privacidad", "url": "/legal/politica" },
-        { "title": "Política de afiliados", "url": "/legal/affi" }
+        { "title": "Política de privacidad", "url": "/legal/politica" }
       ]
     },
     "footerBar": {
       "developBy": "Desarrollada por Emprendomex Marketing",
-      "path": "https://www.hudsoninternationalmarket.com",
+      "path": "https://www.emprendomex.xyz",
       "company": "Hudson International Market",
-      "addressOne": "119 N La Plaza St,",
-      "addressTwo": "",
-      "city": "Anaheim",
-      "state": "California",
-      "zip": "92806",
+      "addressOne": "321 High School Rd NE,",
+      "addressTwo": "Suite D3",
+      "city": "Bainbridge Island",
+      "state": "Washington",
+      "zip": "98110",
       "country": "USA",
       "copyright": {
         "pretitle": "Derechos de autor",
         "subtitle": "Todos los derechos reservados.",
         "disclosure": "Todos los precios de productos, servicios mostrados en esta página incluyen el IVA correspondiente.",
         "preOwner": "La titularidad del presente sitio web corresponde a",
-        "owner": "Dora Victoria Gonzalez Guerrero",
+        "owner": "Hudson International Market",
         "subOwner": "con domicilio de negocio en"
       }
     }
   },
   "homeDic": {
     "imageHero": {
-      "pretitle": "Digital",
-      "title": "Grow Your",
-      "titleTwo": "Business",
-      "text": "Expand the reach and presence of your products or services and reach new markets with a personalized web application tailored to your business and reach new markets with a personalized web application tailored to your business..",
-      "btnText": "Discover More",
-      "btnPath": "/servicios"
+      "pretitle": "Trading Experts",
+      "title": "Expande Tus",
+      "titleTwo": "Horizontes Comerciales",
+      "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",
+      "btnText": "Aprende Más",
+      "btnPath": "/about-us"
     },
     "sliders": [
       {
-        "preTitle": "Digital",
-        "title": "Haz crecer tu",
-        "titleTwo": "Negocio",
-        "text": "Amplía el alcance y la presencia de tus productos o servicios y llegue a nuevos mercados con una aplicación web personalizada y adaptada a su negocio.",
-        "btnText": "Descubrir más",
-        "btnPath": "/servicios",
+        "preTitle": "Trading Experts",
+        "title": "Expande Tus",
+        "titleTwo": "Horizontes Comerciales",
+        "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",
+        "btnText": "Aprende Más",
+        "btnPath": "/about-us",
         "imgPath": "/images/dried-red-chili_seco.webp"
       },
       {
-        "preTitle": "Digital",
-        "title": "Te Atraemos",
-        "titleTwo": "Mas Clientes",
-        "text": "Aprovecha herramientas de última generación como IA, CRM y SMS Marketing, aprovechando el poder del análisis de datos y el marketing digital.",
-        "btnText": "Descubrir más",
-        "btnPath": "/servicios",
-        "imgPath": "/images/delicious-nuts-concept.webp"
+        "preTitle": "Productos de Calidad",
+        "title": "Red Global de",
+        "titleTwo": "Proveedores",
+        "text": "Ofrecemos productos bajo estándares de calidad y precio a través de acuerdos comerciales, asegurando que obtengas lo que necesitas de nuestra vasta red de proveedores.",
+        "btnText": "Nuestros Productos",
+        "btnPath": "/products",
+        "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
-        "preTitle": "Digital",
-        "title": "Construimos",
-        "titleTwo": "Relaciones Duraderas",
-        "text": "Te ayudamos a crear sistemas que le faciliten la formulación de relaciones duraderas y lucrativas.",
-        "btnText": "Descubrir más",
-        "btnPath": "/servicios",
+        "preTitle": "Socio Estratégico",
+        "title": "Desarrollo de",
+        "titleTwo": "Negocios",
+        "text": "Facilitamos el acceso a nuevos mercados y brindamos un servicio integral para ayudar a tu negocio a desarrollarse y prosperar.",
+        "btnText": "Descubre Más",
+        "btnPath": "/services",
         "imgPath": "/images/metal-bucket-salted-popcorn.webp"
       }
     ],
     "infiniteSlider": {
       "title": "Experiencia con",
-      "titleTwo": "Tecnología de Punta.",
-      "subtitle": "Aprovechamos la experiencia de nuestros programadores y diseñadores expertos para desarrollar soluciones y herramientas avanzadas que ayuden a impulsar tu negocio al siguiente nivel."
-    },
-    "doublesides": {
-      "boxOne": {
-        "preTitle": "SOMOS EXPERTOS EN TODO LO DIGITAL",
-        "title": "Transforma tu experiencia digital con",
-        "titleTwo": "hudson international market",
-        "subtitle": "Nuestro equipo de expertos esta listo para asistir a optimizar tus conversiones.",
-        "text": "Ofrecemos un enfoque estratégico en la creación de embudos de venta que están perfectamente integrados con el desarrollo de tu sitio web. Esto no solo mejora la experiencia del usuario, sino que optimiza las tasas de conversión, convirtiendo a los visitantes en clientes de manera más eficaz y aumentando tus ingresos.",
-        "btnText": "Contáctenos",
-        "imgUrl": "/images/h1-img2.jpg"
-      },
-      "boxTwo": {
-        "preTitle": "Usamos Análisis y Mejoramiento Continuo",
-        "title": "Nos adaptamos a las necesidades de tu",
-        "titleTwo": "proyecto",
-        "subtitle": "Estamos preparados para cualquier reto, asegurando la personalización y adaptabilidad de tu sistema.",
-        "text": "Adaptamos nuestras soluciones a las necesidades específicas de cada cliente, asegurando que el sitio web y los embudos de venta no solo reflejen la identidad de tu marca, sino que también sean lo suficientemente flexibles para evolucionar con las tendencias del mercado y las preferencias de los consumidores. Esto garantiza una relevancia a largo plazo y una mejor respuesta del usuario.",
-        "btnText": "Contáctenos",
-        "imgUrl": "/images/pexels-photo-3183197.jpeg"
-      }
+      "titleTwo": "Ingredientes de Alta Calidad",
+      "subtitle": "Benefíciate de nuestra red global de proveedores, ofreciendo productos de alta calidad a precios competitivos."
     },
     "singlesides": {
       "boxOne": {
-        "title": "Transforma tu experiencia digital con",
-        "titleTwo": "hudson international market",
-        "text": "Ofrecemos un enfoque estratégico en la creación de embudos de venta que están perfectamente integrados con el desarrollo de tu sitio web.",
-        "btnText": "Contáctenos",
+        "title": "Transforma tu Experiencia Comercial con",
+        "titleTwo": "Hudson International Market",
+        "text": "Ofrecemos enfoques estratégicos para expandir tu alcance en el mercado y mejorar las operaciones de tu negocio a través de una coordinación experta y productos de alta calidad.",
+        "btnText": "Contáctanos",
         "imgUrl": "/images/h1-img2.jpg"
       }
     },
+    "doublesides": {
+      "boxOne": {
+        "preTitle": "TU SOCIO COMERCIAL DE CONFIANZA",
+        "title": "Transforma tu Experiencia Comercial con",
+        "titleTwo": "Hudson International Market",
+        "subtitle": "Nuestro equipo de expertos está listo para optimizar tu cadena de suministro",
+        "text": "Ofrecemos un enfoque estratégico en la creación de acuerdos comerciales que se integran perfectamente con las necesidades de tu negocio. Esto no solo mejora tus operaciones, sino que también optimiza tu cadena de suministro, asegurando una entrega oportuna y eficiente de productos.",
+        "btnText": "Contáctanos",
+        "imgUrl": "/images/h1-img2.jpg"
+      },
+      "boxTwo": {
+        "preTitle": "ANÁLISIS Y MEJORA CONTINUA",
+        "title": "Nos adaptamos según las",
+        "titleTwo": "necesidades de tu proyecto",
+        "subtitle": "Preparados para cualquier desafío, asegurando personalización y adaptabilidad.",
+        "text": "Adaptamos nuestras soluciones a las necesidades específicas de cada cliente, asegurando que nuestros productos y servicios no solo cumplan, sino que superen tus expectativas. Nuestra flexibilidad y adaptabilidad aseguran una relevancia a largo plazo y una mejor satisfacción del cliente.",
+        "btnText": "Contáctanos",
+        "imgUrl": "/images/pexels-photo-3183197.jpeg"
+      }
+    },
     "teamTalk": {
-      "title": "Platica con nuestro equipo",
-      "btnText": "Contáctenos",
-      "btnUrl": "/es/contacto",
+      "title": "Habla con Nuestro Equipo",
+      "btnText": "Contáctanos",
+      "btnUrl": "/contact",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
-      "title": "Eleva tu negocio al",
-      "titleTwo": "siguiente nivel",
-      "subtitle": "Nosotros nos encargamos de todo lo técnico para que puedas continuar administrando tu negocio.",
-      "text": "Nos especializamos aplicaciones web escalables y de alto. Ya sea que sea una startup que busca dejar su huella o una empresa establecida que busca elevar su presencia digital, tenemos la experiencia y las herramientas para hacer realidad su visión.",
-      "btnText": "Contáctenos",
-      "btnUrl": "/es/contacto",
+      "title": "Lleva tu Negocio al",
+      "titleTwo": "Siguiente Nivel",
+      "subtitle": "Nos encargamos de todo lo técnico para que puedas centrarte en el crecimiento.",
+      "text": "Nos especializamos en soluciones comerciales de alto rendimiento y escalabilidad. Ya sea que seas una startup buscando dejar tu huella o una empresa establecida que busca expandirse, tenemos la experiencia y las herramientas para hacer realidad tu visión.",
+      "btnText": "Contáctanos",
+      "btnUrl": "/contact",
       "bullets": [
-        "Estrategia del proyecto",
-        "Investigación y Conceptualización UX",
-        "Diseño de interfaz de usuario (UI)",
-        "Arquitectura de la Información (IA)",
-        "Frontal creativo",
-        "Codificación precisa (desarrollo)"
+        "Expansión de Mercado",
+        "Garantía de Calidad",
+        "Optimización de la Cadena de Suministro",
+        "Soluciones Comerciales Personalizadas",
+        "Red Global de Proveedores",
+        "Coordinación Experta"
       ]
     },
     "miniPortfolio": {
-      "title": "POS con",
-      "titleTwo": "Tienda en Linea",
-      "text": "Permite una sincronización en tiempo real del inventario entre la tienda física y la tienda en línea, reduciendo el riesgo de sobrevender productos y simplificando la gestión de stock.",
+      "title": "Soluciones de",
+      "titleTwo": "Comercio Global",
+      "text": "Sincronización en tiempo real del inventario entre proveedores y clientes, reduciendo riesgos y simplificando la gestión de existencias.",
       "btnText": "Ver Demo",
-      "btnUrl": "/es/contacto",
+      "btnUrl": "/contact",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
     "customerSay": {
-      "title": "Que dicen",
-      "titleTwo": "Nuestros clientes",
-      "subtitle": "Lee lo que nuestros clientes y socios tienen que decir de nuestro trabajo.",
+      "title": "Lo Que Dicen Nuestros",
+      "titleTwo": "Clientes",
+      "subtitle": "Lee lo que nuestros clientes tienen que decir sobre nuestro trabajo.",
       "testimonials": [
         {
           "id": 1,
-          "name": "Carlos Ortega",
-          "position": "Dueña",
-          "text": "Con la ayuda de Emprendomex, pudimos aumentar enormemente la funcionalidad de nuestro sitio web al agregar",
-          "textPop": "pedidos en línea.",
-          "textTwo": "y reducir nuestros costos generales. Nuestro sitio web es mucho más fácil de usar, tiene muchas más funciones que antes y es increíblemente fácil de mantener. ¡No podríamos estar más felices con nuestro nuevo sitio web! ¡Gracias de nuevo!",
+          "name": "Teresita Villalpando",
+          "position": "Mariscos Casa Del Pollo",
+          "text": "Con Hudson International Market, pudimos aumentar significativamente la funcionalidad de nuestra cadena de suministro añadiendo",
+          "textPop": "seguimiento en línea",
+          "textTwo": "y reduciendo nuestros costos generales. ¡Nuestras operaciones son mucho más fluidas y no podríamos estar más contentos con su servicio! ¡Gracias de nuevo!",
           "icon": "/images/2149416730.jpg"
         },
         {
           "id": 2,
           "name": "Martin Latisner",
           "position": "Movired",
-          "text": "Debido al mal trabajo de nuestro previo desarrollador, tuvimos que reconstruir nuestro sitio web dos veces en un período de menos de 6 meses.  ",
+          "text": "Debido al mal trabajo de nuestro proveedor anterior, tuvimos que reconstruir nuestra cadena de suministro dos veces en un período de menos de 6 meses. ",
           "textPop": "No hay comparación",
-          "textTwo": "entre la primera empresa y Emprendomex. Profesional, Creativo, Detallista, Excelente Comunicación y Rápido.",
+          "textTwo": "entre la primera empresa y Hudson International Market. Profesional, Creativo, Detallista, Excelente Comunicación y Rápido.",
           "icon": "/images/2149416730.jpg"
         },
         {
           "id": 3,
           "name": "Emanuel Garcia",
           "position": "Anas Iron Supply",
-          "text": "Fui a Emprendomex con la “idea” básica de lo que quería en nuestro sistema de pedidos interno. Ellos",
+          "text": "Fui a Hudson International Market con la idea básica de lo que quería en nuestro sistema de cadena de suministro. Ellos",
           "textPop": "ayudaron a refinar",
-          "textTwo": "el diseño visual y la funcionalidad. No dudo en que los volveré a utilizar en futuros proyectos. ¡Gracias de nuevo!",
+          "textTwo": "los procesos y la funcionalidad. Sin duda los volveré a utilizar en futuros proyectos. ¡Gracias de nuevo!",
           "icon": "/images/2149416730.jpg"
         },
         {
           "id": 4,
           "name": "Flavio Orte",
           "position": "Marort Shoes",
-          "text": "Nuestro sitio web anterior no funcionaba bien en términos de velocidad y compatibilidad móvil. Emprendomex intervino y",
-          "textPop": "optimizo cada aspecto",
-          "textTwo": "de nuestra presencia digital, desde tiempos de carga más rápidos hasta mejores resultados de SEO. La transición fue fluida y su equipo de soporte siempre está receptivo. ¡A nuestros clientes les encanta la nueva experiencia!",
+          "text": "Nuestra cadena de suministro anterior no estaba rindiendo bien en términos de velocidad y eficiencia. Hudson International Market intervino y",
+          "textPop": "optimizó cada aspecto",
+          "textTwo": "de nuestras operaciones, desde tiempos de entrega más rápidos hasta mejores relaciones con proveedores. La transición fue fluida y su equipo de soporte siempre está disponible. ¡A nuestros clientes les encanta la nueva experiencia!",
           "icon": "/images/2149416730.jpg"
         }
       ]
     },
     "contactCta": {
-      "title": "Suscríbete a nuestra Newsletter",
-      "subtitle": "Además, llévate un 10% de descuento en tu primera cotización.",
+      "title": "Suscríbete a Nuestro Boletín",
+      "subtitle": "Además, obtén un 10% de descuento en tu primera cotización.",
       "placeholder": "Tu correo electrónico aquí",
-      "messageSent": "El mensaje se envió exitosamente."
+      "messageSent": "El mensaje se envió correctamente."
     }
   },
+
+  "flipBoxes": [
+    {
+      "bgColor": "pink",
+      "bgColorTwo": "pink",
+      "preTitle": "¡Llega a Más Clientes!",
+      "title": "Comercio de Especias",
+      "titleTwo": "¡Amplía Tu Alcance!",
+      "subTitle": "Aumenta tus Ventas",
+      "textTitle": "BIOGRAFÍA",
+      "text": "Transforma tu negocio con nuestras soluciones personalizadas para la venta de especias y condimentos. Utilizamos tecnologías avanzadas para optimizar tus operaciones comerciales.",
+      "textTwo": "¿Listo para expandir tu negocio? Descubre cómo nuestras estrategias de comercio pueden impulsar tu crecimiento.",
+      "img": "/images/beach_bonus.jpg",
+      "imgTwo": "/images/beach_bonus.jpg",
+      "btnText": "Ver Productos",
+      "btnLink": "/productos",
+      "icon": "FaBezierCurve"
+    },
+    {
+      "bgColor": "blue",
+      "bgColorTwo": "blue",
+      "preTitle": "¡Soluciones Integrales!",
+      "title": "Gestión de Ingredientes",
+      "titleTwo": "¡Optimiza tu Eficiencia!",
+      "subTitle": "Mejora tus Operaciones",
+      "text": "Moderniza la gestión de tu punto de venta con sistemas POS eficientes para ingredientes alimentarios. Diseñamos sistemas que mejoran la precisión y eficiencia de tus operaciones comerciales.",
+      "textTwo": "Aumenta la precisión de tus datos y mejora la eficiencia en la gestión de especias y condimentos.",
+      "img": "/images/GTI-interior.jpeg",
+      "imgTwo": "/images/GTI-interior.jpeg",
+      "btnText": "Ver Productos",
+      "btnLink": "/productos",
+      "icon": "FaUsers"
+    },
+    {
+      "bgColor": "purple",
+      "bgColorTwo": "purple",
+      "preTitle": "¡Código Personalizado!",
+      "title": "Aplicaciones Web para Comercio",
+      "titleTwo": "¡Escala con Confianza!",
+      "subTitle": "Soluciones Personalizadas",
+      "textTitle": "BIOGRAFÍA",
+      "text": "Desarrollamos aplicaciones web robustas y escalables para el comercio de especias y condimentos. Nos enfocamos en soluciones rápidas y flexibles para tu negocio.",
+      "textTwo": "Asegura el éxito de tu comercio de ingredientes con aplicaciones diseñadas para el crecimiento y la adaptabilidad.",
+      "img": "/images/Premio_10_mil_pesos.jpg",
+      "imgTwo": "/images/Premio_10_mil_pesos.jpg",
+      "btnText": "Ver Productos",
+      "btnLink": "/productos",
+      "icon": "FaCode"
+    }
+  ],
   "aboutDic": {
     "hero": {
       "title": "Acerca de nosotros",
-      "subtitle": "Conoce a nuestro equipo innovador"
+      "subtitle": "Conoce a nuestro equipo."
     },
     "founder": {
       "name": "Salvador Sandoval",
@@ -277,7 +335,7 @@
   "contactDic": {
     "hero": {
       "pretitle": "PONERSE EN CONTACTO",
-      "title": "Nos gustaría conocerte. Siéntete libre de mantenerte en contacto."
+      "title": "Nos gustaría conocerte."
     },
     "contactInfo": {
       "pretitle": "Contáctenos",
@@ -298,22 +356,22 @@
       "state": "Michoacan",
       "zip": "59010",
       "country": "Mexico",
-      "phone": "+52 353-246-4146",
+      "phone": "+1 206 979 9807",
       "mapImage": "/images/Colima61_.webp",
       "mapUrl": "https://maps.app.goo.gl/c5twJrvpb3KpXMhH8"
     },
     "addressTwo": {
-      "ubicacion": "California",
+      "ubicacion": "Washington",
       "addressOne": "119 N La Plaza St",
       "addressTwo": "",
-      "city": "Anaheim",
+      "city": "Bainbridge Island",
       "hood": "",
-      "state": "California",
+      "state": "Washington",
       "zip": "92806",
       "country": "USA",
-      "phone": "+1 949-723-9390",
-      "mapImage": "/images/google_map_emprendomex.webp",
-      "mapUrl": "https://maps.app.goo.gl/NyDTDXZcRHdmFnpM7"
+      "phone": "+1 206 979 9807",
+      "mapImage": "/images/hudson_map.webp",
+      "mapUrl": "https://maps.app.goo.gl/ZGz6MvactPHiEbPD6"
     }
   },
   "servicesDic": {

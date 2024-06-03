@@ -7,7 +7,7 @@ const DarkLogoComponent = ({ className }) => {
       <Link aria-label="dark-logo" href={"/"}>
         <Image
           alt="image"
-          src={"/images/new_emprendomex_logo_horizontal.png"}
+          src={"/logos/hudson_Intl_full_logo_light.webp"}
           width={180}
           height={55}
           priority

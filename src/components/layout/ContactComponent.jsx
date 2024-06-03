@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ContactComponent = ({ contactDic }) => {
   return (
-    <div className=" py-12 px-40 maxxlg:px-20 maxlg:px-5 h-full overflow-x-hidden ">
+    <div className="bg-white dark:bg-primary py-12 px-40 maxxlg:px-20 maxlg:px-5 h-full overflow-x-hidden ">
       {/* Title */}
       <div className="w-full flex h-full gap-x-5 maxmd:flex-col justify-center items-center mb-10">
         <div className="w-1/2 maxmd:w-full pr-10 maxmd:px-1 maxmd:mt-10  ">
@@ -26,13 +26,13 @@ const ContactComponent = ({ contactDic }) => {
         {/* Info */}
         <div className="w-1/2 maxsm:mt-10 maxmd:w-full h-full text-base  ">
           {/* contact links */}
-          <div className="flex  items-start mt-5 gap-3">
+          <div className=" flex items-center justify-end flex-col mt-5 gap-3">
             {/* Social media */}
             <div className="w-1/2">
-              <p className="text-[12px] uppercase font-secondary text-gray-500">
+              <p className="text-[12px] text-center uppercase font-secondary text-gray-500">
                 {contactDic.contactInfo.social}
               </p>
-              <div className="relative flex items-start justify-start w-full">
+              <div className="relative flex items-center justify-center w-full">
                 {/* Facebook */}
                 <Link
                   aria-label="Facebook"
@@ -120,7 +120,7 @@ const ContactComponent = ({ contactDic }) => {
               </div>
             </div>
             <div className="w-1/2 ">
-              <p className="text-[12px] uppercase font-secondary text-gray-500">
+              <p className="text-[12px] text-center uppercase font-secondary text-gray-500">
                 {contactDic.contactInfo.questions}
               </p>
               <p className="text-base font-primary ">
@@ -132,7 +132,7 @@ const ContactComponent = ({ contactDic }) => {
         </div>
       </div>
       {/* Address One */}
-      <div className="w-full flex h-full gap-x-5 maxmd:flex-col-reverse justify-center items-center">
+      <div className="w-full flex h-full gap-x-5 maxmd:flex-col-reverse justify-end items-center">
         {/*  Map */}
         <div className="w-1/2 maxmd:w-full pr-10 maxmd:px-1 maxmd:mt-10  ">
           <div className="w-full h-auto flex justify-end maxmd:justify-start items-center">
@@ -148,7 +148,7 @@ const ContactComponent = ({ contactDic }) => {
           </div>
         </div>
         {/* Info */}
-        <div className="w-1/2 maxsm:mt-10 maxmd:w-full h-full text-base  ">
+        <div className="w-1/2 maxsm:mt-10 maxmd:w-full h-full text-base  flex items-center justify-end flex-col">
           <p className="uppercase font-secondary tracking-widest text-xs text-gray-500">
             {contactDic.addressTwo.ubicacion}
           </p>
@@ -167,41 +167,6 @@ const ContactComponent = ({ contactDic }) => {
             <span className="text-secondary">
               {contactDic.addressTwo.phone}
             </span>
-          </div>
-        </div>
-      </div>
-      {/* Address Two */}
-      <div className="w-full mt-20 flex h-full gap-x-5 maxmd:flex-col justify-center items-center">
-        {/* Info */}
-        <div className="w-1/2 maxsm:mt-10 maxmd:w-full h-full text-base  ">
-          <p className="uppercase font-secondary tracking-widest text-xs text-gray-500">
-            {contactDic.address.ubicacion}
-          </p>
-          <h3 className="text-3xl maxsm:text-3xl font-primary mb-1">
-            <span>{contactDic.address.addressOne}, </span>
-            <span className="text-secondary">{contactDic.address.city}</span>
-          </h3>
-
-          <div className="text-xl maxsm:text-xl font-primary mb-1">
-            <span>{contactDic.address.state}, </span>
-            <span className="text-secondary">{contactDic.address.country}</span>
-          </div>
-          <div className="text-2xl maxsm:text-2xl font-primary mb-1">
-            <span className="text-secondary">{contactDic.address.phone}</span>
-          </div>
-        </div>
-        {/*  Map */}
-        <div className="w-1/2 maxmd:w-full pr-10 maxmd:px-1 maxmd:mt-10  ">
-          <div className="w-full h-auto flex justify-end maxmd:justify-start items-center">
-            <Link href={contactDic.address.mapUrl} target="_blank">
-              <Image
-                alt="google maps"
-                src={contactDic.address.mapImage}
-                width={500}
-                height={500}
-                className="object-cover shadow-sm shadow-black"
-              />
-            </Link>
           </div>
         </div>
       </div>

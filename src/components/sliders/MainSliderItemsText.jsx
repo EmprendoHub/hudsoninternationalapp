@@ -12,6 +12,7 @@ const MainSliderItemsText = ({ item, index }) => {
             initial={{ y: -50, x: -50, opacity: 0 }}
             whileInView={{ y: 0, x: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
+            className="text-primary text-wrap"
           >
             {item.title}
           </motion.span>
@@ -28,7 +29,7 @@ const MainSliderItemsText = ({ item, index }) => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-sm font-secondary mt-2"
+          className="text-sm font-secondary mt-2 text-primary text-wrap"
         >
           {item.text}
         </motion.p>
@@ -36,7 +37,7 @@ const MainSliderItemsText = ({ item, index }) => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-sm font-secondary my-4 gap-x-2 flex items-center"
+          className="text-sm font-secondary my-4 gap-x-2 flex items-center text-primary text-wrap"
         >
           {item.btnText} <FaArrowRightLong />
         </motion.button>

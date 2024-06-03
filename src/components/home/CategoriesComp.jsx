@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CategoriesComp = ({ homeDic }) => {
+const CategoriesComp = ({ homeDic, lang }) => {
   return (
     <div className="pt-5 px-40 maxxlg:px-20 maxlg:px-10 maxmd:px-5 maxmd:pt-1 mb-20">
       <div className="mx-auto">
@@ -18,7 +18,7 @@ const CategoriesComp = ({ homeDic }) => {
       <div className="flex flex-row maxmd:flex-wrap items-center ">
         <div className="flex flex-row gap-5 maxmd:flex-wrap w-full">
           <Link
-            href={`/tienda?keyword=chiles`}
+            href={`/${lang}/productos?keyword=chiles`}
             className="colone p cursor-pointer hover:scale-[105%] duration-300 ease-in-out w-full "
           >
             <div className="box relative mx-auto items-center justify-center flex ">
@@ -37,7 +37,7 @@ const CategoriesComp = ({ homeDic }) => {
             </div>
           </Link>
           <Link
-            href={`/tienda?keyword=condimentos`}
+            href={`/${lang}/productos?keyword=condimentos`}
             className="coltwo cursor-pointer hover:scale-[105%] duration-300 ease-in-out  w-full"
           >
             <div className="box relative mx-auto items-center justify-center flex ">
@@ -56,7 +56,7 @@ const CategoriesComp = ({ homeDic }) => {
             </div>
           </Link>
           <Link
-            href={`/tienda?keyword=especias`}
+            href={`/${lang}/productos?keyword=Spices`}
             className="colthree cursor-pointer hover:scale-[105%] duration-300 ease-in-out  w-full"
           >
             <div className="box object-fit relative mx-auto items-center justify-center flex">
@@ -80,7 +80,7 @@ const CategoriesComp = ({ homeDic }) => {
       <div className="flex flex-row maxmd:flex-wrap items-center mt-5">
         <div className="flex flex-row gap-5 maxmd:flex-wrap w-full">
           <Link
-            href={`/tienda?keyword=flores`}
+            href={`/${lang}/productos?keyword=flores`}
             className="colone p cursor-pointer hover:scale-[105%] duration-300 ease-in-out w-full "
           >
             <div className="box relative mx-auto items-center justify-center flex ">
@@ -99,7 +99,7 @@ const CategoriesComp = ({ homeDic }) => {
             </div>
           </Link>
           <Link
-            href={`/tienda?keyword=grains`}
+            href={`/${lang}/productos?keyword=grains`}
             className="coltwo cursor-pointer hover:scale-[105%] duration-300 ease-in-out  w-full"
           >
             <div className="box relative mx-auto items-center justify-center flex ">
@@ -118,7 +118,7 @@ const CategoriesComp = ({ homeDic }) => {
             </div>
           </Link>
           <Link
-            href={`/tienda?keyword=hierbas`}
+            href={`/${lang}/productos?keyword=hierbas`}
             className="colthree cursor-pointer hover:scale-[105%] duration-300 ease-in-out  w-full"
           >
             <div className="box object-fit relative mx-auto items-center justify-center flex">

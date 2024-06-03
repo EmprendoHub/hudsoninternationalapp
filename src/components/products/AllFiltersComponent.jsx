@@ -6,6 +6,7 @@ import { getPriceQueryParams } from "@/backend/helpers";
 import Search from "../layout/Search";
 
 const AllFiltersComponent = ({
+  lang,
   allBrands,
   allCategories,
   SetIsActive,
@@ -137,7 +138,7 @@ const AllFiltersComponent = ({
                   <input
                     name="category"
                     type="checkbox"
-                    value={category}
+                    value={category[`${lang}`]}
                     defaultChecked={checkHandler("category", `${category}`)}
                     onClick={(e) => handleClick(e.target)}
                     className={`checkboxBipolarInput ${styles.checkboxBipolarInput}`}
@@ -154,44 +155,7 @@ const AllFiltersComponent = ({
                       <span className={`off ${styles.off}`}>O</span>
                     </span>
                     <span className="brandName ml-2 text-gray-500 capitalize">
-                      {" "}
-                      {category}{" "}
-                    </span>
-                  </label>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        {/* Brand Filter */}
-        <div className="p-5 pt-4 sm:p-1 border border-gray-200 bg-white rounded shadow-sm">
-          <h3 className="font-semibold mb-2 text-gray-700">Marca</h3>
-          <ul className="space-y-1">
-            {allBrands?.map((brand, index) => (
-              <li key={index}>
-                <div className={`box  py-[1px]  ${styles.box}`}>
-                  <input
-                    name="brand"
-                    type="checkbox"
-                    value={brand}
-                    defaultChecked={checkHandler("brand", `${brand}`)}
-                    onClick={(e) => handleClick(e.target)}
-                    className={`checkboxBipolarInput ${styles.checkboxBipolarInput}`}
-                    id={brand}
-                  />
-                  <label
-                    htmlFor={brand}
-                    className="flex flex-row items-center cursor-pointer"
-                  >
-                    <span
-                      className={`checkboxBipolar ${styles.checkboxBipolar}`}
-                    >
-                      <span className={`on ${styles.on}`}>I</span>
-                      <span className={`off ${styles.off}`}>O</span>
-                    </span>
-                    <span className="brandName ml-2 text-gray-500 capitalize">
-                      {" "}
-                      {brand}{" "}
+                      {category[`${lang}`]}
                     </span>
                   </label>
                 </div>

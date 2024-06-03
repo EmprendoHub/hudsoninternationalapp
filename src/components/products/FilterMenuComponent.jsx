@@ -1,12 +1,13 @@
-'use client';
-import styles from './menufilterstyle.module.scss';
-import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import { filterMenuSlide } from './anim';
-import { useSession } from 'next-auth/react';
-import AllFiltersComponent from './AllFiltersComponent';
+"use client";
+import styles from "./menufilterstyle.module.scss";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { filterMenuSlide } from "./anim";
+import { useSession } from "next-auth/react";
+import AllFiltersComponent from "./AllFiltersComponent";
 
 const FilterMenuComponent = ({
+  lang,
   allBrands,
   allCategories,
   SetIsActive,
@@ -29,6 +30,7 @@ const FilterMenuComponent = ({
         className={`${styles.body} max-w-[350px]  overflow-y-auto px-5 py-10`}
       >
         <AllFiltersComponent
+          lang={lang}
           allBrands={allBrands}
           allCategories={allCategories}
           SetIsActive={SetIsActive}

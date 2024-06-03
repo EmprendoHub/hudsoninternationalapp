@@ -354,7 +354,7 @@ export const product_categories = [
   { es: "Chiles", en: "Chilies" },
   { es: "Flores", en: "Flowers" },
   { es: "Hierbas", en: "Herbs" },
-  { es: "Especies", en: "Spices" },
+  { es: "Especias", en: "Spices" },
   { es: "Condimentos", en: "Condiments" },
 ];
 

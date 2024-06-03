@@ -5,14 +5,18 @@ class APIFilters {
   }
 
   searchAllFields() {
-    const keyword = this.queryStr.get('keyword');
+    const keyword = this.queryStr.get("keyword");
+
     // Define the conditions to search for the keyword in title, description, and category
     const searchConditions = {
       $or: [
-        { title: { $regex: keyword, $options: 'i' } },
-        { description: { $regex: keyword, $options: 'i' } },
-        { category: { $regex: keyword, $options: 'i' } },
-        { brand: { $regex: keyword, $options: 'i' } },
+        { "title.es": { $regex: keyword, $options: "i" } },
+        { "title.en": { $regex: keyword, $options: "i" } },
+        { "description.es": { $regex: keyword, $options: "i" } },
+        { "description.en": { $regex: keyword, $options: "i" } },
+        { "category.es": { $regex: keyword, $options: "i" } },
+        { "category.en": { $regex: keyword, $options: "i" } },
+        { brand: { $regex: keyword, $options: "i" } },
       ],
     };
 
@@ -33,16 +37,16 @@ class APIFilters {
       queryCopy[key] = value;
     });
 
-    const removeFields = ['keyword', 'page', 'per_page'];
+    const removeFields = ["keyword", "page", "per_page"];
     removeFields.forEach((el) => delete queryCopy[el]);
-    let prop = '';
+    let prop = "";
     //Price Filter for gt> gte>= lt< lte<= in PRICE
     let output = {};
     for (let key in queryCopy) {
       if (!key.match(/\b(gt|gte|lt|lte)/)) {
         output[key] = queryCopy[key];
       } else {
-        prop = key.split('[')[0];
+        prop = key.split("[")[0];
         let operator = key.match(/\[(.*)\]/)[1];
         if (!output[prop]) {
           output[prop] = {};

@@ -7,18 +7,19 @@ import { addToFavorites } from "@/redux/shoppingSlice";
 import { useDispatch } from "react-redux";
 import { IoMdHeart } from "react-icons/io";
 import { calculatePercentage } from "@/backend/helpers";
+import { FaWhatsapp } from "react-icons/fa6";
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ item, lang }) => {
   const dispatch = useDispatch();
   return (
     <motion.div
       initial={{ y: 30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1.0 }}
-      className="border-[1px] rounded-sm max-w-[350px] maxmd:max-w-[100%] overflow-hidden relative"
+      transition={{ duration: 0.7 }}
+      className="rounded-sm max-w-[250px] maxmd:max-w-[200px] overflow-hidden relative"
     >
-      <Link href={`/producto/${item.slug}`}>
-        <div className="w-full h-[300px] group overflow-hidden relative">
+      <Link href={`/${lang}/producto/${item.slug}`}>
+        <div className="w-full h-[200px] group overflow-hidden relative">
           <Image
             src={item?.images[0].url}
             alt="product image"
@@ -53,7 +54,7 @@ const ProductCard = ({ item }) => {
       <div className=" px-4 py-4 flex flex-col bg-gray-100 rounded-b-sm">
         <div className="flex items-center justify-between gap-x-1">
           <p className="text-black tracking-widest font-primary text-xl">
-            {item?.title.substring(0, 15) + "..."}
+            {item?.title[`${lang}`]}
           </p>
           <div className="flex items-center justify-between my-5">
             {/* add to favorites button */}
@@ -63,47 +64,9 @@ const ProductCard = ({ item }) => {
               className="bg-black h-7 w-7 text-sm flex flex-row rounded-full justify-center gap-x-2 items-center tracking-wide text-slate-100 hover:bg-black hover:text-darkwhite duration-500"
               onClick={() => dispatch(addToFavorites(item))}
             >
-              <IoMdHeart className="" />
+              <FaWhatsapp className="" />
             </motion.button>
           </div>
-        </div>
-
-        <div className="pricing-class flex fle-row items-center gap-x-2">
-          <div className="flex flex-col gap-y-1">
-            <p className="font-semibold text-black tracking-wider text-xl">
-              {item?.sale_price > 0 ? (
-                <FormattedPrice amount={item?.sale_price} />
-              ) : item?.price > 0 ? (
-                <FormattedPrice amount={item?.price} />
-              ) : (
-                ""
-              )}
-            </p>
-          </div>
-          {item?.sale_price ? (
-            <div>
-              <div className="flex items-center gap-x-2">
-                <p className="line-through text-sm text-black font-bodyFont">
-                  <FormattedPrice amount={item?.price} />
-                </p>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
-        <div className="">
-          <p className="text-xs text-black">Resérvalo por solo: </p>
-          <p className="font-semibold text-black tracking-wider">
-            <FormattedPrice
-              amount={
-                item?.variations[0].price > 0
-                  ? item?.variations[0].price * 0.3
-                  : item?.sale_price ?? item?.sale_price * 0.3
-              }
-            />
-            {item?.sale_price > 0 ? "(30%)" : ""}
-          </p>
         </div>
       </div>
     </motion.div>

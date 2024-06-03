@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const WhiteLogoComponent = ({ className, lang }) => {
+const LightLogoComponent = ({ className }) => {
   return (
-    <div className={`relative flex ${className}`}>
-      <Link aria-label="light-logo" href={`/${lang}/`}>
+    <div className={`relative ${className}`}>
+      <Link aria-label="dark-logo" href={"/"}>
         <Image
           alt="image"
-          src={"/logos/hudson_Intl_full_logo_white.webp"}
+          src={"/logos/hudson_Intl_full_logo_dark.webp"}
           width={180}
           height={55}
           priority
@@ -18,4 +18,4 @@ const WhiteLogoComponent = ({ className, lang }) => {
   );
 };
 
-export default WhiteLogoComponent;
+export default LightLogoComponent;

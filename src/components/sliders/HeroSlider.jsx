@@ -34,7 +34,7 @@ const HeroSlider = ({ homeDic }) => {
         <link rel="preload" as="image" href={homeDic.sliders[index].imgPath} />
       </Head>
       <div
-        className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 py-20 maxsm:pt-10 bg-white dark:bg-primary overflow-hidden"
+        className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 py-20 maxsm:pt-10 bg-white  overflow-hidden"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -79,7 +79,7 @@ const HeroSlider = ({ homeDic }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <BsChevronLeft className="text-secondary text-4xl" />
+          <BsChevronLeft className="text-primary text-4xl" />
         </button>
         <button
           aria-label="rightArrow"
@@ -88,7 +88,7 @@ const HeroSlider = ({ homeDic }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <BsChevronRight className="text-secondary text-4xl" />
+          <BsChevronRight className="text-primary text-4xl" />
         </button>
       </div>
     </>

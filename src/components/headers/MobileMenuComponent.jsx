@@ -1,27 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-  AiOutlineLogout,
-  AiOutlineLogin,
-} from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import { signOut, useSession } from "next-auth/react";
-import { NAV_LINKS } from "@/backend/data/constants";
 import styles from "./_navbar.module.scss";
 import DarkLightLogo from "../logos/DarkLightLogo";
-import ThemeToggle from "../layout/ThemeToggle";
 
 const MobileMenuComponent = ({ className, lang, localeHeader }) => {
   const [open, setOpen] = useState(false);
   const toggleMobileMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-  const { data: session } = useSession();
-  const isLoggedIn = Boolean(session?.user);
   const menuVariants = {
     initial: {
       scaleY: 0,
@@ -70,7 +60,6 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
             <AiOutlineMenu className="text-xl" />
           </div>
         </div>
-        <ThemeToggle className={"mr-4"} />
       </nav>
       <AnimatePresence>
         {open && (
@@ -79,7 +68,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className=" fixed flex items-center justify-center flex-col left-0 top-0 w-full min-h-screen bg-light dark:bg-dark px-10 pt-2  origin-top"
+            className="fixed flex items-center justify-center flex-col left-0 top-0 w-full min-h-screen bg-primary dark:bg-dark px-10 pt-2 z-[50] origin-top"
           >
             <p
               onClick={toggleMobileMenu}
@@ -109,26 +98,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
                 })}
               </motion.div>
             </div>
-            {/** Logout Button */}
-            {isLoggedIn ? (
-              <div
-                onClick={() => signOut()}
-                className="pt-10 cursor-pointer flex justify-center items-center gap-x-1 "
-              >
-                Cerrar Session
-                <AiOutlineLogout className="text-xl flex" />
-                {/* <p className='text-sm font-semibold'>Logout</p> */}
-              </div>
-            ) : (
-              <Link
-                href={`/${lang}/iniciar`}
-                onClick={() => setOpen((prevOpen) => !prevOpen)}
-                className="pt-5 cursor-pointer font-primary font-light flex justify-center items-center gap-x-1 text-base"
-              >
-                Iniciar Session
-                <AiOutlineLogin className="  hover:scale-110 ease-in-out duration-300" />
-              </Link>
-            )}
+
             {/* Contact Links */}
             <div className="flex flex-col items-center justify-center gap-x-4 pt-10">
               <Link

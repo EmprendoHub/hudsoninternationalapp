@@ -4,17 +4,16 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import MobileMenuComponent from "./MobileMenuComponent";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import DarkLogoComponent from "../logos/DarkLogoComponent";
 import styles from "./_navbar.module.scss";
 import ThemeToggle from "../layout/ThemeToggle";
 import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "next/navigation";
-import DarkLightLogo from "../logos/DarkLightLogo";
 import TopBar from "./TopBar";
 
 const MotionHeaderComponent = ({ localeHeader, lang }) => {
   const [hidden, setHidden] = useState(true);
+  const [transparency, setTransparency] = useState(false);
   const { scrollY } = useScroll();
   const { data: session } = useSession();
   const isLoggedIn = Boolean(session?.user);
@@ -42,59 +41,38 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
   };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log(latest);
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 150) {
       setHidden(false);
     } else {
       setHidden(true);
     }
+    if (latest < 150) {
+      setTransparency(false);
+    } else {
+      setTransparency(true);
+    }
   });
 
   return (
     <>
-      {isLoggedIn && session?.user?.role !== "manager" ? (
+      {!isLoggedIn ? (
         <motion.nav
           variants={{ hidden: { y: 0 }, visible: { y: "-110%" } }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className={`print:hidden flex flex-row items-center justify-between  header-class  text-white  text-xl absolute top-0 z-[50]  w-full mx-auto py-3  border-b shadow-lg pl-4 h-[80px]`}
+          className={`print:hidden flex flex-row items-center justify-between  header-class text-white  text-xl fixed top-0 z-[30]  w-full mx-auto py-3 pl-4 h-[80px] ${
+            !transparency ? "" : "bg-primary bg-opacity-50"
+          }`}
         >
-          <DarkLightLogo lang={lang} />
+          <WhiteLogoComponent lang={lang} />
           <motion.div
             variants={containerVariants}
             initial="initial"
             animate="open"
             exit="initial"
-            className="flex w-8/12 flex-row items-center justify-between font-lato tracking-widest gap-x-3 maxlg:hidden "
-          >
-            {localeHeader.menu?.map((link, index) => {
-              return (
-                <div key={index} className="">
-                  <MobileNavLink title={link.title} href={link.url} />
-                </div>
-              );
-            })}
-            <span className="pr-4 text-sm">
-              <ThemeToggle />
-            </span>
-          </motion.div>
-
-          <MobileMenuComponent className={"minlg:hidden"} lang={lang} />
-        </motion.nav>
-      ) : !isLoggedIn ? (
-        <motion.nav
-          variants={{ hidden: { y: 0 }, visible: { y: "-110%" } }}
-          animate={hidden ? "hidden" : "visible"}
-          transition={{ duration: 0.35, ease: "easeInOut" }}
-          className={`print:hidden flex flex-row items-center justify-between  header-class text-white  text-xl absolute top-0 z-[50]  w-full mx-auto py-3 pl-4 h-[80px]`}
-        >
-          <DarkLightLogo lang={lang} />
-          <motion.div
-            variants={containerVariants}
-            initial="initial"
-            animate="open"
-            exit="initial"
-            className="flex w-8/12 flex-row items-center justify-between font-lato tracking-widest gap-x-3 hidden "
+            className="flex maxmd:hidden w-8/12 flex-row items-center justify-between font-lato tracking-widest gap-x-3  "
           >
             {localeHeader.menu?.map((link, index) => {
               return (
@@ -107,16 +85,17 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
                 </div>
               );
             })}
-            <span className="pr-4 text-sm">
+          </motion.div>
+          <div className="flex items-center">
+            <MobileMenuComponent
+              className={"hidden maxmd:block"}
+              lang={lang}
+              localeHeader={localeHeader}
+            />
+            <span className="pr-4 text-sm relative z-10">
               <ThemeToggle />
             </span>
-          </motion.div>
-
-          <MobileMenuComponent
-            className={""}
-            lang={lang}
-            localeHeader={localeHeader}
-          />
+          </div>
         </motion.nav>
       ) : (
         <TopBar session={session} lang={lang} />

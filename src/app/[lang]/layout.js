@@ -17,11 +17,11 @@ export const metadata = {
   metadataBase: new URL("https://www.hudsoninternationalmarket.com"),
   title: "Hudson International Market",
   description:
-    "Expertos en desarrollo de aplicaciones y sitios web con funciones avanzadas, Marketing digital y embudos de venta",
+    "Comercio Internacional de Granos, Hierbas, Especias y Condimentos",
   openGraph: {
     title: "Hudson International Market",
     description:
-      "Desarrollo de aplicaciones y sitios web con funciones avanzadas. Marketing digital y embudos de venta",
+      "Comercio Internacional de Granos, Hierbas, Especias y Condimentos",
     image: "url/opengraph-image.png",
   },
   twitter: {
@@ -29,7 +29,7 @@ export const metadata = {
     site: "@hudsoninternationalmarket",
     title: "Hudson International Market",
     description:
-      "Expertos en desarrollo de aplicaciones y sitios web con funciones avanzadas, Marketing digital y embudos de venta",
+      "Comercio Internacional de Granos, Hierbas, Especias y Condimentos",
     image: "url/opengraph-image.png",
   },
 };

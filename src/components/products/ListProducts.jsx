@@ -5,15 +5,7 @@ import MobileFilterComponet from "./MobileFilterComponet";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const ListProducts = ({
-  products,
-  allBrands,
-  allCategories,
-  filteredProductsCount,
-  per_page,
-  start,
-  end,
-}) => {
+const ListProducts = ({ lang, products }) => {
   const { data: session } = useSession();
   const router = useRouter();
   useEffect(() => {
@@ -23,23 +15,13 @@ const ListProducts = ({
   }, [session?.user?.role]);
 
   return (
-    <section className="py-12 mx-auto px-20 maxmd:px-2  flex flex-col justify-center items-center">
-      <MobileFilterComponet
-        allBrands={allBrands}
-        allCategories={allCategories}
-      />
-      {/* <div className="w-[90%] mb-10 bg-gray-200 flex flex-row items-center justify-between pr-5 py-5">
-        <span className="flex flex-row items-center gap-2 pl-3 cursor-pointer">
-          <FaFilter /> Filtrar
-        </span>
-        <span>Servicios Disponibles: {productsCount}</span>
-      </div> */}
+    <section className=" flex flex-col justify-center items-center">
       <div className=" mx-auto flex justify-center items-center w-full">
-        <div className="flex maxmd:flex-col flex-row  w-[90%]">
+        <div className="flex maxsm:flex-col flex-row  w-full">
           <div className=" maxmd:w-full justify-center items-center gap-x-5">
-            <main className=" grid grid-cols-5 maxlg:grid-cols-3 maxmd:grid-cols-2 maxsm:grid-cols-1 gap-8 ">
+            <main className=" grid grid-cols-6 maxxlg:grid-cols-5 maxlg:grid-cols-4 maxmd:grid-cols-3 maxsm:grid-cols-2 gap-8 maxmd:gap-3 ">
               {products?.map((product, index) => (
-                <ProductCard item={product} key={index} />
+                <ProductCard item={product} key={index} lang={lang} />
               ))}
             </main>
           </div>

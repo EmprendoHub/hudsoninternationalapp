@@ -27,28 +27,15 @@ const FooterBar = ({ localeFooter, lang }) => {
         {localeFooter.footerBar.state} {localeFooter.footerBar.zip},{" "}
         {localeFooter.footerBar.country}.
       </p>
-      <div className="pt-5 flex flex-row flex-wrap items-center justify-start gap-x-4">
-        <FaCcVisa className="text-2xl" />
-        <FaCcStripe className="text-2xl" />
-        <FaCcPaypal className="text-2xl" />
-        <FaCcMastercard className="text-2xl" />
-        <FaCcDiscover className="text-2xl" />
-        <Image
-          src={"/images/Oxxo_pay.webp"}
-          alt={"oxxo"}
-          width={150}
-          height={150}
-          className="w-16 h-auto grayscale"
-        />
-      </div>
-      {/* <Link
-        aria-label="hudsoninternationalmarket"
+
+      <Link
+        aria-label="emprendomex"
         target="_blank"
         href={localeFooter.footerBar.path}
         className="text-popPrimary hover:text-popSecondary hover:scale-105 ease-in-out duration-300"
       >
         {localeFooter.footerBar.developBy}
-      </Link> */}
+      </Link>
     </div>
   );
 };

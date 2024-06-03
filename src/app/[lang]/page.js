@@ -18,16 +18,16 @@ import CategoriesComp from "@/components/home/CategoriesComp";
 
 export default async function Home({ params }) {
   const lang = params.lang;
-  const { homeDic, servicesDic } = await getDictionary(lang);
+  const { homeDic, servicesDic, flipBoxes } = await getDictionary(lang);
   return (
     <div className=" overflow-x-hidden">
       <Suspense fallback={<LoadingHero />}>
         <ImageHero homeDic={homeDic} />
-        <SingleSideToSide homeDic={homeDic} />
+        <SingleSideToSide flipBoxes={flipBoxes} homeDic={homeDic} />
         <HeroSlider homeDic={homeDic} />
         <IconGridComp servicesDic={servicesDic} />
         <SideToSide homeDic={homeDic} />
-        <CategoriesComp homeDic={homeDic} />
+        <CategoriesComp homeDic={homeDic} lang={lang} />
         {/* <TalkToTeam homeDic={homeDic} /> */}
         <SideToSideText homeDic={homeDic} />
         {/* <MiniPortfolio homeDic={homeDic} /> */}

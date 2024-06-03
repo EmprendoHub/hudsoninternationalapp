@@ -7,7 +7,7 @@ import FilterMenuComponent from "./FilterMenuComponent";
 import { CiShare2 } from "react-icons/ci";
 import Swal from "sweetalert2";
 
-const MobileFilterComponet = ({ allBrands, allCategories, lang }) => {
+const MobileFilterComponet = ({ lang, allBrands, allCategories }) => {
   const [isActive, SetIsActive] = useState(false);
   const pathname = usePathname();
 
@@ -63,6 +63,7 @@ const MobileFilterComponet = ({ allBrands, allCategories, lang }) => {
       <AnimatePresence mode="wait">
         {isActive && (
           <FilterMenuComponent
+            lang={lang}
             allBrands={allBrands}
             allCategories={allCategories}
             SetIsActive={SetIsActive}
