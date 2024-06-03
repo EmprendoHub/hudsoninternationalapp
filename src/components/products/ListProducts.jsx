@@ -10,7 +10,7 @@ const ListProducts = ({ lang, products }) => {
   const router = useRouter();
   useEffect(() => {
     if (session?.user?.role === "manager") {
-      router.push("/admin");
+      router.push(`/${lang}/admin`);
     }
   }, [session?.user?.role]);
 
@@ -19,7 +19,7 @@ const ListProducts = ({ lang, products }) => {
       <div className=" mx-auto flex justify-center items-center w-full">
         <div className="flex maxsm:flex-col flex-row  w-full">
           <div className=" maxmd:w-full justify-center items-center gap-x-5">
-            <main className=" grid grid-cols-6 maxxlg:grid-cols-5 maxlg:grid-cols-4 maxmd:grid-cols-3 maxsm:grid-cols-2 gap-8 maxmd:gap-3 ">
+            <main className=" grid grid-cols-8 maxxlg:grid-cols-6 maxlg:grid-cols-5 maxmd:grid-cols-4 maxsm:grid-cols-2 gap-8 maxmd:gap-3 ">
               {products?.map((product, index) => (
                 <ProductCard item={product} key={index} lang={lang} />
               ))}

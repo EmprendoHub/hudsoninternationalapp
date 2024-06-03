@@ -56,7 +56,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
           onClick={toggleMobileMenu}
           className="relative flex flex-row items-center justify-end gap-x-2  cursor-pointer text-sm"
         >
-          <div className="p-2 bg-fourth drop-shadow-md rounded-full hover:rotate-180 ease-linear duration-300">
+          <div className="p-2 bg-fourth drop-shadow-md rounded-full ">
             <AiOutlineMenu className="text-xl" />
           </div>
         </div>

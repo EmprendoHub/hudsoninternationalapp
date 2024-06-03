@@ -10,6 +10,7 @@ import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import TopBar from "./TopBar";
+import LocaleToggleFlags from "../layout/LocaleToggleFlags";
 
 const MotionHeaderComponent = ({ localeHeader, lang }) => {
   const [hidden, setHidden] = useState(true);
@@ -86,14 +87,15 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
               );
             })}
           </motion.div>
-          <div className="flex items-center">
+          <div className="relative flex items-center justify-center ">
             <MobileMenuComponent
               className={"hidden maxmd:block"}
               lang={lang}
               localeHeader={localeHeader}
             />
+
             <span className="pr-4 text-sm relative z-10">
-              <ThemeToggle />
+              <LocaleToggleFlags />
             </span>
           </div>
         </motion.nav>

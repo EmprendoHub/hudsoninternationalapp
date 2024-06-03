@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa6";
 import { BsSunFill } from "react-icons/bs";
 
-const ThemeToggle = ({ className }) => {
+const ThemeToggleVertical = ({ className }) => {
   const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
-    if (Window) {
+    if (localStorage) {
       const theme = localStorage?.getItem("theme");
       if (theme && theme === "dark") setDarkMode(true);
     }
@@ -24,17 +24,17 @@ const ThemeToggle = ({ className }) => {
 
   return (
     <div
-      className={`relative w-12 h-5 flex items-center dark:bg-primary bg-dark cursor-pointer rounded-full p-1 ${className}`}
+      className={`fixed z-[666] w-4 h-12 right-0 top-1/2 flex flex-col justify-between items-center dark:bg-dark bg-teal-800 cursor-pointer rounded-full p-1 ${className}`}
       onClick={() => setDarkMode(!darkMode)}
     >
-      <FaMoon className="text-white" size={18} />
+      <FaMoon className="text-white" size={9} />
       <div
-        className="absolute bg-gray-200 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
-        style={darkMode ? { left: "4px" } : { right: "4px" }}
+        className="absolute bg-white dark:bg-gray-200 w-3 h-3 rounded-full shadow-md transform transition-transform duration-300"
+        style={darkMode ? { top: "4px" } : { bottom: "4px" }}
       ></div>
-      <BsSunFill className="ml-auto text-accent" size={18} />
+      <BsSunFill className=" text-amber-500" size={9} />
     </div>
   );
 };
 
-export default ThemeToggle;
+export default ThemeToggleVertical;

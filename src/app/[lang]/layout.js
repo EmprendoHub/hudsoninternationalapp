@@ -11,6 +11,7 @@ import { options } from "../api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
 import AdminThemeToggle from "@/components/layout/AdminThemeToggle";
 import BackToTopButton from "@/components/buttons/BackToTopButton";
+import ThemeToggleVertical from "@/components/layout/ThemeToggleVertical";
 
 export const metadata = {
   manifest: "/manifest.json",
@@ -62,6 +63,7 @@ export default async function RootLayout({ children, params }) {
               <AdminThemeToggle />
             </div>
           )}
+          <ThemeToggleVertical />
         </CustomSessionProvider>
       </body>
     </html>
