@@ -84,7 +84,7 @@ const DoubleSideToSide = ({ homeDic }) => {
                 transition={{
                   duration: 0.8,
                 }}
-                className="text-5xl text-gray-800 dark:text-gray-300 font-primary leading-none mb-3"
+                className="text-5xl maxmd:text-3xl text-gray-800 dark:text-gray-300 font-primary leading-none mb-3 w-[90%] h-full"
               >
                 <span>{homeDic.doublesides.boxTwo.title} </span>
                 <span className="text-dark">
@@ -95,10 +95,10 @@ const DoubleSideToSide = ({ homeDic }) => {
           </div>
         </div>
         {/* Bottom Side */}
-        <div className="container max-w-5xl mx-auto m-8">
-          <div className="flex maxmd:flex-wrap items-center justify-center">
+        <div className="container max-w-5xl mx-auto m-8 ">
+          <div className="flex maxmd:flex-wrap h-[400px] items-center justify-center">
             {/* TExt */}
-            <div className="w-5/12 maxmd:w-full p-6">
+            <div className="w-5/12 maxmd:w-full p-6 ">
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -121,7 +121,7 @@ const DoubleSideToSide = ({ homeDic }) => {
                   {homeDic.doublesides.boxOne.titleTwo}
                 </span>
               </motion.h2>
-              <div className="text-gray-800 dark:text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3">
+              <div className="text-gray-800 dark:text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3 min-h-full">
                 <motion.p
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}

@@ -126,7 +126,16 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                   >
                     <div className="grid grid-cols-2 gap-4 mt-2 w-full">
                       <p>Presentaciones:</p>
-                      <p className="">{product?.presentations[0]?.value}</p>
+                      <p className="flex items-center text-[14px]">
+                        {product?.presentations.map((presentation, index) => (
+                          <span key={presentation.value}>
+                            {presentation.value}
+                            {product.presentations?.length === index + 1
+                              ? ""
+                              : ", "}
+                          </span>
+                        ))}
+                      </p>
                     </div>
                   </motion.div>
                 </div>
@@ -138,8 +147,8 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="text-xl font-semibold font-primary mb-3">
-                    Orígenes:
+                  <p className="text-base font-semibold font-primary mb-3">
+                    Crop Season:
                   </p>
                   <div className="">
                     <div className="flex items-center gap-x-1 w-full">
@@ -178,7 +187,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                                 return (
                                   <td
                                     key={month.value}
-                                    className={`border m-0.2 border-primary dark:border-white h-3 w-3 ${
+                                    className={`border m-0.2 my-1 border-primary dark:border-white h-3 w-3 ${
                                       isAvailable ? "bg-dark" : ""
                                     }`}
                                   ></td>

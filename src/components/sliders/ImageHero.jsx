@@ -17,8 +17,8 @@ const ImageHero = ({ homeDic }) => {
           alt="portfolio image"
           className="object-cover h-full w-full"
         />
-        <div className="absolute top-20 right-20 maxlg:right-5 z-10 text-white text-5xl maxsm:text-3xl  font-primary w-[50%] maxsm:w-[80%] ">
-          <h2 className="text-7xl  font-primary leading-none mb-3">
+        <div className="absolute top-20 right-20 maxlg:right-5 z-10 text-white text-7xl maxlg:text-5xl font-primary w-[50%] maxsm:w-[80%] ">
+          <h2 className="font-primary leading-none mb-3">
             <span className="text-primary dark:text-white">
               {homeDic.imageHero.title}{" "}
             </span>
