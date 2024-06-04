@@ -3,7 +3,7 @@
     "menu": [
       { "title": "Home", "url": "/" },
       { "title": "About", "url": "/acerca" },
-      { "title": "Productos", "url": "/productos" },
+      { "title": "Products", "url": "/productos" },
       { "title": "Contact", "url": "/contacto" }
     ],
     "searchbar": "Buscar"

@@ -5,7 +5,6 @@ import MobileMenuComponent from "./MobileMenuComponent";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import styles from "./_navbar.module.scss";
-import ThemeToggle from "../layout/ThemeToggle";
 import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "next/navigation";
@@ -128,7 +127,7 @@ const MobileNavLink = ({ title, href, lang }) => {
   return (
     <motion.div
       variants={mobileNavLinksVariants}
-      className="tracking-widest text-xs lowercase "
+      className="tracking-widest text-xs uppercase "
     >
       <Link
         href={`/${lang}${href}`}

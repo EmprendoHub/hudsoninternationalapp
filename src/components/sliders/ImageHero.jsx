@@ -35,12 +35,12 @@ const ImageHero = ({ homeDic }) => {
           <div className="text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3">
             <p className=" flex items-center gap-2">{homeDic.imageHero.text}</p>
           </div>
-          <button
+          {/* <button
             aria-label="Contactar"
             className="bg-primary dark:bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
           >
             {homeDic.imageHero.btnText}
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
     "menu": [
       { "title": "Inicio", "url": "/" },
       { "title": "Acerca", "url": "/acerca" },
-      { "title": "Products", "url": "/productos" },
+      { "title": "Productos", "url": "/productos" },
       { "title": "Contacto", "url": "/contacto" }
     ],
     "searchbar": "Buscar"
@@ -92,7 +92,7 @@
   },
   "homeDic": {
     "imageHero": {
-      "pretitle": "Trading Experts",
+      "pretitle": "Expertos en comercio",
       "title": "Expande Tus",
       "titleTwo": "Horizontes Comerciales",
       "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",

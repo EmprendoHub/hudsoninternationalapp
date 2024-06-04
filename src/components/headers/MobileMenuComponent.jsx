@@ -7,6 +7,7 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 import styles from "./_navbar.module.scss";
 import DarkLightLogo from "../logos/DarkLightLogo";
 import { FaFacebookF, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import WhiteLogoComponent from "../logos/WhiteLogoComponent";
 
 const MobileMenuComponent = ({ className, lang, localeHeader }) => {
   const [open, setOpen] = useState(false);
@@ -78,7 +79,7 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
               <AiOutlineClose />
             </p>
             <div className="relative flex h-full flex-col mb-5">
-              <DarkLightLogo className={"mb-5"} lang={lang} />
+              <WhiteLogoComponent className={"mb-5"} lang={lang} />
               <motion.div
                 variants={containerVariants}
                 initial="initial"
@@ -226,7 +227,7 @@ const MobileNavLink = ({ title, href, toggleMobileMenu }) => {
   return (
     <motion.div
       variants={mobileNavLinksVariants}
-      className="text-xl lowercase "
+      className="text-xl uppercase "
     >
       <Link
         href={href}
