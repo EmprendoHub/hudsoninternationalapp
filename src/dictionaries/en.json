@@ -1,6 +1,7 @@
 {
   "header": {
     "menu": [
+      { "title": "Home", "url": "/" },
       { "title": "About", "url": "/acerca" },
       { "title": "Productos", "url": "/productos" },
       { "title": "Contact", "url": "/contacto" }
@@ -104,8 +105,8 @@
         "title": "Expand Your",
         "titleTwo": "Business Horizons",
         "text": "Leverage over 20 years of expertise in the global spice trade, food ingredient supply, and condiment exchange to access new markets and grow your business with our comprehensive coordination service.",
-        "btnText": "Learn More",
-        "btnPath": "/about-us",
+        "btnText": "Explore Products",
+        "btnPath": "/en/productos",
         "imgPath": "/images/dried-red-chili_seco.webp"
       },
       {
@@ -113,8 +114,8 @@
         "title": "Global Supplier",
         "titleTwo": "Network",
         "text": "We offer products under quality and price standards through commercial agreements, ensuring you get what you need from our vast network of suppliers.",
-        "btnText": "Our Products",
-        "btnPath": "/products",
+        "btnText": "Explore Products",
+        "btnPath": "/en/productos",
         "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
@@ -122,8 +123,8 @@
         "title": "Business",
         "titleTwo": "Development",
         "text": "We facilitate access to new markets and provide a comprehensive service to help your business develop and thrive.",
-        "btnText": "Discover More",
-        "btnPath": "/services",
+        "btnText": "Explore Products",
+        "btnPath": "/en/productos",
         "imgPath": "/images/metal-bucket-salted-popcorn.webp"
       }
     ],
@@ -164,16 +165,16 @@
     "teamTalk": {
       "title": "Talk to Our Team",
       "btnText": "Contact Us",
-      "btnUrl": "/contact",
+      "btnUrl": "/en/contact",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
       "title": "Take Your Business to the",
       "titleTwo": "Next Level",
       "subtitle": "We take care of everything technical so you can focus on growth.",
-      "text": "We specialize in high-performance and scalable trading solutions. Whether you're a startup looking to make your mark or an established company seeking to expand, we have the experience and tools to make your vision a reality.",
+      "text": "We specialize in high-performance and scalable trading solutions. Whether you're a startup looking to make your mark or an established company seeking to expand, we have the experience and products to make your vision a reality.",
       "btnText": "Contact Us",
-      "btnUrl": "/contact",
+      "btnUrl": "/en/contact",
       "bullets": [
         "Market Expansion",
         "Quality Assurance",
@@ -188,7 +189,7 @@
       "titleTwo": "Solutions",
       "text": "Real-time synchronization of inventory between suppliers and clients, reducing risks and simplifying stock management.",
       "btnText": "View Demo",
-      "btnUrl": "/contact",
+      "btnUrl": "/en/contact",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
@@ -248,48 +249,48 @@
       "bgColor": "pink",
       "bgColorTwo": "pink",
       "preTitle": "Reach More Customers!",
-      "title": "Spice Trade",
-      "titleTwo": "Expand Your Reach!",
-      "subTitle": "Increase Your Sales",
+      "title": "High Quality",
+      "titleTwo": "Variety of products",
+      "subTitle": "Highest Standards",
       "textTitle": "BIOGRAPHY",
-      "text": "Transform your business with our customized solutions for selling spices and condiments. We use advanced technologies to optimize your trading operations.",
-      "textTwo": "Ready to expand your business? Discover how our trade strategies can drive your growth.",
+      "text": "Providing our customers with a wide variety of top products.",
+      "textTwo": "Products that meet the highest standards of quality and safety.",
       "img": "/images/beach_bonus.jpg",
       "imgTwo": "/images/beach_bonus.jpg",
       "btnText": "View Products",
       "btnLink": "/en/productos",
-      "icon": "FaBezierCurve"
+      "icon": "FaPepperHot"
     },
     {
       "bgColor": "blue",
       "bgColorTwo": "blue",
       "preTitle": "Comprehensive Solutions!",
-      "title": "Ingredient Management",
-      "titleTwo": "Optimize Your Efficiency!",
+      "title": "Fair Trade",
+      "titleTwo": "Supporting Communities",
       "subTitle": "Improve Your Operations",
-      "text": "Modernize your point of sale management with efficient POS systems for food ingredients. We design systems that enhance the accuracy and efficiency of your trading operations.",
-      "textTwo": "Increase the accuracy of your data and improve efficiency in managing spices and condiments.",
+      "text": "Ensuring fair trade practices for the betterment of local communities.",
+      "textTwo": "We work hard to ensure we support the livelihoods of farmers and local communities",
       "img": "/images/GTI-interior.jpeg",
       "imgTwo": "/images/GTI-interior.jpeg",
       "btnText": "View Products",
       "btnLink": "/en/productos",
-      "icon": "FaUsers"
+      "icon": "FaScaleBalanced"
     },
     {
       "bgColor": "purple",
       "bgColorTwo": "purple",
       "preTitle": "Custom Code!",
-      "title": "Web Applications for Trade",
+      "title": "World wide Trade",
       "titleTwo": "Scale with Confidence!",
       "subTitle": "Customized Solutions",
       "textTitle": "BIOGRAPHY",
-      "text": "We develop robust and scalable web applications for the trade of spices and condiments. Our focus is on fast and flexible solutions for your business.",
-      "textTwo": "Ensure the success of your ingredient trade with applications designed for growth and adaptability.",
+      "text": "Continuously innovating and improving our processes.",
+      "textTwo": "Ready to meet the evolving needs of the global market.",
       "img": "/images/Premio_10_mil_pesos.jpg",
       "imgTwo": "/images/Premio_10_mil_pesos.jpg",
       "btnText": "View Products",
       "btnLink": "/en/productos",
-      "icon": "FaCode"
+      "icon": "FaGlobe"
     }
   ],
   "aboutDic": {
@@ -373,6 +374,14 @@
       "phone": "+1 206 979 9807",
       "mapImage": "/images/hudson_map.webp",
       "mapUrl": "https://maps.app.goo.gl/ZGz6MvactPHiEbPD6"
+    },
+    "contactForm": {
+      "placeName": "Your Name Here",
+      "placePhone": "Your Phone Here",
+      "placeEmail": "Your Email Here",
+      "placeNote": "Your Message Here",
+      "success": "The message was sent successfully",
+      "btnText": "Send Message"
     }
   },
   "servicesDic": {
@@ -381,43 +390,43 @@
     "services": [
       {
         "icon": "/icons/p12-icon-img-1.png",
-        "title": "Custom Web Design Your brand is unique and your website should be too.",
-        "text": " Our custom designs ensure your site stands out from the competition, aligns perfectly with your brand identity.",
+        "title": "Quality Assurance",
+        "text": " We are dedicated to maintaining the highest quality standards for all our products. Our rigorous quality control measures ensure that every grain, herb, spice, and condiment we trade is safe, fresh, and flavorful.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-2.png",
-        "title": "High Speed and Performance",
-        "text": "Speed is not a luxury; It is a necessity to retain visitors. We optimize each app for high performance, ensuring fast loading times that improve user experience and increase your SEO rankings.",
+        "title": "Quick Response Time",
+        "text": "Speed is not a luxury; It is a necessity to retain customers we understand that. We take pride in our quick response times, ensuring you meet you business goals  and increase your productivity.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
       {
         "icon": "/icons/p12-icon-img-2.png",
         "title": "Intelligent scalability",
-        "text": "As your business grows, so should your digital solutions. Our web applications are built to scale effortlessly with your needs, ensuring you're always ready to expand without technological restrictions..",
+        "text": "As your business grows, so must the capacity of your business partners. Our high-quality products and service are focused on helping your business scale and expand without supply restrictions.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-1.png",
-        "title": "SEO Optimization",
-        "text": "From on-page techniques to backend tweaks, our SEO practices ensure your site gains high visibility and attracts more organic traffic, turning searches into valuable customer engagements.",
+        "title": "Sustainability",
+        "text": "We believe in responsible sourcing and sustainable practices. By working closely with our suppliers, we ensure that our products are grown and harvested in ways that protect the environment and support local communities.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
       {
         "icon": "/icons/p12-icon-img-2.png",
-        "title": "Intelligent scalability",
-        "text": "As your business grows, so should your digital solutions. Our web applications are built to scale effortlessly with your needs, ensuring you're always ready to expand without technological restrictions..",
+        "title": "Integrity",
+        "text": "Integrity is at the core of our business. We conduct all our transactions with honesty and transparency, building trust with our partners and customers through ethical business practices.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-1.png",
-        "title": "SEO Optimization",
-        "text": "From on-page techniques to backend tweaks, our SEO practices ensure your site gains high visibility and attracts more organic traffic, turning searches into valuable customer engagements.",
+        "title": "Innovation",
+        "text": "In an ever-changing global market, we embrace innovation to stay ahead. We continuously invest in research and development to improve our supply chain, enhance product quality, and meet the diverse needs of our customers.",
         "btnText": "Quote",
         "btnUrl": "/en/cotizar"
       }

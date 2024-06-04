@@ -16,7 +16,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
         />
       </div>
       <div className="flex flex-row maxmd:flex-wrap items-center ">
-        <div className="flex flex-row gap-5 maxmd:flex-wrap w-full">
+        <div className="flex flex-row gap-5 maxsm:flex-wrap w-full">
           <Link
             href={`/${lang}/productos?keyword=chiles`}
             className="colone p cursor-pointer hover:scale-[105%] duration-300 ease-in-out w-full "
@@ -29,7 +29,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explora Chiles"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Chiles"}
               </span>
               {/* overlay */}
@@ -48,7 +48,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explore Condimentos"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Condimentos"}
               </span>
               {/* overlay */}
@@ -67,7 +67,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explora Especias"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Especias"}
               </span>
               {/* overlay */}
@@ -78,7 +78,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
       </div>
       {/* bottom cats */}
       <div className="flex flex-row maxmd:flex-wrap items-center mt-5">
-        <div className="flex flex-row gap-5 maxmd:flex-wrap w-full">
+        <div className="flex flex-row gap-5 maxsm:flex-wrap w-full">
           <Link
             href={`/${lang}/productos?keyword=flores`}
             className="colone p cursor-pointer hover:scale-[105%] duration-300 ease-in-out w-full "
@@ -91,7 +91,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explora flowers"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Flowers"}
               </span>
               {/* overlay */}
@@ -110,7 +110,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explore Grains"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50 text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Grains"}
               </span>
               {/* overlay */}
@@ -129,7 +129,7 @@ const CategoriesComp = ({ homeDic, lang }) => {
                 alt="Explora Hierbas"
                 className="w-full h-[500px] maxxlg:h-[350px] object-cover "
               />
-              <span className="absolute rounded-full z-50  text-white uppercase py-2 px-8  maxmd:text-xs top-1/2 font-primary tracking-wide">
+              <span className="absolute rounded-full z-50  text-white uppercase py-2 px-8  maxmd:text-xl top-1/2 font-primary tracking-wide">
                 {"Hierbas"}
               </span>
               {/* overlay */}

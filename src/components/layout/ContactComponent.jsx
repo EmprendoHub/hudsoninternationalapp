@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaLinkedin,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa6";
 import styles from "./layout.module.scss";
 import Image from "next/image";
 
@@ -10,16 +16,16 @@ const ContactComponent = ({ contactDic }) => {
       {/* Title */}
       <div className="w-full flex h-full gap-x-5 maxmd:flex-col justify-center items-center mb-10">
         <div className="w-1/2 maxmd:w-full pr-10 maxmd:px-1 maxmd:mt-10  ">
-          <p className="uppercase font-secondary tracking-widest text-xs text-gray-500">
+          <p className="uppercase font-secondary tracking-widest text-xs text-gray-500 maxmd:text-center">
             {contactDic.contactInfo.pretitle}
           </p>
-          <h3 className="text-3xl maxsm:text-3xl font-primary mb-1">
+          <h3 className="maxmd:text-center text-3xl maxsm:text-3xl font-primary mb-1">
             <span>{contactDic.contactInfo.title} </span>
             <span className="text-secondary">
               {contactDic.contactInfo.titleTwo}
             </span>
           </h3>
-          <p className="font-secondary italic maxlg:text-sm">
+          <p className="maxmd:text-center font-secondary italic maxlg:text-sm">
             {contactDic.contactInfo.subtitle}
           </p>
         </div>
@@ -36,7 +42,10 @@ const ContactComponent = ({ contactDic }) => {
                 {/* Facebook */}
                 <Link
                   aria-label="Facebook"
-                  href={"/"}
+                  target="_blank"
+                  href={
+                    "https://www.facebook.com/Hudson-International-Market-100649958963881"
+                  }
                   className="relative flex items-center justify-center group"
                 >
                   <svg className={`${styles.circle}`}>
@@ -61,10 +70,13 @@ const ContactComponent = ({ contactDic }) => {
                   </svg>
                   <FaFacebookF className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
                 </Link>
-                {/* YouTube */}
+                {/* LinkedIn */}
                 <Link
-                  aria-label="YouTube"
-                  href={"/"}
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  href={
+                    "https://www.linkedin.com/company/hudson-international-market"
+                  }
                   className="relative flex items-center justify-center group"
                 >
                   <svg className={`${styles.circle}`}>
@@ -87,12 +99,13 @@ const ContactComponent = ({ contactDic }) => {
                       />
                     </g>
                   </svg>
-                  <FaYoutube className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
+                  <FaLinkedin className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
                 </Link>
-                {/* TikTok */}
+                {/* WhatsApp */}
                 <Link
-                  aria-label="TikTok"
-                  href={"/"}
+                  aria-label="WhatsApp"
+                  target="_blank"
+                  href={"https://wa.me/12069799807"}
                   className="relative flex items-center justify-center group"
                 >
                   <svg className={`${styles.circle}`}>
@@ -115,7 +128,7 @@ const ContactComponent = ({ contactDic }) => {
                       />
                     </g>
                   </svg>
-                  <FaTiktok className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
+                  <FaWhatsapp className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
                 </Link>
               </div>
             </div>
@@ -123,9 +136,11 @@ const ContactComponent = ({ contactDic }) => {
               <p className="text-[12px] text-center uppercase font-secondary text-gray-500">
                 {contactDic.contactInfo.questions}
               </p>
-              <p className="text-base font-primary ">
-                hudsoninternationalmarket@gmail.com
-              </p>
+              <Link href={"mailto:hudsoninternationalmarket01@gmail.com"}>
+                <p className="maxmd:text-center text-base font-primary hover:text-secondary ease-in-out duration-700">
+                  hudsoninternationalmarket01@gmail.com
+                </p>
+              </Link>
             </div>
           </div>
           {/* Email */}
@@ -135,7 +150,7 @@ const ContactComponent = ({ contactDic }) => {
       <div className="w-full flex h-full gap-x-5 maxmd:flex-col-reverse justify-end items-center">
         {/*  Map */}
         <div className="w-1/2 maxmd:w-full pr-10 maxmd:px-1 maxmd:mt-10  ">
-          <div className="w-full h-auto flex justify-end maxmd:justify-start items-center">
+          <div className="w-full h-auto flex justify-end maxmd:justify-center items-center">
             <Link href={contactDic.addressTwo.mapUrl} target="_blank">
               <Image
                 alt="google maps"
@@ -152,7 +167,7 @@ const ContactComponent = ({ contactDic }) => {
           <p className="uppercase font-secondary tracking-widest text-xs text-gray-500">
             {contactDic.addressTwo.ubicacion}
           </p>
-          <h3 className="text-3xl maxsm:text-3xl font-primary mb-1">
+          <h3 className="text-3xl maxsm:text-3xl font-primary mb-1 maxmd:text-center">
             <span>{contactDic.addressTwo.addressOne}, </span>
             <span className="text-secondary">{contactDic.addressTwo.city}</span>
           </h3>

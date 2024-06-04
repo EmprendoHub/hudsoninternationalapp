@@ -322,7 +322,7 @@ export async function payPOSDrawer(data) {
           service: "gmail",
           auth: {
             user: process.env.GOOGLE_MAIL,
-            pass: process.env.GOOGLE_MAIL_PASS_ONE,
+            pass: process.env.GOOGLE_MAIL_PASS,
           },
         });
 
@@ -3571,7 +3571,7 @@ export async function resendEmail(data) {
             secure: false,
             auth: {
               user: process.env.GOOGLE_MAIL,
-              pass: process.env.GOOGLE_MAIL_PASS_ONE,
+              pass: process.env.GOOGLE_MAIL_PASS,
             },
           });
 
@@ -3689,7 +3689,7 @@ export async function resetAccountEmail(data) {
             secure: false,
             auth: {
               user: process.env.GOOGLE_MAIL,
-              pass: process.env.GOOGLE_MAIL_PASS_ONE,
+              pass: process.env.GOOGLE_MAIL_PASS,
             },
           });
 

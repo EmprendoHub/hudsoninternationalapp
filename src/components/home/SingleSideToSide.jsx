@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const SingleSideToSide = ({ homeDic, flipBoxes }) => {
   return (
-    <div className="w-full pt-10 maxmd:pt-0 bg-white dark:bg-primary px-40 maxxlg:px-20 maxlg:px-5 maxmd:px-3 ">
+    <div className="w-full pt-10 maxmd:pt-0 bg-white dark:bg-primary px-32 maxxlg:px-10 maxlg:px-5 maxmd:px-3 ">
       {/* underhero */}
 
       <section className=" py-8">
@@ -48,7 +48,7 @@ const SingleSideToSide = ({ homeDic, flipBoxes }) => {
                     duration: 1.0,
                   }}
                   aria-label="Contactar"
-                  className="dark:bg-primary bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
+                  className=" bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
                 >
                   {homeDic.singlesides.boxOne.btnText}
                 </motion.button>

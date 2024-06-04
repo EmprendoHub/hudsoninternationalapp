@@ -1,9 +1,9 @@
-"use client";
 import SubscribeForm from "@/components/forms/SubscribeForm";
 import ContactComponent from "@/components/layout/ContactComponent";
 import Image from "next/image";
 import React from "react";
 import coverImage from "../../../public/images/hudson_contact_cover.webp";
+import ContactUsComponent from "./ContactUsComponent";
 
 const ContactInner = ({ homeDic, contactDic }) => {
   return (
@@ -27,7 +27,13 @@ const ContactInner = ({ homeDic, contactDic }) => {
         </div>
       </div>
       <ContactComponent contactDic={contactDic} />
-      <SubscribeForm homeDic={homeDic} />
+      <ContactUsComponent
+        contactDic={contactDic}
+        contactTitle={"Mándanos un breve mensaje"}
+        contactSubTitle={
+          "En breve uno de nuestros representantes se comunicara."
+        }
+      />
     </div>
   );
 };

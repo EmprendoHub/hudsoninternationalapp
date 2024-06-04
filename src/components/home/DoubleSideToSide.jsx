@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 const DoubleSideToSide = ({ homeDic }) => {
   return (
-    <div className="w-full my-10 bg-white dark:bg-primary">
+    <div className="w-full min-h-full my-10 bg-white dark:bg-primary ">
       {/* underhero */}
-      <section className=" py-8">
+      <div className="h-full py-8">
         {/* Top Side */}
-        <div className="container max-w-5xl mx-auto m-8">
-          <div className="flex maxmd:flex-wrap maxmd:flex-col-reverse items-center justify-center">
+        <div className="h-full max-w-5xl mx-auto m-8">
+          <div className="flex h-full maxmd:flex-col-reverse items-center justify-center">
             {/* text and image */}
-            <div className="w-6/12 maxmd:w-full p-6">
+            <div className="w-6/12 maxmd:w-full p-6 h-full">
               <div className="text-gray-800 dark:text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3">
                 <motion.p
                   initial={{ y: 50, opacity: 0 }}
@@ -43,7 +43,7 @@ const DoubleSideToSide = ({ homeDic }) => {
                 className={`relative mt-10 `}
               >
                 <Image
-                  className="object-cover rounded-full w-[25rem] h-[25rem] maxmd:w-[20rem] maxmd:h-[20rem] z-50"
+                  className="object-cover rounded-full w-[25rem] h-[25rem] maxsm:w-[20rem] maxsm:h-[20rem] z-50"
                   src="/images/importacion_de_condimentos.webp"
                   alt="Diseño Gráfico Profesional"
                   width={550}
@@ -95,8 +95,8 @@ const DoubleSideToSide = ({ homeDic }) => {
           </div>
         </div>
         {/* Bottom Side */}
-        <div className="container max-w-5xl mx-auto m-8 ">
-          <div className="flex maxmd:flex-wrap h-[400px] items-center justify-center">
+        <div className="h-full max-w-5xl mx-auto m-8 ">
+          <div className="flex maxmd:flex-wrap h-[700px] maxmd:h-full items-center justify-center">
             {/* TExt */}
             <div className="w-5/12 maxmd:w-full p-6 ">
               <motion.div
@@ -144,7 +144,7 @@ const DoubleSideToSide = ({ homeDic }) => {
               </motion.button>
             </div>
             {/* Image */}
-            <div className="relative w-6/12 maxmd:w-full h-full">
+            <div className="relative w-6/12 maxmd:w-[90%] ">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -154,7 +154,7 @@ const DoubleSideToSide = ({ homeDic }) => {
                 className="relative w-full h-full"
               >
                 <Image
-                  className="object-cover w-full h-full z-50"
+                  className="object-cover w-full h-full "
                   src="/images/seeds_dry_fruits_nuts_2.webp"
                   alt="Diseño Gráfico Profesional"
                   width={850}
@@ -164,7 +164,7 @@ const DoubleSideToSide = ({ homeDic }) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

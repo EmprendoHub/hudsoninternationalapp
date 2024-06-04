@@ -1,6 +1,7 @@
 {
   "header": {
     "menu": [
+      { "title": "Inicio", "url": "/" },
       { "title": "Acerca", "url": "/acerca" },
       { "title": "Products", "url": "/productos" },
       { "title": "Contacto", "url": "/contacto" }
@@ -104,8 +105,8 @@
         "title": "Expande Tus",
         "titleTwo": "Horizontes Comerciales",
         "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",
-        "btnText": "Aprende Más",
-        "btnPath": "/about-us",
+        "btnText": "Explorar Productos",
+        "btnPath": "/es/productos",
         "imgPath": "/images/dried-red-chili_seco.webp"
       },
       {
@@ -113,8 +114,8 @@
         "title": "Red Global de",
         "titleTwo": "Proveedores",
         "text": "Ofrecemos productos bajo estándares de calidad y precio a través de acuerdos comerciales, asegurando que obtengas lo que necesitas de nuestra vasta red de proveedores.",
-        "btnText": "Nuestros Productos",
-        "btnPath": "/products",
+        "btnText": "Explorar Productos",
+        "btnPath": "/es/productos",
         "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
@@ -122,8 +123,8 @@
         "title": "Desarrollo de",
         "titleTwo": "Negocios",
         "text": "Facilitamos el acceso a nuevos mercados y brindamos un servicio integral para ayudar a tu negocio a desarrollarse y prosperar.",
-        "btnText": "Descubre Más",
-        "btnPath": "/services",
+        "btnText": "Explorar Productos",
+        "btnPath": "/es/productos",
         "imgPath": "/images/metal-bucket-salted-popcorn.webp"
       }
     ],
@@ -164,16 +165,16 @@
     "teamTalk": {
       "title": "Habla con Nuestro Equipo",
       "btnText": "Contáctanos",
-      "btnUrl": "/contact",
+      "btnUrl": "/es/contact",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
       "title": "Lleva tu Negocio al",
       "titleTwo": "Siguiente Nivel",
       "subtitle": "Nos encargamos de todo lo técnico para que puedas centrarte en el crecimiento.",
-      "text": "Nos especializamos en soluciones comerciales de alto rendimiento y escalabilidad. Ya sea que seas una startup buscando dejar tu huella o una empresa establecida que busca expandirse, tenemos la experiencia y las herramientas para hacer realidad tu visión.",
+      "text": "Nos especializamos en soluciones comerciales de alto rendimiento y escalabilidad. Ya sea que seas una startup buscando dejar tu huella o una empresa establecida que busca expandirse, tenemos la experiencia y los productos para hacer realidad tu visión.",
       "btnText": "Contáctanos",
-      "btnUrl": "/contact",
+      "btnUrl": "/es/contact",
       "bullets": [
         "Expansión de Mercado",
         "Garantía de Calidad",
@@ -188,7 +189,7 @@
       "titleTwo": "Comercio Global",
       "text": "Sincronización en tiempo real del inventario entre proveedores y clientes, reduciendo riesgos y simplificando la gestión de existencias.",
       "btnText": "Ver Demo",
-      "btnUrl": "/contact",
+      "btnUrl": "/es/contact",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
@@ -248,48 +249,48 @@
       "bgColor": "pink",
       "bgColorTwo": "pink",
       "preTitle": "¡Llega a Más Clientes!",
-      "title": "Comercio de Especias",
-      "titleTwo": "¡Amplía Tu Alcance!",
+      "title": "Alta calidad",
+      "titleTwo": "Variedad de Productos",
       "subTitle": "Aumenta tus Ventas",
       "textTitle": "BIOGRAFÍA",
-      "text": "Transforma tu negocio con nuestras soluciones personalizadas para la venta de especias y condimentos. Utilizamos tecnologías avanzadas para optimizar tus operaciones comerciales.",
-      "textTwo": "¿Listo para expandir tu negocio? Descubre cómo nuestras estrategias de comercio pueden impulsar tu crecimiento.",
+      "text": "Proporcionar a nuestros clientes una amplia variedad de productos de primera calidad.",
+      "textTwo": "Productos que cumplen con los más altos estándares de calidad y seguridad.",
       "img": "/images/beach_bonus.jpg",
       "imgTwo": "/images/beach_bonus.jpg",
       "btnText": "Ver Productos",
       "btnLink": "/es/productos",
-      "icon": "FaBezierCurve"
+      "icon": "FaPepperHot"
     },
     {
       "bgColor": "blue",
       "bgColorTwo": "blue",
       "preTitle": "¡Soluciones Integrales!",
-      "title": "Gestión de Ingredientes",
-      "titleTwo": "¡Optimiza tu Eficiencia!",
+      "title": "Comercio justo",
+      "titleTwo": "Apoyando Comunidades",
       "subTitle": "Mejora tus Operaciones",
-      "text": "Moderniza la gestión de tu punto de venta con sistemas POS eficientes para ingredientes alimentarios. Diseñamos sistemas que mejoran la precisión y eficiencia de tus operaciones comerciales.",
-      "textTwo": "Aumenta la precisión de tus datos y mejora la eficiencia en la gestión de especias y condimentos.",
+      "text": "Garantizando prácticas de comercio justo para el mejoramiento de las comunidades locales.",
+      "textTwo": "Trabajamos duro para asegurarnos de apoyar los medios de vida de los agricultores y las comunidades locales.",
       "img": "/images/GTI-interior.jpeg",
       "imgTwo": "/images/GTI-interior.jpeg",
       "btnText": "Ver Productos",
       "btnLink": "/es/productos",
-      "icon": "FaUsers"
+      "icon": "FaAward"
     },
     {
       "bgColor": "purple",
       "bgColorTwo": "purple",
       "preTitle": "¡Código Personalizado!",
-      "title": "Aplicaciones Web para Comercio",
+      "title": "Comercio mundial",
       "titleTwo": "¡Escala con Confianza!",
       "subTitle": "Soluciones Personalizadas",
       "textTitle": "BIOGRAFÍA",
-      "text": "Desarrollamos aplicaciones web robustas y escalables para el comercio de especias y condimentos. Nos enfocamos en soluciones rápidas y flexibles para tu negocio.",
-      "textTwo": "Asegura el éxito de tu comercio de ingredientes con aplicaciones diseñadas para el crecimiento y la adaptabilidad.",
+      "text": "Innovando y mejorando continuamente nuestros procesos.",
+      "textTwo": "Listos para satisfacer las necesidades cambiantes del mercado global.",
       "img": "/images/Premio_10_mil_pesos.jpg",
       "imgTwo": "/images/Premio_10_mil_pesos.jpg",
       "btnText": "Ver Productos",
       "btnLink": "/es/productos",
-      "icon": "FaCode"
+      "icon": "FaGlobe"
     }
   ],
   "aboutDic": {
@@ -372,6 +373,14 @@
       "phone": "+1 206 979 9807",
       "mapImage": "/images/hudson_map.webp",
       "mapUrl": "https://maps.app.goo.gl/ZGz6MvactPHiEbPD6"
+    },
+    "contactForm": {
+      "placeName": "Tu Nombre Aquí",
+      "placePhone": "Tu Teléfono Aquí",
+      "placeEmail": "Tu Email",
+      "placeNote": "Tu Mensaje",
+      "success": "El mensaje se envió exitosamente",
+      "btnText": "Enviar Mensaje"
     }
   },
   "servicesDic": {
@@ -380,43 +389,43 @@
     "services": [
       {
         "icon": "/icons/p12-icon-img-1.png",
-        "title": "Diseño Web a Medida",
-        "text": "Tu marca es única y tu sitio web también debería serlo. Nuestros diseños personalizados garantizan que tu sitio se destaque de la competencia, se alinee perfectamente con tu identidad de marca y cautive a tu audiencia desde el primer clic.",
+        "title": "Control de Calidad",
+        "text": "Estamos dedicados a mantener los más altos estándares de calidad para todos nuestros productos. Nuestras rigurosas medidas de control de calidad garantizan que cada grano, hierba, especia y condimento que comercializamos sea seguro, fresco y sabroso.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-2.png",
-        "title": "Alta Velocidad y Rendimiento",
-        "text": "La velocidad no es un lujo; es una necesidad para retener a los visitantes. Optimizamos cada aplicación para un alto rendimiento, asegurando tiempos de carga rápidos que mejoran la experiencia del usuario y aumentan tus clasificaciones SEO.",
+        "title": "Tiempo de respuesta rápido",
+        "text": "La velocidad no es un lujo; Es una necesidad retener a los clientes, lo entendemos. Estamos orgullosos de nuestros rápidos tiempos de respuesta, lo que garantiza que cumpla con sus objetivos comerciales y aumente su productividad.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       },
       {
         "icon": "/icons/p12-icon-img-2.png",
-        "title": "Escalabilidad inteligente",
-        "text": "A medida que tu negocio crece, también deberían hacerlo tus soluciones digitales. Nuestras aplicaciones web están construidas para escalar sin esfuerzo con tus necesidades, asegurando que siempre estés listo para expandirte sin restricciones tecnológicas.",
+        "title": "Escalabilidad Inteligente",
+        "text": "A medida que tu negocio crece, también debe crecer la capacidad de tus socios comerciales. Nuestro productos y servicio de alta calidad esta enfocado en ayudar a tu negocio a escalar y expandirse sin restricciones de suministro.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-1.png",
-        "title": "Optimización SEO",
-        "text": "Desde técnicas en la página hasta ajustes en el backend, nuestras prácticas SEO aseguran que tu sitio gane alta visibilidad y atraiga más tráfico orgánico, convirtiendo búsquedas en valiosos compromisos de clientes.",
+        "title": "Sostenibilidad",
+        "text": "Creemos en el abastecimiento responsable y las prácticas sostenibles. Al trabajar estrechamente con nuestros proveedores, nos aseguramos de que nuestros productos se cultiven y cosechen de manera que protejan el medio ambiente y apoyen a las comunidades locales.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       },
       {
         "icon": "/icons/p12-icon-img-2.png",
-        "title": "Escalabilidad inteligente",
-        "text": "A medida que tu negocio crece, también deberían hacerlo tus soluciones digitales. Nuestras aplicaciones web están construidas para escalar sin esfuerzo con tus necesidades, asegurando que siempre estés listo para expandirte sin restricciones tecnológicas.",
+        "title": "Integridad",
+        "text": "La integridad es el núcleo de nuestro negocio. Realizamos todas nuestras transacciones con honestidad y transparencia, generando confianza con nuestros socios y clientes a través de prácticas comerciales éticas.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       },
       {
         "icon": "/icons/h5-icon-img-1.png",
-        "title": "Optimización SEO",
-        "text": "Desde técnicas en la página hasta ajustes en el backend, nuestras prácticas SEO aseguran que tu sitio gane alta visibilidad y atraiga más tráfico orgánico, convirtiendo búsquedas en valiosos compromisos de clientes.",
+        "title": "Innovación",
+        "text": "En un mercado global en constante cambio, adoptamos la innovación para mantenernos a la vanguardia. Invertimos continuamente en investigación y desarrollo para mejorar nuestra cadena de suministro, mejorar la calidad del producto y satisfacer las diversas necesidades de nuestros clientes.",
         "btnText": "Cotizar",
         "btnUrl": "/es/cotizar"
       }

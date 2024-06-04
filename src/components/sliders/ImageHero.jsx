@@ -26,18 +26,18 @@ const ImageHero = ({ homeDic }) => {
               {homeDic.imageHero.titleTwo}
             </span>
           </h2>
-          <p className="font-secondary text-lg font-medium mb-1 text-gray-800 dark:text-white">
+          <p className="font-secondary text-lg font-medium mb-1 text-white">
             {homeDic.imageHero.pretitle}
           </p>
           <p className="font-secondary text-sm mb-1">
             {homeDic.imageHero.subtitle}
           </p>
-          <div className="text-gray-800 dark:text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3">
+          <div className="text-gray-300 font-secondary text-sm mb-8  maxmd:text-sm flex flex-col gap-3">
             <p className=" flex items-center gap-2">{homeDic.imageHero.text}</p>
           </div>
           <button
             aria-label="Contactar"
-            className="bg-dark dark:bg-secondary px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
+            className="bg-primary dark:bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
           >
             {homeDic.imageHero.btnText}
           </button>

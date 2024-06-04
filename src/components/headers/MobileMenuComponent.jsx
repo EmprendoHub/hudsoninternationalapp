@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import styles from "./_navbar.module.scss";
 import DarkLightLogo from "../logos/DarkLightLogo";
+import { FaFacebookF, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 const MobileMenuComponent = ({ className, lang, localeHeader }) => {
   const [open, setOpen] = useState(false);
@@ -99,35 +100,100 @@ const MobileMenuComponent = ({ className, lang, localeHeader }) => {
               </motion.div>
             </div>
 
-            {/* Contact Links */}
-            <div className="flex flex-col items-center justify-center gap-x-4 pt-10">
-              <Link
-                href={"tel:3532464146"}
-                className=" flex flex-row justify-between items-center gap-x-2 cursor-pointer mb-3"
-              >
-                <span className="text-sm">353-246-4146</span>
-              </Link>
-              <div className="flex items-center gap-x-4">
-                <motion.a
-                  whileHover={{ scale: 1.3 }}
-                  whileTap={{ scale: 0.9 }}
-                  href="https://www.instagram.com/hudsoninternationalmarket/"
+            {/* Social media */}
+            <div className="w-1/2">
+              <div className="relative flex items-center justify-center w-full">
+                {/* Facebook */}
+                <Link
+                  aria-label="Facebook"
                   target="_blank"
+                  href={
+                    "https://www.facebook.com/Hudson-International-Market-100649958963881"
+                  }
+                  className="relative flex items-center justify-center group"
                 >
-                  <span className="socialLink">
-                    <BsInstagram className="text-xl maxsm:text-base" />
-                  </span>
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.3 }}
-                  whileTap={{ scale: 0.9 }}
-                  href="https://www.facebook.com/hudsoninternationalmarket/"
+                  <svg className={`${styles.circle}`}>
+                    <g>
+                      <ellipse
+                        className={`${styles.background}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                      <ellipse
+                        className={`${styles.foreground}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                    </g>
+                  </svg>
+                  <FaFacebookF className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
+                </Link>
+                {/* LinkedIn */}
+                <Link
+                  aria-label="LinkedIn"
                   target="_blank"
+                  href={
+                    "https://www.linkedin.com/company/hudson-international-market"
+                  }
+                  className="relative flex items-center justify-center group"
                 >
-                  <span className="socialLink">
-                    <BsFacebook className="text-xl maxsm:text-base" />
-                  </span>
-                </motion.a>
+                  <svg className={`${styles.circle}`}>
+                    <g>
+                      <ellipse
+                        className={`${styles.background}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                      <ellipse
+                        className={`${styles.foreground}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                    </g>
+                  </svg>
+                  <FaLinkedin className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
+                </Link>
+                {/* WhatsApp */}
+                <Link
+                  aria-label="WhatsApp"
+                  target="_blank"
+                  href={"https://wa.me/12069799807"}
+                  className="relative flex items-center justify-center group"
+                >
+                  <svg className={`${styles.circle}`}>
+                    <g>
+                      <ellipse
+                        className={`${styles.background}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                      <ellipse
+                        className={`${styles.foreground}`}
+                        ry="20"
+                        rx="20"
+                        cy="30"
+                        cx="30"
+                        strokeWidth="2"
+                      />
+                    </g>
+                  </svg>
+                  <FaWhatsapp className="absolute text-xs group-hover:text-secondary ease-in-out duration-700 z-0" />
+                </Link>
               </div>
             </div>
           </motion.div>

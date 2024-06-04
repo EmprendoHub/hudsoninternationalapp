@@ -3,10 +3,8 @@ import "./css/globals.css";
 import FooterComponent from "@/components/footer/FooterComponent";
 //import BackToTopButton from "@/components/buttons/BackToTopButton";
 import WhatsAppButton from "@/components/buttons/WhatsAppButton";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import HeaderComponent from "@/components/headers/HeaderComponent";
-import LocaleToggle from "@/components/layout/LocaleToggle";
-import LocaleToggleStyled from "@/components/buttons/LocaleToggleStyled";
 import { options } from "../api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
 import AdminThemeToggle from "@/components/layout/AdminThemeToggle";
@@ -45,8 +43,7 @@ export default async function RootLayout({ children, params }) {
   const lang = params.lang;
   return (
     <html lang={`${lang}`}>
-      <GoogleTagManager gtmId="GTM-NZ8VMWZ" />
-      <GoogleAnalytics gaId="G-GW5V9YLG5X" />
+      <GoogleAnalytics gaId="G-XHDKY7FLQ5" />
       <body
         className={`body-class relative overflow-x-hidden h-full dark:bg-dark bg-white dark:text-white`}
       >

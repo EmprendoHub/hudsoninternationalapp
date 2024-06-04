@@ -19,7 +19,7 @@ const ListProducts = ({ lang, products }) => {
       <div className=" mx-auto flex justify-center items-center w-full">
         <div className="flex maxsm:flex-col flex-row  w-full">
           <div className=" maxmd:w-full justify-center items-center gap-x-5">
-            <main className=" grid grid-cols-8 maxxlg:grid-cols-6 maxlg:grid-cols-5 maxmd:grid-cols-4 maxsm:grid-cols-2  maxxsm:grid-cols-1 gap-8 maxmd:gap-3 ">
+            <main className="justify-center grid grid-cols-8 maxxlg:grid-cols-6 maxlg:grid-cols-5 maxmd:grid-cols-3 maxsm:grid-cols-2  maxxsm:grid-cols-1 gap-8 maxmd:gap-3 ">
               {products?.map((product, index) => (
                 <ProductCard item={product} key={index} lang={lang} />
               ))}
