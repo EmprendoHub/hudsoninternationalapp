@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { countries } from "countries-list";
 
 const UpdateUserAddress = ({ searchParams, address }) => {
-  console.log(address);
   const cartUrl = searchParams?.callbackUrl;
   const router = useRouter();
   const formRef = useRef();

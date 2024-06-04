@@ -71,7 +71,6 @@ const ProductosPage = async ({ searchParams, params }) => {
   const offsetNumber = 2;
 
   const products = data?.products.products;
-  console.log(products[0].origins);
 
   const filteredProductsCount = data?.filteredProductsCount;
   const search =
@@ -84,7 +83,7 @@ const ProductosPage = async ({ searchParams, params }) => {
 
   return (
     <div className="relative h-full  overflow-x-hidden">
-      <CatCoverComp searchParams={searchParams} />
+      <CatCoverComp searchParams={searchParams} lang={lang} />
 
       <div className="w-full h-full py-16 px-5 bg-dark dark:bg-slate-700">
         <div className="py-14 px-10 maxmd:px-5 bg-white  dark:bg-primary">

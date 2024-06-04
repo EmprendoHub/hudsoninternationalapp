@@ -5,7 +5,6 @@ import "./_onboardingQuiz.scss";
 import { addOnboarding } from "@/app/[lang]/_actions";
 
 const OnboardingQuiz = ({ lang, onboardingDic }) => {
-  console.log(onboardingDic);
   let [index, setIndex] = useState(0);
   let [question, setQuestion] = useState(onboardingDic.questions[index]);
   const [answers, setAnswers] = useState([

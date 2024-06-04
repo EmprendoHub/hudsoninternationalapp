@@ -9,10 +9,13 @@ import coverGrains from "../../../public/images/grains_and_seeds_cat_cover.webp"
 import coverHerbs from "../../../public/images/herbs_cat_cover.webp";
 import coverSpices from "../../../public/images/spices_cat_cover.webp";
 
-const CatCoverComp = ({ searchParams }) => {
-  console.log(searchParams);
+const CatCoverComp = ({ searchParams, lang }) => {
   const keyword = searchParams?.keyword;
   const [coverImage, setCoverImage] = useState(coverImage0);
+  const [coverTitle, setCoverTitle] = useState(
+    "Granos, Hierbas, Especias y Condimentos"
+  );
+  const [coverPreTitle, setCoverPreTitle] = useState("Comercio Internacional");
   useEffect(() => {
     if (keyword) {
       if (
@@ -22,31 +25,67 @@ const CatCoverComp = ({ searchParams }) => {
         keyword.toLowerCase() === "spices"
       ) {
         setCoverImage(coverSpices);
+        if (lang === "es") {
+          setCoverTitle("Condimentos");
+        }
+        if (lang === "en") {
+          setCoverTitle("Condiments");
+        }
       } else if (
         keyword.toLowerCase() === "chiles" ||
         keyword.toLowerCase() === "chilies"
       ) {
         setCoverImage(coverChiles);
+        if (lang === "es") {
+          setCoverTitle("Chiles");
+        }
+        if (lang === "en") {
+          setCoverTitle("Chilies");
+        }
       } else if (
         keyword.toLowerCase() === "flores" ||
         keyword.toLowerCase() === "flowers"
       ) {
         setCoverImage(coverFlowers);
+        if (lang === "es") {
+          setCoverTitle("Flores");
+        }
+        if (lang === "en") {
+          setCoverTitle("Flowers");
+        }
       } else if (
         keyword.toLowerCase() === "dried fruits and nuts" ||
         keyword.toLowerCase() === "frutos secos y nueces"
       ) {
         setCoverImage(coverNuts);
+        if (lang === "es") {
+          setCoverTitle("Frutos secos y nueces");
+        }
+        if (lang === "en") {
+          setCoverTitle("Dried fruits and nuts");
+        }
       } else if (
         keyword.toLowerCase() === "grains and seeds" ||
         keyword.toLowerCase() === "granos y semillas"
       ) {
         setCoverImage(coverGrains);
+        if (lang === "es") {
+          setCoverTitle("Granos y semillas");
+        }
+        if (lang === "en") {
+          setCoverTitle("Grains and seeds");
+        }
       } else if (
         keyword.toLowerCase() === "hierbas" ||
         keyword.toLowerCase() === "herbs"
       ) {
         setCoverImage(coverHerbs);
+        if (lang === "es") {
+          setCoverTitle("Hierbas");
+        }
+        if (lang === "en") {
+          setCoverTitle("Herbs");
+        }
       }
     } else {
       setCoverImage(coverImage0);
@@ -65,11 +104,11 @@ const CatCoverComp = ({ searchParams }) => {
         alt="contact cover image"
         className="object-cover h-full w-full"
       />
-      <div className="absolute z-10 text-white text-5xl maxsm:text-3xl  font-primary w-[50%] maxsm:w-[80%] text-center">
+      <div className="absolute z-10 text-white text-4xl maxsm:text-3xl  font-primary w-[80%] text-center">
         <p className="uppercase text-xs tracking-widest font-secondary">
-          {`contactDic.hero.pretitle`}
+          {coverPreTitle}
         </p>
-        <h3>{`contactDic.hero.title`}</h3>
+        <h3>{coverTitle}</h3>
       </div>
     </div>
   );

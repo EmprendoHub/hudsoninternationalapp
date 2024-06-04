@@ -99,20 +99,11 @@ export const GET = async (request, res) => {
     apiProductFilters.pagination(resPerPage, page);
     productsData = await apiProductFilters.query.clone();
 
-    // If you want a new sorted array without modifying the original one, use slice
-    // const sortedObj1 = obj1
-    //   .slice()
-    //   .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-
-    // descending order
-    // descending order
     const sortedProducts = productsData
       .slice()
       .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     const groupedMonths = await updateProductOrigins(sortedProducts);
-    console.log(groupedMonths[0].product.origins);
-    console.log(groupedMonths[0].origins[0].months);
     const products = {
       products: groupedMonths,
     };

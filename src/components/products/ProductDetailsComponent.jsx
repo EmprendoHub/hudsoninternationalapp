@@ -25,7 +25,6 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
   const product = data.product;
   const origins = data.origins;
   const slideRef = useRef(null);
-  console.log(origins, "origins", product);
   const clickImage = (imageId) => {
     const lists = slideRef.current.children;
 
@@ -63,7 +62,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                   {product?.images.map((image, index) => (
                     <div
                       key={image._id}
-                      className="ml-5 maxsm:ml-0 mt-5 relative rounded-full h-[250px] w-[250px] maxsm:h-[200px] maxsm:w-[200px] overflow-hidden"
+                      className="ml-5 maxsm:ml-0 mt-5 maxsm:mt-2 relative rounded-full h-[250px] w-[250px] maxsm:h-[150px] maxsm:w-[150px] overflow-hidden"
                     >
                       <Image
                         src={image.url}
@@ -77,7 +76,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col pr-3 min-h-[270px] justify-end">
+                <div className="flex flex-col pr-3 min-h-[270px] maxmd:min-h-[200px] justify-end">
                   <p className="text-4xl font-semibold font-primary">
                     {product?.title[`${lang}`]}
                   </p>
@@ -132,67 +131,67 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                   </motion.div>
                 </div>
               </div>
-            </div>
-            {/* Right PAnel */}
-            <div className="description-class relative w-[90%] h-full ml-2 mt-5 pb-5">
-              <motion.div
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <p className="text-xl font-semibold font-primary mb-3">
-                  Orígenes:
-                </p>
-                <div className="">
-                  <div className="flex items-center gap-x-1 w-full">
-                    <table className="w-full">
-                      <thead className="w-full">
-                        <tr className="font-secondary font-light text-[12px] flex items-center justify-between min-w-full">
-                          <th className="w-10"></th>
-                          <th>Ene</th>
-                          <th>Feb</th>
-                          <th>Mar</th>
-                          <th>Abr</th>
-                          <th>May</th>
-                          <th>Jun</th>
-                          <th>Jul</th>
-                          <th>Ago</th>
-                          <th>Sep</th>
-                          <th>Oct</th>
-                          <th>Nov</th>
-                          <th>Dic</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {origins.map((origin) => (
-                          <tr
-                            key={origin.country[`${lang}`]}
-                            className="font-secondary font-light text-[10px] flex items-center justify-between min-w-full"
-                          >
-                            <td className="min-w-10 max-w-10">
-                              {origin.country[`${lang}`]}
-                            </td>
-                            {months.map((month) => {
-                              const isAvailable = origin.months.some(
-                                (originMonth) =>
-                                  originMonth.value === month.value
-                              );
-                              return (
-                                <td
-                                  key={month.value}
-                                  className={`border m-0.5 border-white h-3 w-3 ${
-                                    isAvailable ? "bg-dark" : ""
-                                  }`}
-                                ></td>
-                              );
-                            })}
+              {/* bottom PAnel */}
+              <div className="description-class relative w-[97%] h-full  mt-1 pb-5">
+                <motion.div
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="text-xl font-semibold font-primary mb-3">
+                    Orígenes:
+                  </p>
+                  <div className="">
+                    <div className="flex items-center gap-x-1 w-full">
+                      <table className="w-full">
+                        <thead className="w-full">
+                          <tr className="font-secondary font-light text-[9px] flex items-center justify-between min-w-full">
+                            <th className="w-8"></th>
+                            <th>Ene</th>
+                            <th>Feb</th>
+                            <th>Mar</th>
+                            <th>Abr</th>
+                            <th>May</th>
+                            <th>Jun</th>
+                            <th>Jul</th>
+                            <th>Ago</th>
+                            <th>Sep</th>
+                            <th>Oct</th>
+                            <th>Nov</th>
+                            <th>Dic</th>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                        </thead>
+                        <tbody>
+                          {origins.map((origin) => (
+                            <tr
+                              key={origin.country[`${lang}`]}
+                              className="font-secondary font-light text-[10px] flex items-center justify-between min-w-full"
+                            >
+                              <td className="min-w-8 max-w-8 maxxsm:text-[8px]">
+                                {origin.country[`${lang}`]}
+                              </td>
+                              {months.map((month) => {
+                                const isAvailable = origin.months.some(
+                                  (originMonth) =>
+                                    originMonth.value === month.value
+                                );
+                                return (
+                                  <td
+                                    key={month.value}
+                                    className={`border m-0.2 border-primary dark:border-white h-3 w-3 ${
+                                      isAvailable ? "bg-dark" : ""
+                                    }`}
+                                  ></td>
+                                );
+                              })}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

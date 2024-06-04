@@ -49,7 +49,6 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
   const [mainImage, setMainImage] = useState(product.images[0].url);
 
   const [origins, setOrigins] = useState(product.origins);
-  console.log(origins);
   const addOrigin = () => {
     setOrigins((prevOrigins) => [
       ...prevOrigins,
