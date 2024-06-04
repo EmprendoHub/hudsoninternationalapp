@@ -69,9 +69,10 @@ const ProductosPage = async ({ searchParams, params }) => {
   const isPageOutOfRange = page > totalPages;
   const pageNumbers = [];
   const offsetNumber = 2;
+
   const products = data?.products.products;
-  const allBrands = data?.allBrands;
-  const allCategories = data?.allCategories;
+  console.log(products[0].origins);
+
   const filteredProductsCount = data?.filteredProductsCount;
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;

@@ -42,7 +42,6 @@ const MotionHeaderComponent = ({ localeHeader, lang }) => {
   };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest);
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 150) {
       setHidden(false);

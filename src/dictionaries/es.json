@@ -257,7 +257,7 @@
       "img": "/images/beach_bonus.jpg",
       "imgTwo": "/images/beach_bonus.jpg",
       "btnText": "Ver Productos",
-      "btnLink": "/productos",
+      "btnLink": "/es/productos",
       "icon": "FaBezierCurve"
     },
     {
@@ -272,7 +272,7 @@
       "img": "/images/GTI-interior.jpeg",
       "imgTwo": "/images/GTI-interior.jpeg",
       "btnText": "Ver Productos",
-      "btnLink": "/productos",
+      "btnLink": "/es/productos",
       "icon": "FaUsers"
     },
     {
@@ -288,7 +288,7 @@
       "img": "/images/Premio_10_mil_pesos.jpg",
       "imgTwo": "/images/Premio_10_mil_pesos.jpg",
       "btnText": "Ver Productos",
-      "btnLink": "/productos",
+      "btnLink": "/es/productos",
       "icon": "FaCode"
     }
   ],
