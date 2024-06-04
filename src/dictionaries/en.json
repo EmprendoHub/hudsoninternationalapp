@@ -165,7 +165,7 @@
     "teamTalk": {
       "title": "Talk to Our Team",
       "btnText": "Contact Us",
-      "btnUrl": "/en/contact",
+      "btnUrl": "/en/contacto",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
@@ -174,7 +174,7 @@
       "subtitle": "We take care of everything technical so you can focus on growth.",
       "text": "We specialize in high-performance and scalable trading solutions. Whether you're a startup looking to make your mark or an established company seeking to expand, we have the experience and products to make your vision a reality.",
       "btnText": "Contact Us",
-      "btnUrl": "/en/contact",
+      "btnUrl": "/en/contacto",
       "bullets": [
         "Market Expansion",
         "Quality Assurance",
@@ -189,7 +189,7 @@
       "titleTwo": "Solutions",
       "text": "Real-time synchronization of inventory between suppliers and clients, reducing risks and simplifying stock management.",
       "btnText": "View Demo",
-      "btnUrl": "/en/contact",
+      "btnUrl": "/en/contacto",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },

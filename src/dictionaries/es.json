@@ -165,7 +165,7 @@
     "teamTalk": {
       "title": "Habla con Nuestro Equipo",
       "btnText": "Contáctanos",
-      "btnUrl": "/es/contact",
+      "btnUrl": "/es/contacto",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
@@ -174,7 +174,7 @@
       "subtitle": "Nos encargamos de todo lo técnico para que puedas centrarte en el crecimiento.",
       "text": "Nos especializamos en soluciones comerciales de alto rendimiento y escalabilidad. Ya sea que seas una startup buscando dejar tu huella o una empresa establecida que busca expandirse, tenemos la experiencia y los productos para hacer realidad tu visión.",
       "btnText": "Contáctanos",
-      "btnUrl": "/es/contact",
+      "btnUrl": "/es/contacto",
       "bullets": [
         "Expansión de Mercado",
         "Garantía de Calidad",
@@ -189,7 +189,7 @@
       "titleTwo": "Comercio Global",
       "text": "Sincronización en tiempo real del inventario entre proveedores y clientes, reduciendo riesgos y simplificando la gestión de existencias.",
       "btnText": "Ver Demo",
-      "btnUrl": "/es/contact",
+      "btnUrl": "/es/contacto",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
