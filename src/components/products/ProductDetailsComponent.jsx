@@ -5,6 +5,7 @@ import FormattedPrice from "@/backend/helpers/FormattedPrice";
 import { motion } from "framer-motion";
 import { FaCircleXmark, FaWhatsapp } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
   const months = [
@@ -135,6 +136,32 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                               : ", "}
                           </span>
                         ))}
+                      </p>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                    className="text-sm text-lightText flex flex-col"
+                  >
+                    <div className="grid grid-cols-2 gap-4 mt-2 w-full">
+                      <p>Cotizar:</p>
+                      <p className="flex items-center text-[14px]">
+                        <Link
+                          href={
+                            lang === "es"
+                              ? `https://api.whatsapp.com/send/?phone=12069799807&text=Hola+%2AHudson+International+Market%2A.+Me+Interesa+cotizar+y+obtener+m%C3%A1s+informaci%C3%B3n+de+${
+                                  product?.title[`${lang}`]
+                                }&type=phone_number&app_absent=0`
+                              : `https://api.whatsapp.com/send/?phone=12069799807&text=Hello+%2AHudson+International+Market%2A.+Im+Interested+in+getting+a+quote+and+more+information+on+${
+                                  product?.title[`${lang}`]
+                                }&type=phone_number&app_absent=0`
+                          }
+                          target="_blank"
+                        >
+                          <FaWhatsapp size={30} />
+                        </Link>
                       </p>
                     </div>
                   </motion.div>
