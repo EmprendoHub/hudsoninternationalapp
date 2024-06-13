@@ -4,7 +4,7 @@
       { "title": "Inicio", "url": "/" },
       { "title": "Acerca", "url": "/acerca" },
       { "title": "Productos", "url": "/productos" },
-      { "title": "Contacto", "url": "/contacto" }
+      { "title": "Contacto", "url": "/#contacto" }
     ],
     "searchbar": "Buscar"
   },
@@ -27,7 +27,7 @@
     },
     "addressTwo": {
       "ubicacion": "Washington",
-      "addressOne": "321 High School Rd NE",
+      "addressOne": "",
       "addressTwo": "Suite D3",
       "city": "Bainbridge Island",
       "hood": "",
@@ -59,7 +59,7 @@
       "links": [
         { "title": "Inicio", "url": "/" },
         { "title": "Productos", "url": "/productos" },
-        { "title": "Contacto", "url": "/contacto" },
+        { "title": "Contacto", "url": "/#contacto" },
         { "title": "Nosotros", "url": "/acerca" }
       ]
     },
@@ -74,7 +74,7 @@
       "developBy": "Desarrollada por Emprendomex Marketing",
       "path": "https://www.emprendomex.xyz",
       "company": "Hudson International Market",
-      "addressOne": "321 High School Rd NE,",
+      "addressOne": "",
       "addressTwo": "Suite D3",
       "city": "Bainbridge Island",
       "state": "Washington",
@@ -93,9 +93,9 @@
   "homeDic": {
     "imageHero": {
       "pretitle": "Expertos en comercio",
-      "title": "Expande Tus",
-      "titleTwo": "Horizontes Comerciales",
-      "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",
+      "title": "¡Bienvenido a nuestro ",
+      "titleTwo": "mundo de las especias!",
+      "text": "En HUDSON INTERNATIONAL MARKET nos preocupamos por las especias. Nuestro viaje está impulsado por la pasión y la dedicación para brindarle lo mejor. Nos especializamos en facilitar el comercio de una amplia variedad de especias, hierbas, granos, semillas y frutos secos de alta calidad de fuentes confiables en todo el mundo. Desde deliciosas especias hasta ingredientes exóticos, lo tenemos cubierto. Únase a nosotros en esta aventura culinaria y exploremos juntos el mundo de los sabores. Bienvenido a nuestro mundo de especias.",
       "btnText": "Aprende Más",
       "btnPath": "/about-us"
     },
@@ -104,7 +104,7 @@
         "preTitle": "Trading Experts",
         "title": "Expande Tus",
         "titleTwo": "Horizontes Comerciales",
-        "text": "Aprovecha más de 20 años de experiencia en el comercio global de especias, suministro de ingredientes alimentarios e intercambio de condimentos para acceder a nuevos mercados y hacer crecer tu negocio con nuestro servicio de coordinación integral.",
+        "text": "Nos especializamos en especias y también obtenemos otros alimentos a pedido. Priorizamos la satisfacción del cliente y buscamos continuamente nuevos productos.",
         "btnText": "Explorar Productos",
         "btnPath": "/es/productos",
         "imgPath": "/images/dried-red-chili_seco.webp"
@@ -113,16 +113,16 @@
         "preTitle": "Productos de Calidad",
         "title": "Red Global de",
         "titleTwo": "Proveedores",
-        "text": "Ofrecemos productos bajo estándares de calidad y precio a través de acuerdos comerciales, asegurando que obtengas lo que necesitas de nuestra vasta red de proveedores.",
+        "text": "Ofrecemos productos de calidad a un valor justo de mercado a través de acuerdos que benefician a todas las partes. Nuestra amplia red de proveedores garantiza que usted reciba los productos que necesitas.",
         "btnText": "Explorar Productos",
         "btnPath": "/es/productos",
         "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
         "preTitle": "Socio Estratégico",
-        "title": "Desarrollo de",
-        "titleTwo": "Negocios",
-        "text": "Facilitamos el acceso a nuevos mercados y brindamos un servicio integral para ayudar a tu negocio a desarrollarse y prosperar.",
+        "title": "Transforme tu ",
+        "titleTwo": "experiencia comercial",
+        "text": "Ofrecemos enfoques estratégicos para ampliar su alcance en el mercado y mejorar sus operaciones comerciales a través de una coordinación experta y productos de alta calidad..",
         "btnText": "Explorar Productos",
         "btnPath": "/es/productos",
         "imgPath": "/images/metal-bucket-salted-popcorn.webp"
@@ -148,16 +148,16 @@
         "title": "Transforma tu Experiencia Comercial con",
         "titleTwo": "Hudson International Market",
         "subtitle": "Nuestro equipo de expertos está listo para optimizar tu cadena de suministro",
-        "text": "Ofrecemos un enfoque estratégico en la creación de acuerdos comerciales que se integran perfectamente con las necesidades de tu negocio. Esto no solo mejora tus operaciones, sino que también optimiza tu cadena de suministro, asegurando una entrega oportuna y eficiente de productos.",
+        "text": "Hudson International Market tiene su sede cerca de Seattle, Washington, en el noroeste del Pacífico de los Estados Unidos. atendiendo a nuestros clientes en toda América del Norte, América Latina, el Caribe, Asia y África. Nuestra cultivada red de proveedores y consumidores, junto con nuestra experiencia y conocimiento del mercado, nos permite negociar acuerdos que reflejan las fluctuaciones actuales del mercado. Nuestros principios rectores de Honestidad, Integridad y Confiabilidad nos permiten ser un mediador justo entre el consumidor y el proveedor. Nuestra filosofía es que en cada transacción debe haber un trato justo.",
         "btnText": "Contáctanos",
         "imgUrl": "/images/h1-img2.jpg"
       },
       "boxTwo": {
         "preTitle": "ANÁLISIS Y MEJORA CONTINUA",
         "title": "Nos adaptamos según las",
-        "titleTwo": "necesidades de tu proyecto",
+        "titleTwo": "necesidades de tu empresa",
         "subtitle": "Preparados para cualquier desafío, asegurando personalización y adaptabilidad.",
-        "text": "Adaptamos nuestras soluciones a las necesidades específicas de cada cliente, asegurando que nuestros productos y servicios no solo cumplan, sino que superen tus expectativas. Nuestra flexibilidad y adaptabilidad aseguran una relevancia a largo plazo y una mejor satisfacción del cliente.",
+        "text": "Hudson International Market opera como corredor en el comercio de especias y otros ingredientes alimentarios. Nuestro éxito se basa en nuestra capacidad para escuchar las necesidades de nuestros clientes y obtener los productos que necesitan. Con más de 20 años de experiencia en el comercio mundial de especias, suministro de ingredientes alimentarios e intercambio de condimentos, hemos construido nuestro negocio creando relaciones a largo plazo basadas en la confianza y la satisfacción del cliente. Nuestra cultivada red de proveedores y consumidores, junto con nuestra experiencia y conocimiento del mercado, nos permite negociar acuerdos que reflejan las fluctuaciones actuales del mercado.",
         "btnText": "Contáctanos",
         "imgUrl": "/images/pexels-photo-3183197.jpeg"
       }
@@ -165,16 +165,16 @@
     "teamTalk": {
       "title": "Habla con Nuestro Equipo",
       "btnText": "Contáctanos",
-      "btnUrl": "/es/contacto",
+      "btnUrl": "/es/#contacto",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
       "title": "Lleva tu Negocio al",
       "titleTwo": "Siguiente Nivel",
-      "subtitle": "Nos encargamos de todo lo técnico para que puedas centrarte en el crecimiento.",
-      "text": "Nos especializamos en soluciones comerciales de alto rendimiento y escalabilidad. Ya sea que seas una startup buscando dejar tu huella o una empresa establecida que busca expandirse, tenemos la experiencia y los productos para hacer realidad tu visión.",
+      "subtitle": "Nos encargamos de negociar las mejores ofertas para que puedas centrarte en el crecimiento.",
+      "text": "Buscamos continuamente ampliar nuestra red de clientes y ofrecer el más alto nivel de servicio. Esperamos que nos permita servirle.",
       "btnText": "Contáctanos",
-      "btnUrl": "/es/contacto",
+      "btnUrl": "/es/#contacto",
       "bullets": [
         "Expansión de Mercado",
         "Garantía de Calidad",
@@ -189,7 +189,7 @@
       "titleTwo": "Comercio Global",
       "text": "Sincronización en tiempo real del inventario entre proveedores y clientes, reduciendo riesgos y simplificando la gestión de existencias.",
       "btnText": "Ver Demo",
-      "btnUrl": "/es/contacto",
+      "btnUrl": "/es/#contacto",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
@@ -264,12 +264,12 @@
     {
       "bgColor": "blue",
       "bgColorTwo": "blue",
-      "preTitle": "¡Soluciones Integrales!",
-      "title": "Comercio justo",
+      "preTitle": "Transparencia",
+      "title": "Adaptabilidad cultural",
       "titleTwo": "Apoyando Comunidades",
       "subTitle": "Mejora tus Operaciones",
-      "text": "Garantizando prácticas de comercio justo para el mejoramiento de las comunidades locales.",
-      "textTwo": "Trabajamos duro para asegurarnos de apoyar los medios de vida de los agricultores y las comunidades locales.",
+      "text": "Comprender y respetar las diferencias culturales es esencial para una negociación exitosa en un entorno internacional.",
+      "textTwo": "Mantener altos estándares éticos y una comunicación abierta y honesta con todas las partes interesadas ayuda a construir una sólida y reputación confiable en el mercado internacional.",
       "img": "/images/GTI-interior.jpeg",
       "imgTwo": "/images/GTI-interior.jpeg",
       "btnText": "Ver Productos",
@@ -296,7 +296,7 @@
   "aboutDic": {
     "hero": {
       "title": "Acerca de nosotros",
-      "subtitle": "Conoce a nuestro equipo."
+      "subtitle": "Quienes somos..."
     },
     "founder": {
       "name": "Salvador Sandoval",
@@ -342,7 +342,7 @@
       "pretitle": "Contáctenos",
       "title": "Nos gustaría conocerte. Siéntete libre de",
       "titleTwo": "mantenerte en contacto.",
-      "subtitle": "Descubramos cómo podemos optimizar sus sistemas.",
+      "subtitle": "Descubramos cómo podemos ayudarle a mejorar su experiencia comercial.",
       "location": "Ubicación",
       "social": "Redes Sociales",
       "questions": "Preguntas Generales",
@@ -363,7 +363,7 @@
     },
     "addressTwo": {
       "ubicacion": "Washington",
-      "addressOne": "119 N La Plaza St",
+      "addressOne": "",
       "addressTwo": "",
       "city": "Bainbridge Island",
       "hood": "",
@@ -980,7 +980,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": "contáctenos.", "path": "/es/contacto" },
+            { "name": "contáctenos.", "path": "/es/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1145,7 +1145,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": "contáctenos.", "path": "/es/contacto" },
+            { "name": "contáctenos.", "path": "/es/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1231,7 +1231,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": " contacto.", "path": "/es/contacto" },
+            { "name": " contacto.", "path": "/es/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1305,7 +1305,7 @@
         }
       ],
       "btnText": "Get a Quote",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "description": {
       "boxOne": {
@@ -1354,7 +1354,7 @@
         }
       ],
       "btnText": "Consigue una cotización",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "benefits": {
       "img": "/images/2149416730.jpg",
@@ -1369,7 +1369,7 @@
         { "title": "Actualización diaria", "percent": 68 }
       ],
       "btnText": "Consigue una cotización",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "why": {
       "img": "/images/2149416730.jpg",
@@ -1378,7 +1378,7 @@
       "titleTwo": "por su negocio?",
       "subtitle": "Ven a ver lo que podemos hacer",
       "btnText": "Consigue una cotización",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "rightText": "Nuestras soluciones personalizadas no solo simplifican su entrada al dropshipping, sino que también mejoran la eficiencia operativa, mejoran la satisfacción de los revendedores y abren nuevas fuentes de ingresos. Aprovecha los benéficos de un sistema que crece con tu negocio, fortalecido con seguridad sólida y funciones fáciles de usar."
     },
     "cta": {
@@ -1387,7 +1387,7 @@
       "titleTwo": "Tu estrategia de suministro?",
       "subtitle": "Ven a ver lo que podemos hacer",
       "btnText": "Solicitar presupuesto",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "rightText": "Contáctenos hoy para saber cómo podemos crear la solución de comercio electrónico con API perfecta para tu negocio, haciendo del dropshipping una parte poderosa de tu estrategia de ventas."
     },
     "prices": [
@@ -1405,7 +1405,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       },
       {
@@ -1422,7 +1422,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       },
       {
@@ -1439,7 +1439,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       }
     ]

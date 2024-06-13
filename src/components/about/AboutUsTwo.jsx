@@ -14,6 +14,7 @@ import portfolioImage06 from "../../../public/images/team-image-6.webp";
 import TalkToTeam from "../home/TalkToTeam";
 import ImageToSideText from "../home/ImageToSideText";
 import InfiniteLogoSlider from "../motions/InfiniteLogoSlider";
+import DoubleSideToSide from "../home/DoubleSideToSide";
 
 const WORKS = [
   {
@@ -86,8 +87,8 @@ const AboutUsTwo = ({ aboutDic, homeDic }) => {
           <h3>{aboutDic.hero.subtitle}</h3>
         </div>
       </div>
+      <DoubleSideToSide homeDic={homeDic} />
       <ImageToSideText homeDic={homeDic} />
-      <TalkToTeam homeDic={homeDic} />
     </div>
   );
 };

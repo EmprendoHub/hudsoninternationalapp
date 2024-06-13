@@ -11,7 +11,7 @@ const ContactUsComponent = ({ contactDic, contactTitle, contactSubTitle }) => {
   const nextAuthSessionToken = nextCookies.get(cookieName);
   const cookie = `${cookieName}=${nextAuthSessionToken?.value}`;
   return (
-    <div className="flex flex-row maxmd:flex-col py-10 w-[90%] justify-center items-center mx-auto">
+    <div className="flex flex-row maxmd:flex-col w-[95%] justify-center items-center mx-auto">
       <div className="w-full maxmd:w-full z-10  maxmd:px-5 maxsm:px-1">
         <div className=" w-full">
           <h2></h2>

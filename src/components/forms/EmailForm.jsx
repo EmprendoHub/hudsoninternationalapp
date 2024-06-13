@@ -116,7 +116,7 @@ const EmailForm = ({ cookie, contactDic }) => {
   };
 
   return (
-    <div className="relative flex fle-col py-7  pr-7 m-auto w-full rounded-xl z-10">
+    <div className="relative flex fle-col m-auto w-full rounded-xl z-10">
       {!formStatus ? (
         <form onSubmit={handleSubmit} className="flex flex-col w-full gap-y-4">
           <input
@@ -156,7 +156,7 @@ const EmailForm = ({ cookie, contactDic }) => {
           ></textarea>
           <button
             type="submit"
-            className="mt-5 bg-primary"
+            className="mt-5 bg-primary dark:bg-dark"
             disabled={activeButton}
           >
             <p className=" bg-fourth  text-white py-3">

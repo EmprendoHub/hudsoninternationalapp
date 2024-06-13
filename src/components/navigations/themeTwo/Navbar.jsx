@@ -23,7 +23,7 @@ function Navbar() {
     { name: "Blog", link: "/blog" },
     { name: "Experiencia", link: "/portfolio" },
     { name: "Servicios", link: "/servicios" },
-    { name: "Contacto", link: "/contacto" },
+    { name: "Contacto", link: "/#contacto" },
   ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {

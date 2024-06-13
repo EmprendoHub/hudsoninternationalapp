@@ -5,7 +5,7 @@ import React from "react";
 
 const CategoriesComp = ({ homeDic, lang }) => {
   return (
-    <div className="pt-5 px-40 maxxlg:px-20 maxlg:px-10 maxmd:px-5 maxmd:pt-1 mb-20">
+    <div className="pt-5 px-40 maxxlg:px-20 maxlg:px-10 maxmd:px-5 maxmd:pt-1 mt-20">
       <div className="mx-auto">
         <SectionTitle
           className="pb-10 text-3xl maxmd:text-3xl text-center"

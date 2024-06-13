@@ -23,17 +23,7 @@ const DoubleSideToSide = ({ homeDic }) => {
                   {homeDic.doublesides.boxTwo.text}
                 </motion.p>
               </div>
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  duration: 0.8,
-                }}
-                aria-label="Contactar"
-                className="bg-primary dark:bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
-              >
-                {homeDic.doublesides.boxTwo.btnText}
-              </motion.button>
+
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -131,17 +121,6 @@ const DoubleSideToSide = ({ homeDic }) => {
                   {homeDic.doublesides.boxOne.text}
                 </motion.p>
               </div>
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  duration: 0.8,
-                }}
-                aria-label="Contactar"
-                className="bg-primary dark:bg-dark px-10 py-3 text-white flex items-center justify-center uppercase text-xs tracking-widest"
-              >
-                {homeDic.doublesides.boxOne.btnText}
-              </motion.button>
             </div>
             {/* Image */}
             <div className="relative w-6/12 maxmd:w-[90%] ">
@@ -151,11 +130,11 @@ const DoubleSideToSide = ({ homeDic }) => {
                 transition={{
                   duration: 1.1,
                 }}
-                className="relative w-full h-full"
+                className="relative w-full h-full rounded-full overflow-hidden"
               >
                 <Image
-                  className="object-cover w-full h-full "
-                  src="/images/seeds_dry_fruits_nuts_2.webp"
+                  className="object-cover rounded-full w-[25rem] h-[25rem] maxsm:w-[20rem] maxsm:h-[20rem] z-50"
+                  src="/images/pexels-photo-3183197.jpeg"
                   alt="Diseño Gráfico Profesional"
                   width={850}
                   height={850}

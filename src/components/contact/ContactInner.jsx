@@ -7,7 +7,7 @@ import ContactUsComponent from "./ContactUsComponent";
 
 const ContactInner = ({ homeDic, contactDic }) => {
   return (
-    <div className="relative h-full  overflow-x-hidden">
+    <div className="relative h-full  overflow-x-hidden" id="contacto">
       <div className="w-full h-[300px] overflow-hidden top-0 relative flex justify-center items-center flex-col ">
         <div className="absolute bg-primary bg-opacity-40 w-full h-full z-0" />
         <Image
@@ -27,13 +27,6 @@ const ContactInner = ({ homeDic, contactDic }) => {
         </div>
       </div>
       <ContactComponent contactDic={contactDic} />
-      <ContactUsComponent
-        contactDic={contactDic}
-        contactTitle={"Mándanos un breve mensaje"}
-        contactSubTitle={
-          "En breve uno de nuestros representantes se comunicara."
-        }
-      />
     </div>
   );
 };

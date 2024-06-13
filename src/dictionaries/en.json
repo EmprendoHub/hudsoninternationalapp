@@ -4,7 +4,7 @@
       { "title": "Home", "url": "/" },
       { "title": "About", "url": "/acerca" },
       { "title": "Products", "url": "/productos" },
-      { "title": "Contact", "url": "/contacto" }
+      { "title": "Contact", "url": "/#contacto" }
     ],
     "searchbar": "Buscar"
   },
@@ -27,7 +27,7 @@
     },
     "addressTwo": {
       "ubicacion": "Washington",
-      "addressOne": "321 High School Rd NE",
+      "addressOne": "",
       "addressTwo": "Suite D3",
       "city": "Bainbridge Island",
       "hood": "",
@@ -59,7 +59,7 @@
       "links": [
         { "title": "Home", "url": "/" },
         { "title": "Products", "url": "/productos" },
-        { "title": "Contact", "url": "/contacto" },
+        { "title": "Contact", "url": "/#contacto" },
         { "title": "About Us", "url": "/acerca" }
       ]
     },
@@ -74,7 +74,7 @@
       "developBy": "Developed by Emprendomex Marketing",
       "path": "https://www.emprendomex.xyz",
       "company": "Hudson International Market",
-      "addressOne": "321 High School Rd NE,",
+      "addressOne": ",",
       "addressTwo": "Suite D3",
       "city": "Bainbridge Island",
       "state": "Washington",
@@ -93,9 +93,9 @@
   "homeDic": {
     "imageHero": {
       "pretitle": "Trading Experts",
-      "title": "Expand Your",
-      "titleTwo": "Business Horizons",
-      "text": "Leverage over 20 years of expertise in the global spice trade, food ingredient supply, and condiment exchange to access new markets and grow your business with our comprehensive coordination service.",
+      "title": "Welcome to our ",
+      "titleTwo": "spice world!",
+      "text": "At HUDSON INTERNATIONAL MARKET we are all about spices. Our journey is fueled by passion and dedication in bringing you the best. We specialize in facilitating the trade of a wide variety of high-quality spices, herbs, grains, seeds and dried fruits from reliable sources around the world. From mouth-watering spices to exotic ingredients, we've got you covered. Join us on this culinary adventure and let's explore the world of flavors together. Welcome to our spice world",
       "btnText": "Learn More",
       "btnPath": "/about-us"
     },
@@ -104,7 +104,7 @@
         "preTitle": "Trading Experts",
         "title": "Expand Your",
         "titleTwo": "Business Horizons",
-        "text": "Leverage over 20 years of expertise in the global spice trade, food ingredient supply, and condiment exchange to access new markets and grow your business with our comprehensive coordination service.",
+        "text": "We specialize in spices and also source other food items upon request. We prioritize client satisfaction and continually search new products.",
         "btnText": "Explore Products",
         "btnPath": "/en/productos",
         "imgPath": "/images/dried-red-chili_seco.webp"
@@ -113,16 +113,16 @@
         "preTitle": "Quality Products",
         "title": "Global Supplier",
         "titleTwo": "Network",
-        "text": "We offer products under quality and price standards through commercial agreements, ensuring you get what you need from our vast network of suppliers.",
+        "text": "We offer quality products at fair market value through agreements that benefit all parties. Our extensive network of suppliers ensures that you receive the products you need.",
         "btnText": "Explore Products",
         "btnPath": "/en/productos",
         "imgPath": "/images/delicious-nuts-concept_2.webp"
       },
       {
         "preTitle": "Strategic Partner",
-        "title": "Business",
-        "titleTwo": "Development",
-        "text": "We facilitate access to new markets and provide a comprehensive service to help your business develop and thrive.",
+        "title": "Transform Your ",
+        "titleTwo": "Trading Experience",
+        "text": "We offer strategic approaches to expand your market reach and improve your business operations through expert coordination and high-quality products.",
         "btnText": "Explore Products",
         "btnPath": "/en/productos",
         "imgPath": "/images/metal-bucket-salted-popcorn.webp"
@@ -148,16 +148,16 @@
         "title": "Transform Your Trading Experience with",
         "titleTwo": "Hudson International Market",
         "subtitle": "Our team of experts is ready to help optimize your supply chain",
-        "text": "We offer a strategic approach in creating commercial agreements that are seamlessly integrated with your business needs. This not only improves your operations but also optimizes your supply chain, ensuring timely and efficient delivery of products.",
+        "text": "Hudson International Market is headquartered near Seattle, Washington in the Pacific Northwest of the United States, attending our clients throughout North America, Latin America, the Caribbean, Asia and Africa. Our cultivated network of suppliers and consumers, along with our experience and market knowledge, allows us to negotiate deals that reflect current market fluctuations. Our guiding principles of Honesty, Integrity and Reliability allow us to be a fair mediator between the consumer and supplier. It is our philosophy that with every trade there should be a fair deal.",
         "btnText": "Contact Us",
         "imgUrl": "/images/h1-img2.jpg"
       },
       "boxTwo": {
         "preTitle": "ANALYSIS AND CONTINUOUS IMPROVEMENT",
         "title": "We adapt based on your",
-        "titleTwo": "project needs",
+        "titleTwo": "business needs",
         "subtitle": "Prepared for any challenge, ensuring customization and adaptability.",
-        "text": "We tailor our solutions to the specific needs of each client, ensuring that our products and services not only meet but exceed your expectations. Our flexibility and adaptability ensure long-term relevance and better client satisfaction.",
+        "text": "Hudson International Market operates as a broker in the trade of spices and other food ingredients. Our success is based on our ability to listen to our client's needs and sourcing the goods they require. With over 20 years of experience in the global spice trade, food ingredient supply, and condiment exchange, we have built our business by creating long term relationships that are based on trust and client satisfaction. Our cultivated network of suppliers and consumers, along with our experience and market knowledge, allows us to negotiate deals that reflect current market fluctuations.",
         "btnText": "Contact Us",
         "imgUrl": "/images/pexels-photo-3183197.jpeg"
       }
@@ -165,16 +165,16 @@
     "teamTalk": {
       "title": "Talk to Our Team",
       "btnText": "Contact Us",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "img": "/images/equipo_de_trabajo_marketing.webp"
     },
     "sideText": {
       "title": "Take Your Business to the",
       "titleTwo": "Next Level",
-      "subtitle": "We take care of everything technical so you can focus on growth.",
-      "text": "We specialize in high-performance and scalable trading solutions. Whether you're a startup looking to make your mark or an established company seeking to expand, we have the experience and products to make your vision a reality.",
+      "subtitle": "We take care of brokering the best deals so you can focus on growth.",
+      "text": "We are continually looking to expand our network of customers and offer the highest standard of service. We hope that you will allow us to serve you.",
       "btnText": "Contact Us",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "bullets": [
         "Market Expansion",
         "Quality Assurance",
@@ -189,7 +189,7 @@
       "titleTwo": "Solutions",
       "text": "Real-time synchronization of inventory between suppliers and clients, reducing risks and simplifying stock management.",
       "btnText": "View Demo",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "imgOne": "/images/2149416730.jpg",
       "imgTwo": "/images/high-angle-hands-holding-paper_23-2149930962.jpg"
     },
@@ -264,12 +264,12 @@
     {
       "bgColor": "blue",
       "bgColorTwo": "blue",
-      "preTitle": "Comprehensive Solutions!",
-      "title": "Fair Trade",
+      "preTitle": "Transparency",
+      "title": "Cultural Adaptability",
       "titleTwo": "Supporting Communities",
       "subTitle": "Improve Your Operations",
-      "text": "Ensuring fair trade practices for the betterment of local communities.",
-      "textTwo": "We work hard to ensure we support the livelihoods of farmers and local communities",
+      "text": "Understanding and respecting the cultural differences is essential for successful negotiation in an international environment.",
+      "textTwo": "Maintaining high ethical standards and open, honest communication with all stakeholders helps build a solid and reliable reputation in the international market",
       "img": "/images/GTI-interior.jpeg",
       "imgTwo": "/images/GTI-interior.jpeg",
       "btnText": "View Products",
@@ -296,7 +296,7 @@
   "aboutDic": {
     "hero": {
       "title": "About Us",
-      "subtitle": "Meet our team"
+      "subtitle": "Who we are..."
     },
     "founder": {
       "name": "Salvador Sandoval",
@@ -343,7 +343,7 @@
       "pretitle": "Contact Us",
       "title": "We would like to meet you. Feel free to",
       "titleTwo": "get in touch.",
-      "subtitle": "Let us discover how we can optimize your systems.",
+      "subtitle": "Let us discover how we can help improve your trade experience.",
       "location": "Location",
       "social": "Social Media",
       "questions": "General Questions",
@@ -364,7 +364,7 @@
     },
     "addressTwo": {
       "ubicacion": "Washington",
-      "addressOne": "321 High School Rd NE",
+      "addressOne": "",
       "addressTwo": "Suite D3",
       "city": "Bainbridge Island",
       "hood": "",
@@ -777,7 +777,7 @@
               "path": ""
             },
             {
-              "name": "e) For more information about the procedure, we make available the following means: https://hudsoninternationalmarket.com/contacto",
+              "name": "e) For more information about the procedure, we make available the following means: https://hudsoninternationalmarket.com/#contacto",
               "path": ""
             }
           ],
@@ -981,7 +981,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": "Contact Us.", "path": "/en/contacto" },
+            { "name": "Contact Us.", "path": "/en/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1146,7 +1146,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": "Contact Us.", "path": "/es/contacto" },
+            { "name": "Contact Us.", "path": "/es/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1232,7 +1232,7 @@
           "textSix": "",
           "textSeven": "",
           "bullets": [
-            { "name": " contact.", "path": "/en/contacto" },
+            { "name": " contact.", "path": "/en/#contacto" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
             { "name": "", "path": "" },
@@ -1306,7 +1306,7 @@
         }
       ],
       "btnText": "Get a Quote",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "description": {
       "boxOne": {
@@ -1355,7 +1355,7 @@
         }
       ],
       "btnText": "Get a Quote",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "benefits": {
       "img": "/images/2149416730.jpg",
@@ -1370,7 +1370,7 @@
         { "title": "Daily update", "percent": 68 }
       ],
       "btnText": "Get a Quote",
-      "btnUrl": "/en/contacto"
+      "btnUrl": "/en/#contacto"
     },
     "why": {
       "img": "/images/2149416730.jpg",
@@ -1379,7 +1379,7 @@
       "titleTwo": "for your business?",
       "subtitle": "Come see what we can do",
       "btnText": "Get a Quote",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "rightText": "Our tailored solutions not only simplify your entry into dropshipping but also enhance operational efficiency, improve reseller satisfaction, and open up new revenue streams. Benefit from a system that grows with your business, fortified with robust security and user-friendly features."
     },
     "cta": {
@@ -1388,7 +1388,7 @@
       "titleTwo": "Your Supply Strategy? ",
       "subtitle": "Come see what we can do",
       "btnText": "Request a Quote",
-      "btnUrl": "/en/contacto",
+      "btnUrl": "/en/#contacto",
       "rightText": "Contact us today to learn how we can build the perfect e-commerce solution for your business, making dropshipping a powerful part of your sales strategy."
     },
     "prices": [
@@ -1406,7 +1406,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       },
       {
@@ -1423,7 +1423,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       },
       {
@@ -1440,7 +1440,7 @@
             "Daily update"
           ],
           "btnText": "Purchase",
-          "btnUrl": "/en/contacto"
+          "btnUrl": "/en/#contacto"
         }
       }
     ]

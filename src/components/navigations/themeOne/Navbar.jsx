@@ -17,7 +17,7 @@ import DarkLogoComponent from "@/components/logos/DarkLogoComponent";
 function Navbar() {
   const MINI_MENU_DATA = [
     {
-      btnLink: "/contacto",
+      btnLink: "/#contacto",
       icon: (
         <FaMessage className="relative text-inherit hover:scale-110 hover:text-darkteal-700 ease-in-out duration-300 cursor-pointer" />
       ),
@@ -45,7 +45,7 @@ function Navbar() {
     { name: "Blog", link: "/blog" },
     { name: "Experiencia", link: "/portfolio" },
     { name: "Servicios", link: "/servicios" },
-    { name: "Contacto", link: "/contacto" },
+    { name: "Contacto", link: "/#contacto" },
   ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {

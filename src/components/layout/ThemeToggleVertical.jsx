@@ -4,13 +4,13 @@ import { FaMoon } from "react-icons/fa6";
 import { BsSunFill } from "react-icons/bs";
 
 const ThemeToggleVertical = ({ className }) => {
-  const [darkMode, setDarkMode] = useState(true);
-  useEffect(() => {
-    if (localStorage) {
-      const theme = localStorage?.getItem("theme");
-      if (theme && theme === "dark") setDarkMode(true);
-    }
-  }, []);
+  const [darkMode, setDarkMode] = useState(false);
+  // useEffect(() => {
+  //   if (localStorage) {
+  //     const theme = localStorage?.getItem("theme");
+  //     if (theme && theme === "dark") setDarkMode(true);
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (darkMode) {
@@ -24,7 +24,7 @@ const ThemeToggleVertical = ({ className }) => {
 
   return (
     <div
-      className={`fixed z-[666] w-4 h-12 right-0 top-1/2 flex flex-col justify-between items-center dark:bg-dark bg-teal-800 cursor-pointer rounded-full p-1 ${className}`}
+      className={`fixed z-[666] w-4 h-12 right-0 top-1/2 flex flex-col justify-between items-center dark:bg-dark bg-primary cursor-pointer rounded-full p-1 ${className}`}
       onClick={() => setDarkMode(!darkMode)}
     >
       <FaMoon className="text-white" size={9} />

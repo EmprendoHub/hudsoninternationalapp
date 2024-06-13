@@ -32,7 +32,7 @@ const FooterCTA = ({ localeFooter, lang }) => {
             </text>
           </motion.svg>
           <Link
-            href={`/${lang}/contacto`}
+            href={`/${lang}/#contacto`}
             className="w-24 h-24 uppercase absolute top-0 left-0 right-0 bottom-0 m-auto bg-dark text-white rounded-full font-primary flex items-center justify-center text-sm hover:scale-105 duration-200 ease-in-out"
           >
             {localeFooter.cta.btnText}
