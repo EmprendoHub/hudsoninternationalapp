@@ -3,6 +3,7 @@ import { getCookiesName, removeUndefinedAndPageKeys } from "@/backend/helpers";
 import { cookies } from "next/headers";
 import ServerPagination from "@/components/pagination/ServerPagination";
 import CatCoverComp from "@/components/products/CatCoverComp";
+import { getDictionary } from "@/lib/dictionary";
 
 export const metadata = {
   title: "Hudson International Market",
@@ -30,6 +31,7 @@ const getAllProducts = async (searchQuery, currentCookies, perPage) => {
 
 const ProductosPage = async ({ searchParams, params }) => {
   const lang = params.lang;
+  const { productDic } = await getDictionary(lang);
   const nextCookies = cookies();
   const cookieName = getCookiesName();
   let nextAuthSessionToken = nextCookies.get(cookieName);
@@ -83,13 +85,18 @@ const ProductosPage = async ({ searchParams, params }) => {
 
   return (
     <div className="relative h-full  overflow-x-hidden">
-      <CatCoverComp searchParams={searchParams} lang={lang} />
+      <CatCoverComp
+        searchParams={searchParams}
+        lang={lang}
+        productDic={productDic}
+      />
 
       <div className="w-full h-full py-16 px-5 bg-dark dark:bg-slate-700">
         <div className="py-14 px-10 maxmd:px-5 bg-white  dark:bg-primary">
           <ListProducts
             lang={lang}
             products={products}
+            productDic={productDic}
             filteredProductsCount={filteredProductsCount}
           />
           <ServerPagination

@@ -2,7 +2,7 @@
 import React, { useCallback, useState } from "react";
 import Image from "next/image";
 import { cstDateTimeClient } from "@/backend/helpers";
-import { addNewProduct } from "@/app/[lang]/_actions";
+import { addNewProduct, updateProduct } from "@/app/[lang]/_actions";
 import { useRouter } from "next/navigation";
 import {
   productos_presentations,
@@ -257,8 +257,9 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
     setTags({ value: option, label: option });
   };
 
-  const handleAddPresentationField = (option) => {
-    setPresentations({ value: option, label: option });
+  const handleAddPresentationField = (options) => {
+    console.log(options, "options");
+    setPresentations(options);
   };
 
   // Auto-translate function using the API route with debounce
@@ -360,10 +361,12 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
     }
 
     const formData = new FormData();
+    formData.append("id", product._id);
     formData.append("title", JSON.stringify(title));
     formData.append("packing", JSON.stringify(packing));
     formData.append("description", JSON.stringify(description));
     formData.append("category", JSON.stringify(category));
+    formData.append("weight", JSON.stringify(weight));
     formData.append("featured", featured);
     formData.append("cost", cost);
     formData.append("price", price);
@@ -373,11 +376,10 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
     formData.append("origins", JSON.stringify(origins));
     formData.append("tags", JSON.stringify(tags));
     formData.append("presentations", JSON.stringify(presentations));
-    formData.append("salePriceEndDate", salePriceEndDate);
     formData.append("updatedAt", updatedAt);
 
     setIsSending(true);
-    const response = await addNewProduct(formData);
+    const response = await updateProduct(formData);
     console.log(response, "response after creation");
     if (!response?.success) {
       if (response.error) {
@@ -402,7 +404,7 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
             <LocaleToggle />
             <button
               type="submit"
-              className="bg-secondary rounded-full text-white px-6 py-2"
+              className="bg-primary rounded-full text-white px-6 py-2"
             >
               Publicar
             </button>
@@ -987,7 +989,7 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
         <section className="w-full min-h-screen">
           <div className="flex flex-col items-center justify-center min-h-screen w-full">
             <span className="loader"></span>
-            <h2 className="text-sm">Creando producto...</h2>
+            <h2 className="text-sm">Actualizando producto...</h2>
           </div>
         </section>
       )}

@@ -8,7 +8,7 @@ const backdropVariants = {
   initial: { opacity: 0, scale: 0.5 },
   duration: { duration: 1.5 },
 };
-const ModalProduct = ({ showModal, setShowModal, data, lang }) => {
+const ModalProduct = ({ showModal, setShowModal, data, lang, productDic }) => {
   return (
     <AnimatePresence mode="wait">
       {showModal && (
@@ -21,6 +21,7 @@ const ModalProduct = ({ showModal, setShowModal, data, lang }) => {
           <ProductDetailsComponent
             setShowModal={setShowModal}
             lang={lang}
+            productDic={productDic}
             data={data}
           />
         </motion.div>

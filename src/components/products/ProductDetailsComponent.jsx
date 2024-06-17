@@ -1,26 +1,25 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./productstyles.css";
-import FormattedPrice from "@/backend/helpers/FormattedPrice";
 import { motion } from "framer-motion";
 import { FaCircleXmark, FaWhatsapp } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
+const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
   const months = [
-    { label: "January", value: 1 },
-    { label: "February", value: 2 },
-    { label: "March", value: 3 },
-    { label: "April", value: 4 },
-    { label: "May", value: 5 },
-    { label: "June", value: 6 },
-    { label: "July", value: 7 },
-    { label: "August", value: 8 },
-    { label: "September", value: 9 },
-    { label: "October", value: 10 },
-    { label: "November", value: 11 },
-    { label: "December", value: 12 },
+    { es: "Enero", en: "January", value: 1 },
+    { es: "Febrero", en: "February", value: 2 },
+    { es: "Marzo", en: "March", value: 3 },
+    { es: "Abril", en: "April", value: 4 },
+    { es: "Mayo", en: "May", value: 5 },
+    { es: "Junio", en: "June", value: 6 },
+    { es: "Julio", en: "July", value: 7 },
+    { es: "Agosto", en: "August", value: 8 },
+    { es: "Septiembre", en: "September", value: 9 },
+    { es: "Octubre", en: "October", value: 10 },
+    { es: "Noviembre", en: "November", value: 11 },
+    { es: "Diciembre", en: "December", value: 12 },
   ];
 
   const product = data.product;
@@ -88,8 +87,10 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     className="text-sm text-lightText flex flex-col"
                   >
                     <div className="grid grid-cols-2 gap-2 mt-2">
-                      <p>Packing:</p>
-                      <p className="">{product?.packing[`${lang}`]}</p>
+                      <p>{productDic.single.packing}:</p>
+                      <p className="text-[14px]">
+                        {product?.packing[`${lang}`]}
+                      </p>
                     </div>
                   </motion.div>
                   <motion.div
@@ -99,8 +100,8 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     className="text-sm text-lightText flex flex-col"
                   >
                     <div className="grid grid-cols-2 gap-4 mt-2 w-full">
-                      <p>Weight:</p>
-                      <p className="">
+                      <p>{productDic.single.weight}:</p>
+                      <p className="text-[14px]">
                         {" "}
                         {product?.weight[`es`]} <span> {"kgs"}</span> /{" "}
                         {product?.weight[`en`]}
@@ -115,8 +116,10 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     className="text-sm text-lightText flex flex-col"
                   >
                     <div className="grid grid-cols-2 gap-4 mt-2 w-full">
-                      <p>Categoría:</p>
-                      <p className="">{product?.category[`${lang}`]}</p>
+                      <p>{productDic.single.category}:</p>
+                      <p className="text-[14px]">
+                        {product?.category[`${lang}`]}
+                      </p>
                     </div>
                   </motion.div>
                   <motion.div
@@ -126,14 +129,14 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     className="text-sm text-lightText flex flex-col"
                   >
                     <div className="grid grid-cols-2 gap-4 mt-2 w-full">
-                      <p>Presentaciones:</p>
-                      <p className="flex items-center text-[14px]">
+                      <p>{productDic.single.types}:</p>
+                      <p className="flex flex-wrap items-center text-[14px]">
                         {product?.presentations.map((presentation, index) => (
                           <span key={presentation.value}>
                             {presentation.value}
                             {product.presentations?.length === index + 1
-                              ? ""
-                              : ", "}
+                              ? "."
+                              : ","}
                           </span>
                         ))}
                       </p>
@@ -146,7 +149,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                     className="text-sm text-lightText flex flex-col"
                   >
                     <div className="grid grid-cols-2 gap-4 mt-2 w-full">
-                      <p>Cotizar:</p>
+                      <p>{productDic.single.quote}:</p>
                       <p className="flex items-center text-[14px]">
                         <Link
                           href={
@@ -183,18 +186,11 @@ const ProductDetailsComponent = ({ data, lang, setShowModal }) => {
                         <thead className="w-full">
                           <tr className="font-secondary font-light text-[9px] flex items-center justify-between min-w-full">
                             <th className="w-8"></th>
-                            <th>Ene</th>
-                            <th>Feb</th>
-                            <th>Mar</th>
-                            <th>Abr</th>
-                            <th>May</th>
-                            <th>Jun</th>
-                            <th>Jul</th>
-                            <th>Ago</th>
-                            <th>Sep</th>
-                            <th>Oct</th>
-                            <th>Nov</th>
-                            <th>Dic</th>
+                            {months.map((mes) => (
+                              <th key={mes.es}>
+                                {mes[`${lang}`].substring(0, 3)}
+                              </th>
+                            ))}
                           </tr>
                         </thead>
                         <tbody>

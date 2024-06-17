@@ -40,12 +40,11 @@
       "title": "Products",
       "links": [
         { "title": "Chilies", "url": "/productos?keyword=chiles" },
-        { "title": "Condiments", "url": "/productos?keyword=Condiments" },
         { "title": "Spices", "url": "/productos?keyword=Spices" },
         { "title": "Flowers", "url": "/productos?keyword=Flowers" },
         {
-          "title": "Dried Fruits and Nuts",
-          "url": "/productos?keyword=Dried Fruits and Nuts"
+          "title": "Seasonal Nuts",
+          "url": "/productos?keyword=Seasonal Nuts"
         },
         { "title": "Herbs", "url": "/productos?keyword=Herbs" },
         {
@@ -116,7 +115,7 @@
         "text": "We offer quality products at fair market value through agreements that benefit all parties. Our extensive network of suppliers ensures that you receive the products you need.",
         "btnText": "Explore Products",
         "btnPath": "/en/productos",
-        "imgPath": "/images/delicious-nuts-concept_2.webp"
+        "imgPath": "/images/condiment_spread.webp"
       },
       {
         "preTitle": "Strategic Partner",
@@ -125,7 +124,7 @@
         "text": "We offer strategic approaches to expand your market reach and improve your business operations through expert coordination and high-quality products.",
         "btnText": "Explore Products",
         "btnPath": "/en/productos",
-        "imgPath": "/images/metal-bucket-salted-popcorn.webp"
+        "imgPath": "/images/black_pepper_spread.webp"
       }
     ],
     "infiniteSlider": {
@@ -243,7 +242,70 @@
       "messageSent": "The message was sent successfully."
     }
   },
-
+  "productDic": {
+    "preTitle": "INTERNATIONAL TRADE",
+    "title": "Grains, Seeds, ",
+    "titleTwo": "Spices & Condiments",
+    "single": {
+      "packing": "Packing",
+      "weight": "Weight",
+      "category": "Category",
+      "types": "Types",
+      "quote": "Quote",
+      "season": "Crop Season"
+    },
+    "months": [
+      { "label": "January", " value": 1 },
+      { "label": "February", " value": 2 },
+      { "label": "March", " value": 3 },
+      { "label": "April", " value": 4 },
+      { "label": "May", " value": 5 },
+      { "label": "June", " value": 6 },
+      { "label": "July", " value": 7 },
+      { "label": "August", " value": 8 },
+      { "label": "September", " value": 9 },
+      { "label": "October", "value": 10 },
+      { "label": "November", "value": 11 },
+      { "label": "December", "value": 12 }
+    ]
+  },
+  "categoryDic": {
+    "title": "Spices, Seeds & ",
+    "titleTwo": "Seasonal Nuts",
+    "text": "We bring you the flavors of the world!",
+    "categories": [
+      {
+        "title": "Chilies",
+        "catPath": "/en/productos?keyword=Chilies",
+        "imgPath": "/images/chiles.webp"
+      },
+      {
+        "title": "Seasonal Nuts",
+        "catPath": "/en/productos?keyword=Seasonal Nuts",
+        "imgPath": "/images/nuts.webp"
+      },
+      {
+        "title": "Spices",
+        "catPath": "/en/productos?keyword=Spices",
+        "imgPath": "/images/especias.webp"
+      },
+      {
+        "title": "Flowers",
+        "catPath": "/en/productos?keyword=Flowers",
+        "imgPath": "/images/flowers.webp"
+      },
+      {
+        "title": "Grains & Seeds",
+        "catPath": "/en/productos?keyword=grains",
+        "imgPath": "/images/grains.webp"
+      },
+      {
+        "title": "Herbs",
+        "catPath": "/en/productos?keyword=Herbs",
+        "imgPath": "/images/hierbas.webp"
+      }
+    ]
+  },
   "flipBoxes": [
     {
       "bgColor": "pink",

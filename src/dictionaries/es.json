@@ -40,17 +40,16 @@
       "title": "Productos",
       "links": [
         { "title": "Chiles", "url": "/productos?keyword=chiles" },
-        { "title": "Condimentos", "url": "/productos?keyword=Condimentos" },
-        { "title": "Especias", "url": "/productos?keyword=Spices" },
+        { "title": "Especias", "url": "/productos?keyword=Especias" },
         { "title": "Flores", "url": "/productos?keyword=Flores" },
         {
-          "title": "Frutos Secos y Nueces",
-          "url": "/productos?keyword=Frutos Secos y Nueces"
+          "title": "Nueces de temporada",
+          "url": "/productos?keyword=Nueces de temporada"
         },
         { "title": "Hierbas", "url": "/productos?keyword=Hierbas" },
         {
-          "title": "Grains and Seeds",
-          "url": "/productos?keyword=Grains and Seeds"
+          "title": "Granos & Semillas",
+          "url": "/productos?keyword=Granos"
         }
       ]
     },
@@ -116,7 +115,7 @@
         "text": "Ofrecemos productos de calidad a un valor justo de mercado a través de acuerdos que benefician a todas las partes. Nuestra amplia red de proveedores garantiza que usted reciba los productos que necesitas.",
         "btnText": "Explorar Productos",
         "btnPath": "/es/productos",
-        "imgPath": "/images/delicious-nuts-concept_2.webp"
+        "imgPath": "/images/condiment_spread.webp"
       },
       {
         "preTitle": "Socio Estratégico",
@@ -125,7 +124,7 @@
         "text": "Ofrecemos enfoques estratégicos para ampliar su alcance en el mercado y mejorar sus operaciones comerciales a través de una coordinación experta y productos de alta calidad..",
         "btnText": "Explorar Productos",
         "btnPath": "/es/productos",
-        "imgPath": "/images/metal-bucket-salted-popcorn.webp"
+        "imgPath": "/images/black_pepper_spread.webp"
       }
     ],
     "infiniteSlider": {
@@ -243,7 +242,70 @@
       "messageSent": "El mensaje se envió correctamente."
     }
   },
-
+  "productDic": {
+    "preTitle": "COMERCIO INTERNACIONAL",
+    "title": "Granos, Hierbas, ",
+    "titleTwo": "Especias & Condimentos",
+    "single": {
+      "packing": "Empaquetado",
+      "weight": "Peso",
+      "category": "Categoría",
+      "types": "Tipos",
+      "quote": "Cotizar",
+      "season": "Temporada de Cosecha"
+    },
+    "months": [
+      { "label": "January", " value": 1 },
+      { "label": "February", " value": 2 },
+      { "label": "March", " value": 3 },
+      { "label": "April", " value": 4 },
+      { "label": "May", " value": 5 },
+      { "label": "June", " value": 6 },
+      { "label": "July", " value": 7 },
+      { "label": "August", " value": 8 },
+      { "label": "September", " value": 9 },
+      { "label": "October", "value": 10 },
+      { "label": "November", "value": 11 },
+      { "label": "December", "value": 12 }
+    ]
+  },
+  "categoryDic": {
+    "title": "Especias, Semillas &",
+    "titleTwo": "Nueces de Temporada",
+    "text": "¡Te traemos los sabores del mundo!",
+    "categories": [
+      {
+        "title": "Chiles",
+        "catPath": "/es/productos?keyword=Chiles",
+        "imgPath": "/images/chiles.webp"
+      },
+      {
+        "title": "Nueces de Temporada",
+        "catPath": "/es/productos?keyword=Nueces de temporada",
+        "imgPath": "/images/nuts.webp"
+      },
+      {
+        "title": "Especias",
+        "catPath": "/es/productos?keyword=Especias",
+        "imgPath": "/images/especias.webp"
+      },
+      {
+        "title": "Flowers",
+        "catPath": "/es/productos?keyword=Flowers",
+        "imgPath": "/images/flowers.webp"
+      },
+      {
+        "title": "Granos & Semillas",
+        "catPath": "/es/productos?keyword=Granos",
+        "imgPath": "/images/grains.webp"
+      },
+      {
+        "title": "Hierbas",
+        "catPath": "/es/productos?keyword=Hierbas",
+        "imgPath": "/images/hierbas.webp"
+      }
+    ]
+  },
   "flipBoxes": [
     {
       "bgColor": "pink",

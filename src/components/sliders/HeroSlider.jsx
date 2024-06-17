@@ -4,7 +4,6 @@ import styles from "./HeroSliderPush.module.scss";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import MainSliderItems from "./MainSliderItems";
 import MainSliderItemsText from "./MainSliderItemsText";
-import Head from "next/head";
 
 const HeroSlider = ({ homeDic }) => {
   const [index, setIndex] = useState(0);
@@ -30,9 +29,6 @@ const HeroSlider = ({ homeDic }) => {
 
   return (
     <>
-      <Head>
-        <link rel="preload" as="image" href={homeDic.sliders[index].imgPath} />
-      </Head>
       <div
         className="relative h-full justify-center flex items-center maxmd:flex-col w-full px-40 maxxlg:px-20 maxmd:px-5 maxsm:pl-2 py-20 maxsm:pt-10 bg-white dark:bg-primary  overflow-hidden"
         onMouseEnter={handleMouseEnter}

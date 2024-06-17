@@ -3,6 +3,7 @@ import {
   getOneProductWithTrending,
 } from "@/app/[lang]/_actions";
 import ProductDetailsComponent from "@/components/products/ProductDetailsComponent";
+import { getDictionary } from "@/lib/dictionary";
 
 export async function generateMetadata({ params }, parent) {
   // fetch data
@@ -23,10 +24,15 @@ export async function generateMetadata({ params }, parent) {
 
 const ProductDetailsPage = async ({ params }) => {
   const lang = params.lang;
+  const { productDic } = await getDictionary(lang);
   const data = await getOneProductWithTrending(params.slug, false);
   return (
     <>
-      <ProductDetailsComponent lang={lang} data={data} />
+      <ProductDetailsComponent
+        lang={lang}
+        data={data}
+        productDic={productDic}
+      />
     </>
   );
 };

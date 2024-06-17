@@ -19,29 +19,26 @@ import ContactInner from "@/components/contact/ContactInner";
 
 export default async function Home({ params }) {
   const lang = params.lang;
-  const { homeDic, servicesDic, flipBoxes, contactDic } = await getDictionary(
-    lang
-  );
+  const { homeDic, servicesDic, flipBoxes, contactDic, categoryDic } =
+    await getDictionary(lang);
   return (
     <div className=" overflow-x-hidden">
-      <Suspense fallback={<LoadingHero />}>
-        <ImageHero homeDic={homeDic} />
-        <HeroSlider homeDic={homeDic} />
-        <CategoriesComp homeDic={homeDic} lang={lang} />
-        <SingleSideToSide flipBoxes={flipBoxes} homeDic={homeDic} />
-        <IconGridComp servicesDic={servicesDic} />
-        {/* <SideToSide homeDic={homeDic} /> */}
-        {/* <TalkToTeam homeDic={homeDic} /> */}
-        {/* <SideToSideText homeDic={homeDic} /> */}
-        <ContactInner homeDic={homeDic} contactDic={contactDic} />
-        {/* <MiniPortfolio homeDic={homeDic} /> */}
-        {/* <WhyUs /> */}
-        {/* <TestimonialSlider homeDic={homeDic} /> */}
-        {/* <ContactSection params={params} /> */}
-        {/* <HeroComp /> */}
-        {/* <FlipBoxesComp /> */}
-        {/* <PricingTable /> */}
-      </Suspense>
+      <ImageHero homeDic={homeDic} />
+      <HeroSlider homeDic={homeDic} />
+      <CategoriesComp categoryDic={categoryDic} lang={lang} />
+      <SingleSideToSide flipBoxes={flipBoxes} homeDic={homeDic} />
+      <IconGridComp servicesDic={servicesDic} />
+      {/* <SideToSide homeDic={homeDic} /> */}
+      {/* <TalkToTeam homeDic={homeDic} /> */}
+      {/* <SideToSideText homeDic={homeDic} /> */}
+      <ContactInner homeDic={homeDic} contactDic={contactDic} />
+      {/* <MiniPortfolio homeDic={homeDic} /> */}
+      {/* <WhyUs /> */}
+      {/* <TestimonialSlider homeDic={homeDic} /> */}
+      {/* <ContactSection params={params} /> */}
+      {/* <HeroComp /> */}
+      {/* <FlipBoxesComp /> */}
+      {/* <PricingTable /> */}
     </div>
   );
 }

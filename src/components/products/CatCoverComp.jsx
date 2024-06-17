@@ -9,13 +9,12 @@ import coverGrains from "../../../public/images/grains_and_seeds_cat_cover.webp"
 import coverHerbs from "../../../public/images/herbs_cat_cover.webp";
 import coverSpices from "../../../public/images/spices_cat_cover.webp";
 
-const CatCoverComp = ({ searchParams, lang }) => {
+const CatCoverComp = ({ searchParams, lang, productDic }) => {
   const keyword = searchParams?.keyword;
   const [coverImage, setCoverImage] = useState(coverImage0);
-  const [coverTitle, setCoverTitle] = useState(
-    "Granos, Hierbas, Especias y Condimentos"
-  );
-  const [coverPreTitle, setCoverPreTitle] = useState("Comercio Internacional");
+  const [coverTitle, setCoverTitle] = useState(productDic.title);
+  const [coverTitleTwo, setCoverTitleTwo] = useState(productDic.titleTwo);
+  const [coverPreTitle, setCoverPreTitle] = useState(productDic.preTitle);
   useEffect(() => {
     if (keyword) {
       if (
@@ -26,10 +25,12 @@ const CatCoverComp = ({ searchParams, lang }) => {
       ) {
         setCoverImage(coverSpices);
         if (lang === "es") {
-          setCoverTitle("Condimentos");
+          setCoverTitle("Especias");
+          setCoverTitleTwo(" & Condimentos");
         }
         if (lang === "en") {
-          setCoverTitle("Condiments");
+          setCoverTitle("Spices");
+          setCoverTitleTwo(" & Condiments");
         }
       } else if (
         keyword.toLowerCase() === "chiles" ||
@@ -38,9 +39,11 @@ const CatCoverComp = ({ searchParams, lang }) => {
         setCoverImage(coverChiles);
         if (lang === "es") {
           setCoverTitle("Chiles");
+          setCoverTitleTwo("");
         }
         if (lang === "en") {
           setCoverTitle("Chilies");
+          setCoverTitleTwo("");
         }
       } else if (
         keyword.toLowerCase() === "flores" ||
@@ -49,9 +52,11 @@ const CatCoverComp = ({ searchParams, lang }) => {
         setCoverImage(coverFlowers);
         if (lang === "es") {
           setCoverTitle("Flores");
+          setCoverTitleTwo("");
         }
         if (lang === "en") {
           setCoverTitle("Flowers");
+          setCoverTitleTwo("");
         }
       } else if (
         keyword.toLowerCase() === "dried fruits and nuts" ||
@@ -59,10 +64,12 @@ const CatCoverComp = ({ searchParams, lang }) => {
       ) {
         setCoverImage(coverNuts);
         if (lang === "es") {
-          setCoverTitle("Frutos secos y nueces");
+          setCoverTitle("Frutos secos");
+          setCoverTitleTwo(" y nueces");
         }
         if (lang === "en") {
-          setCoverTitle("Dried fruits and nuts");
+          setCoverTitle("Dried fruits");
+          setCoverTitleTwo(" and nuts");
         }
       } else if (
         keyword.toLowerCase() === "grains and seeds" ||
@@ -70,10 +77,12 @@ const CatCoverComp = ({ searchParams, lang }) => {
       ) {
         setCoverImage(coverGrains);
         if (lang === "es") {
-          setCoverTitle("Granos y semillas");
+          setCoverTitle("Granos");
+          setCoverTitleTwo(" y semillas");
         }
         if (lang === "en") {
-          setCoverTitle("Grains and seeds");
+          setCoverTitle("Grains");
+          setCoverTitleTwo(" and seeds");
         }
       } else if (
         keyword.toLowerCase() === "hierbas" ||
@@ -82,13 +91,17 @@ const CatCoverComp = ({ searchParams, lang }) => {
         setCoverImage(coverHerbs);
         if (lang === "es") {
           setCoverTitle("Hierbas");
+          setCoverTitleTwo("");
         }
         if (lang === "en") {
           setCoverTitle("Herbs");
+          setCoverTitleTwo("");
         }
       }
     } else {
       setCoverImage(coverImage0);
+      setCoverTitle(productDic.title);
+      setCoverTitleTwo(productDic.titleTwo);
     }
   }, [keyword]);
 
@@ -108,7 +121,15 @@ const CatCoverComp = ({ searchParams, lang }) => {
         <p className="uppercase text-xs tracking-widest font-secondary">
           {coverPreTitle}
         </p>
-        <h3>{coverTitle}</h3>
+        <h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="  font-primary mb-4"
+        >
+          <span className="text-white">{coverTitle} </span>
+          <span className=" text-secondary">{coverTitleTwo}</span>
+        </h2>
       </div>
     </div>
   );

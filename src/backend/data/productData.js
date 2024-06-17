@@ -349,13 +349,12 @@ export const sizes_shoes_woman = [
 
 export const product_categories = [
   { es: "", en: "" },
-  { es: "Frutos Secos y Nueces", en: "Dried Fruits and Nuts" },
+  { es: "Seasonal Nuts", en: "Nueces de temporada" },
   { es: "Granos y Semillas", en: "Grains and Seeds" },
   { es: "Chiles", en: "Chilies" },
   { es: "Flores", en: "Flowers" },
   { es: "Hierbas", en: "Herbs" },
   { es: "Especias", en: "Spices" },
-  { es: "Condimentos", en: "Condiments" },
 ];
 
 export const genders = [

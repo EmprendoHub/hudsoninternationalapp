@@ -2878,7 +2878,6 @@ export async function addNewProduct(data) {
   origins = JSON.parse(origins);
   tags = JSON.parse(tags);
   presentations = JSON.parse(presentations);
-  console.log(tags, presentations, "tags and presentations");
   await dbConnect();
   const slug = generateUrlSafeTitle(title.es);
 
@@ -2916,6 +2915,99 @@ export async function addNewProduct(data) {
   return {
     success: {
       ok: "Producto se creo con exito",
+    },
+  };
+}
+
+export async function updateProduct(data) {
+  const session = await getServerSession(options);
+  const user = { _id: session?.user?._id };
+  let {
+    id,
+    title,
+    packing,
+    description,
+    category,
+    weight,
+    featured,
+    onlineAvailability,
+    mainImage,
+    origins,
+    tags,
+    presentations,
+    price,
+    cost,
+    stock,
+    updatedAt,
+  } = Object.fromEntries(data);
+
+  updatedAt = new Date(updatedAt);
+
+  // Check for errors
+  title = JSON.parse(title);
+  packing = JSON.parse(packing);
+  category = JSON.parse(category);
+  weight = JSON.parse(weight);
+  description = JSON.parse(description);
+  featured = featured;
+  onlineAvailability = JSON.parse(onlineAvailability);
+  mainImage = JSON.parse(mainImage);
+  origins = JSON.parse(origins);
+  tags = JSON.parse(tags);
+  presentations = JSON.parse(presentations);
+
+  await dbConnect();
+
+  const slug = generateUrlSafeTitle(title.es);
+  console.log(id);
+  const slugExists = await Product.findOne({ slug: slug, _id: { $ne: id } });
+  if (slugExists) {
+    return {
+      error: {
+        title: "Este Titulo del producto ya esta en uso",
+      },
+    };
+  }
+
+  const updatedProduct = await Product.findByIdAndUpdate(
+    id,
+    {
+      title,
+      slug,
+      packing,
+      description,
+      category,
+      weight,
+      featured,
+      onlineAvailability,
+      origins,
+      tags,
+      presentations,
+      price,
+      cost,
+      stock,
+      images: [{ url: mainImage }],
+      updatedAt,
+      published: true,
+      user,
+    },
+    { new: true }
+  );
+
+  if (!updatedProduct) {
+    return {
+      error: {
+        title: "No se encontró el producto para actualizar",
+      },
+    };
+  }
+
+  console.log(updatedProduct);
+  revalidatePath("/admin/productos");
+
+  return {
+    success: {
+      ok: "Producto se actualizó con éxito",
     },
   };
 }

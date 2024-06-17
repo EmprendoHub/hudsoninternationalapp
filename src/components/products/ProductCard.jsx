@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import ModalProduct from "../modals/ModalProduct";
 import { useState } from "react";
 
-const ProductCard = ({ item, lang }) => {
+const ProductCard = ({ item, lang, productDic }) => {
   const [showModal, setShowModal] = useState(false);
   const clickForModal = async () => {
     setShowModal(true);
@@ -14,6 +13,7 @@ const ProductCard = ({ item, lang }) => {
     <>
       <ModalProduct
         showModal={showModal}
+        productDic={productDic}
         setShowModal={setShowModal}
         data={item}
         lang={lang}

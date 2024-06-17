@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         primary: "#0D121B",
-        secondary: "#4EA4B2",
+        secondary: "#86c3f7",
         accent: "#F0AA44",
         accentTwo: "#F15733",
         dark: "#2e7cbf",
@@ -23,7 +23,7 @@ module.exports = {
 
       colors: {
         primary: "#0D121B",
-        secondary: "#4EA4B2",
+        secondary: "#86c3f7",
         accent: "#F0AA44",
         accentTwo: "#F15733",
         dark: "#2e7cbf",
