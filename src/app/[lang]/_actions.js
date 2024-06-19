@@ -2926,9 +2926,11 @@ export async function updateProduct(data) {
     id,
     title,
     packing,
+    packingTwo,
     description,
     category,
     weight,
+    weightTwo,
     featured,
     onlineAvailability,
     mainImage,
@@ -2946,8 +2948,10 @@ export async function updateProduct(data) {
   // Check for errors
   title = JSON.parse(title);
   packing = JSON.parse(packing);
+  packingTwo = JSON.parse(packingTwo);
   category = JSON.parse(category);
   weight = JSON.parse(weight);
+  weightTwo = JSON.parse(weightTwo);
   description = JSON.parse(description);
   featured = featured;
   onlineAvailability = JSON.parse(onlineAvailability);
@@ -2959,7 +2963,6 @@ export async function updateProduct(data) {
   await dbConnect();
 
   const slug = generateUrlSafeTitle(title.es);
-  console.log(id);
   const slugExists = await Product.findOne({ slug: slug, _id: { $ne: id } });
   if (slugExists) {
     return {
@@ -2975,9 +2978,11 @@ export async function updateProduct(data) {
       title,
       slug,
       packing,
+      packingTwo,
       description,
       category,
       weight,
+      weightTwo,
       featured,
       onlineAvailability,
       origins,

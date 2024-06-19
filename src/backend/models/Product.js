@@ -30,7 +30,15 @@ const ProductSchema = new mongoose.Schema({
     es: { type: Number },
     en: { type: Number },
   },
+  weightTwo: {
+    es: { type: Number },
+    en: { type: Number },
+  },
   packing: {
+    es: { type: String },
+    en: { type: String },
+  },
+  packingTwo: {
     es: { type: String },
     en: { type: String },
   },

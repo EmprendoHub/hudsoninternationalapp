@@ -34,6 +34,7 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
   const [cost, setCost] = useState(product.cost);
   const [stock, setStock] = useState(product.stock);
   const [weight, setWeight] = useState(product.weight);
+  const [weightTwo, setWeightTwo] = useState(product?.weightTwo || 0);
   const [countrySelection, setCountrySelection] = useState(set_countries);
   const [tagSelection, setTagSelection] = useState(blog_categories);
   const [presentationSelection, setPresentationSelection] = useState(
@@ -46,6 +47,9 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
   const [categories, setCategories] = useState(product_categories);
   const [category, setCategory] = useState(product.category);
   const [packing, setPacking] = useState(product.packing);
+  const [packingTwo, setPackingTwo] = useState(
+    product.packingTwo || { es: "", en: "" }
+  );
   const [mainImage, setMainImage] = useState(product.images[0].url);
 
   const [origins, setOrigins] = useState(product.origins);
@@ -152,6 +156,9 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
 
   const handlePackingChange = async (packingEs, packingEn) => {
     setPacking({ es: packingEs, en: packingEn });
+  };
+  const handlePackingTwoChange = async (packingEs, packingEn) => {
+    setPackingTwo({ es: packingEs, en: packingEn });
   };
   const handleAddKeywordField = (newSelectedKeywords) => {
     setKeywords(newSelectedKeywords);
@@ -287,6 +294,30 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
     }
   };
 
+  const handleWeightTwoConversion = async (option, language) => {
+    try {
+      if (language === "en") {
+        // lbs to kg
+        const newPounds = Math.ceil(option * 2.2046);
+
+        setWeightTwo((prev) => ({
+          ...prev,
+          en: newPounds,
+        }));
+      }
+      if (language === "es") {
+        // lbs to kg
+        const newKilos = Math.ceil(option / 2.2046);
+        setWeightTwo((prev) => ({
+          ...prev,
+          es: newKilos,
+        }));
+      }
+    } catch (error) {
+      console.error("Error converting text:", error);
+    }
+  };
+
   async function hanldeFormSubmit() {
     if (
       !mainImage ||
@@ -364,9 +395,11 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
     formData.append("id", product._id);
     formData.append("title", JSON.stringify(title));
     formData.append("packing", JSON.stringify(packing));
+    formData.append("packingTwo", JSON.stringify(packingTwo));
     formData.append("description", JSON.stringify(description));
     formData.append("category", JSON.stringify(category));
     formData.append("weight", JSON.stringify(weight));
+    formData.append("weightTwo", JSON.stringify(weightTwo));
     formData.append("featured", featured);
     formData.append("cost", cost);
     formData.append("price", price);
@@ -595,6 +628,54 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
                         </i>
                       </div>
                     </div>
+                    <div className="mb-4 w-full">
+                      <label className="block mb-1 font-EB_Garamond text-xs">
+                        Packing#2
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={packingTwo[`${lang}`]}
+                          onChange={(e) => {
+                            const selectedOption =
+                              e.target.options[e.target.selectedIndex];
+                            const packingEs =
+                              selectedOption.getAttribute("data-es");
+                            const packingEn =
+                              selectedOption.getAttribute("data-en");
+                            handlePackingTwoChange(packingEs, packingEn);
+                          }}
+                          name="packingTwo"
+                          htmlFor="packingTwo"
+                          className="block appearance-none border dark:bg-dark border-gray-300 cursor-pointer rounded-md py-2 px-3 focus:outline-none focus:border-gray-400 w-full mt-2"
+                        >
+                          {packingSelection.map((option) => (
+                            <option
+                              data-es={option.es}
+                              data-en={option.en}
+                              key={option[`${lang}`]}
+                              value={option[`${lang}`]}
+                            >
+                              {option[`${lang}`]}
+                            </option>
+                          ))}
+                        </select>
+                        {validationError?.packingTwo && (
+                          <p className="text-sm text-red-400">
+                            {validationError.packingTwo._errors.join(", ")}
+                          </p>
+                        )}
+                        <i className="absolute z-0 inset-y-0 right-0 p-2 text-gray-400">
+                          <svg
+                            width="22"
+                            height="22"
+                            className="fill-current"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M7 10l5 5 5-5H7z"></path>
+                          </svg>
+                        </i>
+                      </div>
+                    </div>
                   </div>
                   {/* Etiquetas y Categoria */}
                   <div className=" flex flex-row gap-1 items-center">
@@ -743,15 +824,11 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
                     </div>
                     <div className="mb-4 w-full">
                       <div className="relative">
-                        <div className="col-span-2">
-                          <label className="block mb-1 font-EB_Garamond text-xs">
-                            Kilos
-                          </label>
+                        <div className="col-span-2 flex items-center">
+                          <label className="block text-[10px]">Kilos:</label>
                           <input
                             name="weight[es]"
-                            type="number"
-                            className="appearance-none border border-gray-300 bg-gray-100 rounded-md pl-2 py-1 remove-arrow focus:outline-none focus:border-gray-400 w-full"
-                            min={"1"}
+                            className="font-medium font-primary text-xl flex flex-row items-center gap-1 w-full appearance-none bg-transparent m-2"
                             value={weight?.es}
                             onChange={async (e) => {
                               setWeight((prev) => ({
@@ -761,9 +838,7 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
                               handleWeightConversion(e.target.value, "en");
                             }}
                           />
-                          <label className="block mb-1 font-EB_Garamond text-xs">
-                            Pounds
-                          </label>
+                          <label className="block text-[10px]">Pounds:</label>
                           <input
                             name="weight[en]"
                             value={weight?.en}
@@ -774,11 +849,46 @@ const EditVariationProduct = ({ product, currentCookies, lang }) => {
                               }));
                               handleWeightConversion(e.target.value, "es");
                             }}
-                            className="font-medium font-primary text-xl flex flex-row items-center gap-1 w-full appearance-none bg-transparent mb-2 mt-2"
+                            className="font-medium font-primary text-xl flex flex-row items-center gap-1 w-full appearance-none bg-transparent m-2"
                           />
                           {validationError?.weight && (
                             <p className="text-sm text-red-400">
                               {validationError.weight._errors.join(", ")}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      <div className="relative">
+                        <div className="col-span-2 flex items-center">
+                          <label className="block text-[10px]">Kilos#2:</label>
+                          <input
+                            name="weightTwo[es]"
+                            className="font-medium font-primary text-xl flex flex-row items-center gap-1 w-full appearance-none bg-transparent m-2"
+                            value={weightTwo?.es}
+                            onChange={async (e) => {
+                              setWeightTwo((prev) => ({
+                                ...prev,
+                                es: e.target.value,
+                              }));
+                              handleWeightTwoConversion(e.target.value, "en");
+                            }}
+                          />
+                          <label className="block text-[10px]">Pounds#2:</label>
+                          <input
+                            name="weightTwo[en]"
+                            value={weightTwo?.en}
+                            onChange={async (e) => {
+                              setWeightTwo((prev) => ({
+                                ...prev,
+                                en: e.target.value,
+                              }));
+                              handleWeightTwoConversion(e.target.value, "es");
+                            }}
+                            className="font-medium font-primary text-xl flex flex-row items-center gap-1 w-full appearance-none bg-transparent m-2"
+                          />
+                          {validationError?.weightTwo && (
+                            <p className="text-sm text-red-400">
+                              {validationError.weightTwo._errors.join(", ")}
                             </p>
                           )}
                         </div>

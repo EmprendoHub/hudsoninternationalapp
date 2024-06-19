@@ -86,7 +86,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
                     transition={{ duration: 0.7 }}
                     className="text-sm text-lightText flex flex-col"
                   >
-                    <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="flex items-center justify-start gap-2 mt-2">
                       <p>{productDic.single.packing}:</p>
                       <p className="text-[14px]">
                         {product?.packing[`${lang}`]}
@@ -99,13 +99,20 @@ const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
                     transition={{ duration: 0.8 }}
                     className="text-sm text-lightText flex flex-col"
                   >
-                    <div className="grid grid-cols-2 gap-4 mt-2 w-full">
+                    <div className="flex items-center justify-start  gap-4 mt-2 w-full">
                       <p>{productDic.single.weight}:</p>
                       <p className="text-[14px]">
-                        {" "}
-                        {product?.weight[`es`]} <span> {"kgs"}</span> /{" "}
-                        {product?.weight[`en`]}
-                        <span> {"lbs"}</span>
+                        {product?.weight[`es`]}
+                        <span>{"kgs"}</span>/{product?.weight[`en`]}
+                        <span>{"lbs"}</span>
+                        {product?.weightTwo ? (
+                          <>
+                            , <span>{product?.weightTwo[`es`]}kgs</span>/
+                            <span>{product?.weightTwo[`en`]}lbs</span>
+                          </>
+                        ) : (
+                          ""
+                        )}
                       </p>
                     </div>
                   </motion.div>
@@ -115,7 +122,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
                     transition={{ duration: 0.9 }}
                     className="text-sm text-lightText flex flex-col"
                   >
-                    <div className="grid grid-cols-2 gap-4 mt-2 w-full">
+                    <div className="flex items-center justify-start  gap-4 mt-2 w-full">
                       <p>{productDic.single.category}:</p>
                       <p className="text-[14px]">
                         {product?.category[`${lang}`]}
@@ -128,7 +135,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
                     transition={{ duration: 1 }}
                     className="text-sm text-lightText flex flex-col"
                   >
-                    <div className="grid grid-cols-2 gap-4 mt-2 w-full">
+                    <div className="flex items-center justify-start gap-4 mt-2 w-full">
                       <p>{productDic.single.types}:</p>
                       <p className="flex flex-wrap items-center text-[14px]">
                         {product?.presentations.map((presentation, index) => (
@@ -148,7 +155,7 @@ const ProductDetailsComponent = ({ data, lang, setShowModal, productDic }) => {
                     transition={{ duration: 1.2 }}
                     className="text-sm text-lightText flex flex-col"
                   >
-                    <div className="grid grid-cols-2 gap-4 mt-2 w-full">
+                    <div className="flex items-center justify-start  gap-4 mt-2 w-full">
                       <p>{productDic.single.quote}:</p>
                       <p className="flex items-center text-[14px]">
                         <Link

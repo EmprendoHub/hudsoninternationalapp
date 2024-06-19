@@ -206,6 +206,7 @@ export const productos_presentations = [
   { value: "Cut", label: "Cut", es: "Cotada", en: "Cut" },
   { value: "Broken", label: "Broken", es: "Quebrado", en: "Broken" },
   { value: "Powder", label: "Powder", es: "Polvo", en: "Powder" },
+  { value: "Flakes", label: "Flakes", es: "Copos", en: "Flakes" },
   {
     value: "Granulated",
     label: "Granulated",
@@ -214,17 +215,25 @@ export const productos_presentations = [
   },
   { value: "Tea Cut", label: "Tea Cut", es: "Corte Te", en: "Tea Cut" },
   { value: "Star", label: "Star", es: "Estrella", en: "Star" },
-  { value: "Flower", label: "Flower", es: "Flor", en: "Flower" },
-  { value: "Yidu", label: "Yidu", es: "Yidu", en: "Yidu" },
-  { value: "S4", label: "S4", es: "S4", en: "S4" },
-  { value: "S15", label: "S15", es: "S15", en: "S15" },
-  { value: "S17", label: "S17", es: "S17", en: "S17" },
+  {
+    value: "Dried Flower",
+    label: "Dried Flower",
+    es: "Flor Seca",
+    en: "Dried Flower",
+  },
+  {
+    value: "(yidu, S4, S15, S17, S21, dundicut)",
+    label: "(yidu, S4, S15, S17, S21, dundicut)",
+    es: "(yidu, S4, S15, S17, S21, dundicut)",
+    en: "(yidu, S4, S15, S17, S21, dundicut)",
+  },
 ];
 
 export const productos_packing = [
   { es: "", en: "" },
   { es: "Cajas", en: "Boxes" },
   { es: "Bolsas", en: "Bags" },
+  { es: "Pacas", en: "Bales" },
   { es: "Varios", en: "Various" },
 ];
 
@@ -296,6 +305,10 @@ export const set_countries = [
     en: "Nigeria",
   },
   {
+    es: "Pakistan",
+    en: "Pakistan",
+  },
+  {
     es: "Peru",
     en: "Peru",
   },
@@ -313,8 +326,8 @@ export const set_countries = [
   },
 
   {
-    es: "Estados Unidos de America",
-    en: "United States Of America",
+    es: "USA",
+    en: "USA",
   },
   {
     es: "Vietnam",
@@ -349,7 +362,7 @@ export const sizes_shoes_woman = [
 
 export const product_categories = [
   { es: "", en: "" },
-  { es: "Seasonal Nuts", en: "Nueces de temporada" },
+  { es: "Nueces de temporada", en: "Seasonal Nuts" },
   { es: "Granos y Semillas", en: "Grains and Seeds" },
   { es: "Chiles", en: "Chilies" },
   { es: "Flores", en: "Flowers" },
